@@ -1,0 +1,15 @@
+name: JetBrains
+description: >-
+  APIs for JetBrains, a software development company providing
+  integrated development environments and developer tools.
+url: https://www.jetbrains.com
+created: "2025-01-01"
+modified: "2025-01-01"
+specificationVersion: "0.18"
+tags:
+- JetBrains
+- Developer Tools
+- IDE
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
