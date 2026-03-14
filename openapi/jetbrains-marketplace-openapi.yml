@@ -1,0 +1,170 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Marketplace API
+  description: >-
+    The JetBrains Marketplace API provides programmatic access to the plugin
+    marketplace for JetBrains IDEs. It allows listing plugins by IDE compatibility,
+    searching for plugins, uploading new plugins and updates, downloading plugin
+    files, and checking plugin licenses. The API serves both plugin developers
+    and consumers who need to integrate with the JetBrains plugin ecosystem.
+  version: 1.0.0
+  contact:
+    name: JetBrains
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+  - url: https://plugins.jetbrains.com
+    description: JetBrains Marketplace
+paths:
+  /plugins/list/:
+    get:
+      summary: List Plugins
+      description: >-
+        Returns a list of all plugins compatible with a provided IDE build.
+      operationId: listPlugins
+      tags:
+        - Plugins
+      parameters:
+        - name: build
+          in: query
+          description: IDE build number (e.g., IC-232.8660.185)
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with plugin list
+  /api/plugins/{pluginId}:
+    get:
+      summary: Get Plugin Details
+      description: Returns details of a specific plugin.
+      operationId: getPlugin
+      tags:
+        - Plugins
+      parameters:
+        - name: pluginId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response with plugin details
+  /api/searchPlugins:
+    get:
+      summary: Search Plugins
+      description: Searches for plugins by keyword and filters.
+      operationId: searchPlugins
+      tags:
+        - Plugins
+      parameters:
+        - name: search
+          in: query
+          schema:
+            type: string
+        - name: max
+          in: query
+          schema:
+            type: integer
+        - name: offset
+          in: query
+          schema:
+            type: integer
+        - name: orderBy
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with search results
+  /api/updates/upload:
+    post:
+      summary: Upload Plugin
+      description: >-
+        Uploads a new plugin or plugin update to the marketplace.
+      operationId: uploadPlugin
+      tags:
+        - Plugin Upload
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                pluginId:
+                  type: integer
+                  description: Plugin ID (for updates)
+                file:
+                  type: string
+                  format: binary
+                  description: Plugin JAR or ZIP file
+                channel:
+                  type: string
+                  description: Release channel
+      responses:
+        '200':
+          description: Plugin uploaded successfully
+      security:
+        - bearerAuth: []
+  /plugin/download:
+    get:
+      summary: Download Plugin
+      description: Downloads a specific version of a plugin.
+      operationId: downloadPlugin
+      tags:
+        - Plugin Download
+      parameters:
+        - name: pluginId
+          in: query
+          schema:
+            type: string
+        - name: version
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Plugin file download
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+  /api/marketplace/plugin/{productCode}/license:
+    get:
+      summary: Check Plugin License
+      description: Checks the license status for a plugin.
+      operationId: checkPluginLicense
+      tags:
+        - Licenses
+      parameters:
+        - name: productCode
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with license info
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Marketplace token for authenticated operations
+security: []
+tags:
+  - name: Plugins
+    description: Plugin listing and search
+  - name: Plugin Upload
+    description: Plugin upload operations
+  - name: Plugin Download
+    description: Plugin download operations
+  - name: Licenses
+    description: License checking operations

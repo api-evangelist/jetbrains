@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "jetbrains": "https://www.jetbrains.com/ns/",
+    "id": "@id",
+    "type": "@type",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "email": "schema:email",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "Organization": "schema:Organization",
+    "Person": "schema:Person",
+    "Project": {
+      "@id": "jetbrains:Project",
+      "@context": {
+        "key": "jetbrains:projectKey",
+        "archived": "jetbrains:archived"
+      }
+    },
+    "Issue": {
+      "@id": "jetbrains:Issue",
+      "@context": {
+        "idReadable": "jetbrains:readableId",
+        "summary": "schema:headline",
+        "reporter": "schema:author",
+        "resolved": "jetbrains:resolvedDate",
+        "commentsCount": "schema:commentCount"
+      }
+    },
+    "Build": {
+      "@id": "jetbrains:Build",
+      "@context": {
+        "buildNumber": "jetbrains:buildNumber",
+        "status": "jetbrains:buildStatus",
+        "state": "jetbrains:buildState",
+        "branchName": "jetbrains:branchName",
+        "buildTypeId": "jetbrains:buildTypeId",
+        "startDate": "schema:startDate",
+        "finishDate": "schema:endDate",
+        "agent": "jetbrains:buildAgent"
+      }
+    },
+    "BuildAgent": {
+      "@id": "jetbrains:BuildAgent",
+      "@context": {
+        "connected": "jetbrains:connected",
+        "enabled": "jetbrains:enabled",
+        "authorized": "jetbrains:authorized",
+        "ip": "jetbrains:ipAddress",
+        "pool": "jetbrains:agentPool"
+      }
+    },
+    "Plugin": {
+      "@id": "jetbrains:Plugin",
+      "@context": {
+        "xmlId": "jetbrains:pluginXmlId",
+        "vendor": "schema:provider",
+        "downloads": "jetbrains:downloadCount",
+        "rating": "schema:aggregateRating",
+        "version": "schema:softwareVersion",
+        "compatibleProducts": "jetbrains:compatibleProducts"
+      }
+    },
+    "User": {
+      "@id": "jetbrains:User",
+      "@context": {
+        "login": "jetbrains:login",
+        "fullName": "schema:name",
+        "avatarUrl": "schema:image",
+        "banned": "jetbrains:banned",
+        "groups": "schema:memberOf"
+      }
+    },
+    "Space": {
+      "@id": "jetbrains:Space",
+      "@context": {
+        "channel": "jetbrains:chatChannel",
+        "codeReview": "jetbrains:codeReview",
+        "automation": "jetbrains:automationJob"
+      }
+    }
+  }
+}

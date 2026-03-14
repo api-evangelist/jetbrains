@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jetbrains-build.json",
+  "title": "JetBrains TeamCity Build",
+  "description": "A build resource in JetBrains TeamCity CI/CD server.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique numeric identifier of the build."
+    },
+    "number": {
+      "type": "string",
+      "description": "Build number string."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["SUCCESS", "FAILURE", "ERROR", "UNKNOWN"],
+      "description": "Status of the build."
+    },
+    "state": {
+      "type": "string",
+      "enum": ["queued", "running", "finished"],
+      "description": "Current state of the build."
+    },
+    "branchName": {
+      "type": "string",
+      "description": "Branch name the build ran on."
+    },
+    "buildTypeId": {
+      "type": "string",
+      "description": "Identifier of the build configuration."
+    },
+    "startDate": {
+      "type": "string",
+      "description": "Timestamp when the build started."
+    },
+    "finishDate": {
+      "type": "string",
+      "description": "Timestamp when the build finished."
+    },
+    "queuedDate": {
+      "type": "string",
+      "description": "Timestamp when the build was queued."
+    },
+    "triggered": {
+      "type": "object",
+      "description": "Information about what triggered the build.",
+      "properties": {
+        "type": { "type": "string" },
+        "date": { "type": "string" }
+      }
+    },
+    "agent": {
+      "type": "object",
+      "description": "Build agent that ran the build.",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" }
+      }
+    },
+    "testOccurrences": {
+      "type": "object",
+      "description": "Summary of test results.",
+      "properties": {
+        "count": { "type": "integer" },
+        "passed": { "type": "integer" },
+        "failed": { "type": "integer" }
+      }
+    }
+  },
+  "required": ["id", "status", "state"]
+}

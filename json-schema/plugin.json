@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jetbrains-plugin.json",
+  "title": "JetBrains Marketplace Plugin",
+  "description": "A plugin resource in the JetBrains Marketplace.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique numeric identifier of the plugin."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the plugin."
+    },
+    "xmlId": {
+      "type": "string",
+      "description": "XML/plugin ID used for installation."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the plugin."
+    },
+    "vendor": {
+      "type": "object",
+      "description": "Plugin vendor information.",
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      }
+    },
+    "downloads": {
+      "type": "integer",
+      "description": "Total download count."
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average user rating."
+    },
+    "version": {
+      "type": "string",
+      "description": "Latest version string."
+    },
+    "compatibleProducts": {
+      "type": "array",
+      "description": "List of compatible JetBrains products.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "productCode": { "type": "string" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Plugin tags/categories.",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["id", "name"]
+}

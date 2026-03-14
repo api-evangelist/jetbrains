@@ -1,0 +1,339 @@
+openapi: 3.0.3
+info:
+  title: JetBrains TeamCity REST API
+  description: >-
+    The TeamCity REST API provides programmatic access to TeamCity CI/CD server
+    functionality. It allows management of projects, build configurations, builds,
+    agents, VCS roots, users, and more. The API uses locators for flexible
+    filtering and supports both JSON and XML formats. The full API specification
+    is available via the /app/rest/swagger.json endpoint on any TeamCity instance.
+  version: 2024.12.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+  - url: https://{server}/app/rest
+    description: TeamCity Server
+    variables:
+      server:
+        default: teamcity.example.com
+        description: Your TeamCity server hostname
+paths:
+  /server:
+    get:
+      summary: Get Server Info
+      description: Returns TeamCity server information and API navigation links.
+      operationId: getServerInfo
+      tags:
+        - Server
+      responses:
+        '200':
+          description: Successful response with server info
+  /projects:
+    get:
+      summary: List Projects
+      description: Returns the complete list of all TeamCity projects.
+      operationId: listProjects
+      tags:
+        - Projects
+      parameters:
+        - name: locator
+          in: query
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with project list
+    post:
+      summary: Create Project
+      description: Creates a new project.
+      operationId: createProject
+      tags:
+        - Projects
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Project created successfully
+  /projects/{projectLocator}:
+    get:
+      summary: Get Project
+      description: Returns details of a specific project.
+      operationId: getProject
+      tags:
+        - Projects
+      parameters:
+        - name: projectLocator
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with project details
+  /buildTypes:
+    get:
+      summary: List Build Configurations
+      description: Returns a list of build configurations (build types).
+      operationId: listBuildTypes
+      tags:
+        - Build Configurations
+      parameters:
+        - name: locator
+          in: query
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with build configuration list
+  /builds:
+    get:
+      summary: List Builds
+      description: Returns a list of builds matching the specified locator.
+      operationId: listBuilds
+      tags:
+        - Builds
+      parameters:
+        - name: locator
+          in: query
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with build list
+  /builds/{buildLocator}:
+    get:
+      summary: Get Build
+      description: Returns details of a specific build.
+      operationId: getBuild
+      tags:
+        - Builds
+      parameters:
+        - name: buildLocator
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with build details
+  /buildQueue:
+    get:
+      summary: List Build Queue
+      description: Returns builds currently in the build queue.
+      operationId: listBuildQueue
+      tags:
+        - Build Queue
+      parameters:
+        - name: locator
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with build queue
+    post:
+      summary: Trigger Build
+      description: Adds a build to the queue (triggers a build).
+      operationId: triggerBuild
+      tags:
+        - Build Queue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Build triggered successfully
+  /agents:
+    get:
+      summary: List Agents
+      description: Returns a list of build agents.
+      operationId: listAgents
+      tags:
+        - Agents
+      parameters:
+        - name: locator
+          in: query
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with agent list
+  /agents/{agentLocator}:
+    get:
+      summary: Get Agent
+      description: Returns details of a specific build agent.
+      operationId: getAgent
+      tags:
+        - Agents
+      parameters:
+        - name: agentLocator
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with agent details
+  /agents/{agentLocator}/enabledInfo:
+    put:
+      summary: Enable/Disable Agent
+      description: Enables or disables a build agent.
+      operationId: setAgentEnabled
+      tags:
+        - Agents
+      parameters:
+        - name: agentLocator
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Agent status updated
+  /vcs-roots:
+    get:
+      summary: List VCS Roots
+      description: Returns a list of VCS roots.
+      operationId: listVcsRoots
+      tags:
+        - VCS Roots
+      responses:
+        '200':
+          description: Successful response with VCS root list
+  /users:
+    get:
+      summary: List Users
+      description: Returns a list of TeamCity users.
+      operationId: listUsers
+      tags:
+        - Users
+      responses:
+        '200':
+          description: Successful response with user list
+  /changes:
+    get:
+      summary: List Changes
+      description: Returns a list of VCS changes.
+      operationId: listChanges
+      tags:
+        - Changes
+      parameters:
+        - name: locator
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with change list
+  /testOccurrences:
+    get:
+      summary: List Test Occurrences
+      description: Returns a list of test results.
+      operationId: listTestOccurrences
+      tags:
+        - Tests
+      parameters:
+        - name: locator
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with test results
+  /agentPools:
+    get:
+      summary: List Agent Pools
+      description: Returns a list of agent pools.
+      operationId: listAgentPools
+      tags:
+        - Agent Pools
+      responses:
+        '200':
+          description: Successful response with agent pool list
+  /swagger.json:
+    get:
+      summary: Get Swagger Spec
+      description: Returns the full Swagger/OpenAPI specification for the TeamCity REST API.
+      operationId: getSwaggerSpec
+      tags:
+        - Server
+      responses:
+        '200':
+          description: Swagger JSON specification
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Access token authentication
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Username and password authentication
+security:
+  - bearerAuth: []
+  - basicAuth: []
+tags:
+  - name: Server
+    description: Server information and metadata
+  - name: Projects
+    description: Project management
+  - name: Build Configurations
+    description: Build type/configuration management
+  - name: Builds
+    description: Build execution and results
+  - name: Build Queue
+    description: Build queue management
+  - name: Agents
+    description: Build agent management
+  - name: Agent Pools
+    description: Agent pool management
+  - name: VCS Roots
+    description: Version control system root management
+  - name: Users
+    description: User management
+  - name: Changes
+    description: VCS change tracking
+  - name: Tests
+    description: Test result tracking

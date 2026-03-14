@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jetbrains-build-agent.json",
+  "title": "JetBrains TeamCity Build Agent",
+  "description": "A build agent resource in JetBrains TeamCity.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique numeric identifier of the agent."
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the build agent."
+    },
+    "typeId": {
+      "type": "integer",
+      "description": "Agent type identifier."
+    },
+    "connected": {
+      "type": "boolean",
+      "description": "Whether the agent is currently connected."
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Whether the agent is enabled for builds."
+    },
+    "authorized": {
+      "type": "boolean",
+      "description": "Whether the agent is authorized."
+    },
+    "ip": {
+      "type": "string",
+      "description": "IP address of the agent."
+    },
+    "pool": {
+      "type": "object",
+      "description": "Agent pool the agent belongs to.",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" }
+      }
+    },
+    "osType": {
+      "type": "string",
+      "description": "Operating system type of the agent."
+    }
+  },
+  "required": ["id", "name"]
+}

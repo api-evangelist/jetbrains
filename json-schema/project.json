@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jetbrains-project.json",
+  "title": "JetBrains Project",
+  "description": "A project resource common across JetBrains products including Space, TeamCity, and YouTrack.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the project."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the project."
+    },
+    "key": {
+      "type": "string",
+      "description": "Short key or abbreviation for the project."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the project."
+    },
+    "archived": {
+      "type": "boolean",
+      "description": "Whether the project is archived."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the project was created."
+    }
+  },
+  "required": ["id", "name"]
+}

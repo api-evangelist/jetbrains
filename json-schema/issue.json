@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "jetbrains-issue.json",
+  "title": "JetBrains YouTrack Issue",
+  "description": "An issue resource in JetBrains YouTrack issue tracker.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique entity identifier."
+    },
+    "idReadable": {
+      "type": "string",
+      "description": "Human-readable issue ID (e.g., PROJECT-123)."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short summary or title of the issue."
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the issue."
+    },
+    "created": {
+      "type": "integer",
+      "description": "Timestamp when the issue was created (Unix ms)."
+    },
+    "updated": {
+      "type": "integer",
+      "description": "Timestamp when the issue was last updated (Unix ms)."
+    },
+    "resolved": {
+      "type": ["integer", "null"],
+      "description": "Timestamp when the issue was resolved (Unix ms), or null."
+    },
+    "reporter": {
+      "type": "object",
+      "description": "User who reported the issue.",
+      "properties": {
+        "id": { "type": "string" },
+        "login": { "type": "string" },
+        "fullName": { "type": "string" }
+      }
+    },
+    "project": {
+      "type": "object",
+      "description": "Project the issue belongs to.",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "shortName": { "type": "string" }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags applied to the issue.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+    "commentsCount": {
+      "type": "integer",
+      "description": "Number of comments on the issue."
+    }
+  },
+  "required": ["id", "summary"]
+}

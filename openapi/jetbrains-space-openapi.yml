@@ -1,0 +1,198 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Space HTTP API
+  description: >-
+    The JetBrains Space HTTP API provides programmatic access to Space
+    functionality including projects, teams, chats, documents, code reviews,
+    packages, automation jobs, and more. The API uses JSON format and supports
+    OAuth 2.0 authentication. An HTTP API playground is available within Space
+    for interactive exploration.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/space/
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+  - url: https://{organization}.jetbrains.space/api/http
+    description: JetBrains Space Cloud
+    variables:
+      organization:
+        default: myorg
+        description: Your Space organization name
+paths:
+  /http-api-model:
+    get:
+      summary: Get HTTP API Model
+      description: Returns the HTTP API model describing all available APIs.
+      operationId: getHttpApiModel
+      tags:
+        - API Model
+      responses:
+        '200':
+          description: Successful response with API model
+  /projects:
+    get:
+      summary: List Projects
+      description: Returns a list of all projects in the Space organization.
+      operationId: listProjects
+      tags:
+        - Projects
+      parameters:
+        - name: $skip
+          in: query
+          schema:
+            type: integer
+        - name: $top
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response with project list
+  /projects/{projectId}:
+    get:
+      summary: Get Project
+      description: Returns details of a specific project.
+      operationId: getProject
+      tags:
+        - Projects
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with project details
+  /team-directory/profiles:
+    get:
+      summary: List Team Members
+      description: Returns a list of team member profiles.
+      operationId: listTeamMembers
+      tags:
+        - Team Directory
+      responses:
+        '200':
+          description: Successful response with member list
+  /team-directory/teams:
+    get:
+      summary: List Teams
+      description: Returns a list of teams in the organization.
+      operationId: listTeams
+      tags:
+        - Team Directory
+      responses:
+        '200':
+          description: Successful response with team list
+  /chats/channels:
+    get:
+      summary: List Channels
+      description: Returns a list of chat channels.
+      operationId: listChannels
+      tags:
+        - Chats
+      responses:
+        '200':
+          description: Successful response with channel list
+  /chats/messages:
+    post:
+      summary: Send Message
+      description: Sends a message to a chat channel.
+      operationId: sendMessage
+      tags:
+        - Chats
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Message sent successfully
+  /projects/{projectId}/code-reviews:
+    get:
+      summary: List Code Reviews
+      description: Returns a list of code reviews for a project.
+      operationId: listCodeReviews
+      tags:
+        - Code Reviews
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with code review list
+  /projects/{projectId}/packages/repositories:
+    get:
+      summary: List Package Repositories
+      description: Returns package repositories for a project.
+      operationId: listPackageRepositories
+      tags:
+        - Packages
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with repository list
+  /projects/{projectId}/automation/jobs:
+    get:
+      summary: List Automation Jobs
+      description: Returns automation jobs for a project.
+      operationId: listAutomationJobs
+      tags:
+        - Automation
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with automation job list
+  /applications:
+    get:
+      summary: List Applications
+      description: Returns a list of registered applications.
+      operationId: listApplications
+      tags:
+        - Applications
+      responses:
+        '200':
+          description: Successful response with application list
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 Bearer Token or permanent token
+security:
+  - bearerAuth: []
+tags:
+  - name: API Model
+    description: HTTP API model and metadata
+  - name: Projects
+    description: Project management operations
+  - name: Team Directory
+    description: Team and member management
+  - name: Chats
+    description: Chat and messaging operations
+  - name: Code Reviews
+    description: Code review operations
+  - name: Packages
+    description: Package repository operations
+  - name: Automation
+    description: Automation and CI/CD operations
+  - name: Applications
+    description: Application management

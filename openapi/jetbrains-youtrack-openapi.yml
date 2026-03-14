@@ -1,0 +1,312 @@
+openapi: 3.0.3
+info:
+  title: JetBrains YouTrack REST API
+  description: >-
+    The YouTrack REST API lets you perform programmatic actions in the issue
+    tracker, including creating, modifying, and querying issues, managing
+    projects, agile boards, work items, and more. The API uses JSON format
+    and supports both permanent token and OAuth 2.0 authentication. A Postman
+    collection is available for interactive exploration.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+  - url: https://{instance}.youtrack.cloud/api
+    description: YouTrack Cloud
+    variables:
+      instance:
+        default: myinstance
+        description: Your YouTrack instance name
+paths:
+  /issues:
+    get:
+      summary: List Issues
+      description: Returns a list of issues matching the query.
+      operationId: listIssues
+      tags:
+        - Issues
+      parameters:
+        - name: query
+          in: query
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+        - name: $skip
+          in: query
+          schema:
+            type: integer
+        - name: $top
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response with issue list
+    post:
+      summary: Create Issue
+      description: Creates a new issue.
+      operationId: createIssue
+      tags:
+        - Issues
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Issue created successfully
+  /issues/{issueId}:
+    get:
+      summary: Get Issue
+      description: Returns details of a specific issue.
+      operationId: getIssue
+      tags:
+        - Issues
+      parameters:
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with issue details
+    post:
+      summary: Update Issue
+      description: Updates an existing issue.
+      operationId: updateIssue
+      tags:
+        - Issues
+      parameters:
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Issue updated successfully
+    delete:
+      summary: Delete Issue
+      description: Deletes an issue.
+      operationId: deleteIssue
+      tags:
+        - Issues
+      parameters:
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Issue deleted successfully
+  /issues/{issueId}/comments:
+    get:
+      summary: List Issue Comments
+      description: Returns comments for an issue.
+      operationId: listIssueComments
+      tags:
+        - Issues
+      parameters:
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with comment list
+    post:
+      summary: Add Issue Comment
+      description: Adds a comment to an issue.
+      operationId: addIssueComment
+      tags:
+        - Issues
+      parameters:
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Comment added successfully
+  /issues/{issueId}/timeTracking/workItems:
+    get:
+      summary: List Work Items
+      description: Returns work items for an issue.
+      operationId: listWorkItems
+      tags:
+        - Work Items
+      parameters:
+        - name: issueId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with work item list
+  /admin/projects:
+    get:
+      summary: List Projects
+      description: Returns a list of projects.
+      operationId: listProjects
+      tags:
+        - Projects
+      parameters:
+        - name: fields
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with project list
+  /admin/projects/{projectId}:
+    get:
+      summary: Get Project
+      description: Returns details of a specific project.
+      operationId: getProject
+      tags:
+        - Projects
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with project details
+  /agiles:
+    get:
+      summary: List Agile Boards
+      description: Returns a list of agile boards.
+      operationId: listAgileBoards
+      tags:
+        - Agile Boards
+      responses:
+        '200':
+          description: Successful response with agile board list
+  /agiles/{agileId}:
+    get:
+      summary: Get Agile Board
+      description: Returns details of a specific agile board.
+      operationId: getAgileBoard
+      tags:
+        - Agile Boards
+      parameters:
+        - name: agileId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with agile board details
+  /users:
+    get:
+      summary: List Users
+      description: Returns a list of users.
+      operationId: listUsers
+      tags:
+        - Users
+      responses:
+        '200':
+          description: Successful response with user list
+  /users/me:
+    get:
+      summary: Get Current User
+      description: Returns the currently authenticated user.
+      operationId: getCurrentUser
+      tags:
+        - Users
+      responses:
+        '200':
+          description: Successful response with current user details
+  /activities:
+    get:
+      summary: List Activities
+      description: Returns a list of activity items.
+      operationId: listActivities
+      tags:
+        - Activities
+      parameters:
+        - name: categories
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with activity list
+  /issueTags:
+    get:
+      summary: List Issue Tags
+      description: Returns a list of issue tags.
+      operationId: listIssueTags
+      tags:
+        - Tags
+      responses:
+        '200':
+          description: Successful response with tag list
+  /savedQueries:
+    get:
+      summary: List Saved Queries
+      description: Returns a list of saved search queries.
+      operationId: listSavedQueries
+      tags:
+        - Saved Queries
+      responses:
+        '200':
+          description: Successful response with saved query list
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Permanent token or OAuth 2.0 Bearer Token
+security:
+  - bearerAuth: []
+tags:
+  - name: Issues
+    description: Issue management operations
+  - name: Projects
+    description: Project management operations
+  - name: Agile Boards
+    description: Agile board management
+  - name: Users
+    description: User management
+  - name: Work Items
+    description: Time tracking and work item management
+  - name: Activities
+    description: Activity feed operations
+  - name: Tags
+    description: Issue tag management
+  - name: Saved Queries
+    description: Saved search query management

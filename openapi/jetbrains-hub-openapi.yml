@@ -1,0 +1,146 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Hub REST API
+  description: >-
+    The JetBrains Hub REST API provides programmatic access to Hub, the
+    centralized authentication and authorization service for JetBrains tools.
+    It allows management of users, groups, projects, roles, permissions, and
+    OAuth 2.0 services. Hub serves as the identity provider for YouTrack,
+    TeamCity, and other connected JetBrains services.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+  - url: https://{instance}.youtrack.cloud/hub/api/rest
+    description: Hub API (via YouTrack Cloud)
+    variables:
+      instance:
+        default: myinstance
+        description: Your instance name
+paths:
+  /users:
+    get:
+      summary: List Users
+      description: Returns a list of Hub users.
+      operationId: listUsers
+      tags:
+        - Users
+      parameters:
+        - name: fields
+          in: query
+          schema:
+            type: string
+        - name: $skip
+          in: query
+          schema:
+            type: integer
+        - name: $top
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response with user list
+  /users/{userId}:
+    get:
+      summary: Get User
+      description: Returns details of a specific user.
+      operationId: getUser
+      tags:
+        - Users
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with user details
+  /usergroups:
+    get:
+      summary: List User Groups
+      description: Returns a list of user groups.
+      operationId: listUserGroups
+      tags:
+        - Groups
+      responses:
+        '200':
+          description: Successful response with group list
+  /projects:
+    get:
+      summary: List Projects
+      description: Returns a list of Hub projects.
+      operationId: listProjects
+      tags:
+        - Projects
+      responses:
+        '200':
+          description: Successful response with project list
+  /roles:
+    get:
+      summary: List Roles
+      description: Returns a list of defined roles.
+      operationId: listRoles
+      tags:
+        - Roles
+      responses:
+        '200':
+          description: Successful response with role list
+  /permissions:
+    get:
+      summary: List Permissions
+      description: Returns a list of permissions.
+      operationId: listPermissions
+      tags:
+        - Permissions
+      responses:
+        '200':
+          description: Successful response with permission list
+  /services:
+    get:
+      summary: List Services
+      description: Returns a list of connected services.
+      operationId: listServices
+      tags:
+        - Services
+      responses:
+        '200':
+          description: Successful response with service list
+  /oauth2clients:
+    get:
+      summary: List OAuth2 Clients
+      description: Returns a list of registered OAuth2 clients.
+      operationId: listOAuth2Clients
+      tags:
+        - OAuth2
+      responses:
+        '200':
+          description: Successful response with OAuth2 client list
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Permanent token or OAuth 2.0 Bearer Token
+security:
+  - bearerAuth: []
+tags:
+  - name: Users
+    description: User management
+  - name: Groups
+    description: User group management
+  - name: Projects
+    description: Project management
+  - name: Roles
+    description: Role management
+  - name: Permissions
+    description: Permission management
+  - name: Services
+    description: Connected service management
+  - name: OAuth2
+    description: OAuth2 client management
