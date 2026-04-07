@@ -24,7 +24,7 @@ servers:
 paths:
   /issues:
     get:
-      summary: List Issues
+      summary: JetBrains List Issues
       description: Returns a list of issues matching the query.
       operationId: listIssues
       tags:
@@ -50,7 +50,7 @@ paths:
         '200':
           description: Successful response with issue list
     post:
-      summary: Create Issue
+      summary: JetBrains Create Issue
       description: Creates a new issue.
       operationId: createIssue
       tags:
@@ -66,7 +66,7 @@ paths:
           description: Issue created successfully
   /issues/{issueId}:
     get:
-      summary: Get Issue
+      summary: JetBrains Get Issue
       description: Returns details of a specific issue.
       operationId: getIssue
       tags:
@@ -85,7 +85,7 @@ paths:
         '200':
           description: Successful response with issue details
     post:
-      summary: Update Issue
+      summary: JetBrains Update Issue
       description: Updates an existing issue.
       operationId: updateIssue
       tags:
@@ -106,7 +106,7 @@ paths:
         '200':
           description: Issue updated successfully
     delete:
-      summary: Delete Issue
+      summary: JetBrains Delete Issue
       description: Deletes an issue.
       operationId: deleteIssue
       tags:
@@ -122,7 +122,7 @@ paths:
           description: Issue deleted successfully
   /issues/{issueId}/comments:
     get:
-      summary: List Issue Comments
+      summary: JetBrains List Issue Comments
       description: Returns comments for an issue.
       operationId: listIssueComments
       tags:
@@ -137,7 +137,7 @@ paths:
         '200':
           description: Successful response with comment list
     post:
-      summary: Add Issue Comment
+      summary: JetBrains Add Issue Comment
       description: Adds a comment to an issue.
       operationId: addIssueComment
       tags:
@@ -159,7 +159,7 @@ paths:
           description: Comment added successfully
   /issues/{issueId}/timeTracking/workItems:
     get:
-      summary: List Work Items
+      summary: JetBrains List Work Items
       description: Returns work items for an issue.
       operationId: listWorkItems
       tags:
@@ -175,7 +175,7 @@ paths:
           description: Successful response with work item list
   /admin/projects:
     get:
-      summary: List Projects
+      summary: JetBrains List Projects
       description: Returns a list of projects.
       operationId: listProjects
       tags:
@@ -190,7 +190,7 @@ paths:
           description: Successful response with project list
   /admin/projects/{projectId}:
     get:
-      summary: Get Project
+      summary: JetBrains Get Project
       description: Returns details of a specific project.
       operationId: getProject
       tags:
@@ -206,7 +206,7 @@ paths:
           description: Successful response with project details
   /agiles:
     get:
-      summary: List Agile Boards
+      summary: JetBrains List Agile Boards
       description: Returns a list of agile boards.
       operationId: listAgileBoards
       tags:
@@ -216,7 +216,7 @@ paths:
           description: Successful response with agile board list
   /agiles/{agileId}:
     get:
-      summary: Get Agile Board
+      summary: JetBrains Get Agile Board
       description: Returns details of a specific agile board.
       operationId: getAgileBoard
       tags:
@@ -232,7 +232,7 @@ paths:
           description: Successful response with agile board details
   /users:
     get:
-      summary: List Users
+      summary: JetBrains List Users
       description: Returns a list of users.
       operationId: listUsers
       tags:
@@ -242,7 +242,7 @@ paths:
           description: Successful response with user list
   /users/me:
     get:
-      summary: Get Current User
+      summary: JetBrains Get Current User
       description: Returns the currently authenticated user.
       operationId: getCurrentUser
       tags:
@@ -252,7 +252,7 @@ paths:
           description: Successful response with current user details
   /activities:
     get:
-      summary: List Activities
+      summary: JetBrains List Activities
       description: Returns a list of activity items.
       operationId: listActivities
       tags:
@@ -267,7 +267,7 @@ paths:
           description: Successful response with activity list
   /issueTags:
     get:
-      summary: List Issue Tags
+      summary: JetBrains List Issue Tags
       description: Returns a list of issue tags.
       operationId: listIssueTags
       tags:
@@ -277,7 +277,7 @@ paths:
           description: Successful response with tag list
   /savedQueries:
     get:
-      summary: List Saved Queries
+      summary: JetBrains List Saved Queries
       description: Returns a list of saved search queries.
       operationId: listSavedQueries
       tags:

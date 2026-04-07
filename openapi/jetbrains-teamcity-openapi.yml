@@ -24,7 +24,7 @@ servers:
 paths:
   /server:
     get:
-      summary: Get Server Info
+      summary: JetBrains Get Server Info
       description: Returns TeamCity server information and API navigation links.
       operationId: getServerInfo
       tags:
@@ -34,7 +34,7 @@ paths:
           description: Successful response with server info
   /projects:
     get:
-      summary: List Projects
+      summary: JetBrains List Projects
       description: Returns the complete list of all TeamCity projects.
       operationId: listProjects
       tags:
@@ -52,7 +52,7 @@ paths:
         '200':
           description: Successful response with project list
     post:
-      summary: Create Project
+      summary: JetBrains Create Project
       description: Creates a new project.
       operationId: createProject
       tags:
@@ -68,7 +68,7 @@ paths:
           description: Project created successfully
   /projects/{projectLocator}:
     get:
-      summary: Get Project
+      summary: JetBrains Get Project
       description: Returns details of a specific project.
       operationId: getProject
       tags:
@@ -88,7 +88,7 @@ paths:
           description: Successful response with project details
   /buildTypes:
     get:
-      summary: List Build Configurations
+      summary: JetBrains List Build Configurations
       description: Returns a list of build configurations (build types).
       operationId: listBuildTypes
       tags:
@@ -107,7 +107,7 @@ paths:
           description: Successful response with build configuration list
   /builds:
     get:
-      summary: List Builds
+      summary: JetBrains List Builds
       description: Returns a list of builds matching the specified locator.
       operationId: listBuilds
       tags:
@@ -126,7 +126,7 @@ paths:
           description: Successful response with build list
   /builds/{buildLocator}:
     get:
-      summary: Get Build
+      summary: JetBrains Get Build
       description: Returns details of a specific build.
       operationId: getBuild
       tags:
@@ -146,7 +146,7 @@ paths:
           description: Successful response with build details
   /buildQueue:
     get:
-      summary: List Build Queue
+      summary: JetBrains List Build Queue
       description: Returns builds currently in the build queue.
       operationId: listBuildQueue
       tags:
@@ -160,7 +160,7 @@ paths:
         '200':
           description: Successful response with build queue
     post:
-      summary: Trigger Build
+      summary: JetBrains Trigger Build
       description: Adds a build to the queue (triggers a build).
       operationId: triggerBuild
       tags:
@@ -176,7 +176,7 @@ paths:
           description: Build triggered successfully
   /agents:
     get:
-      summary: List Agents
+      summary: JetBrains List Agents
       description: Returns a list of build agents.
       operationId: listAgents
       tags:
@@ -195,7 +195,7 @@ paths:
           description: Successful response with agent list
   /agents/{agentLocator}:
     get:
-      summary: Get Agent
+      summary: JetBrains Get Agent
       description: Returns details of a specific build agent.
       operationId: getAgent
       tags:
@@ -211,7 +211,7 @@ paths:
           description: Successful response with agent details
   /agents/{agentLocator}/enabledInfo:
     put:
-      summary: Enable/Disable Agent
+      summary: JetBrains Enable/Disable Agent
       description: Enables or disables a build agent.
       operationId: setAgentEnabled
       tags:
@@ -233,7 +233,7 @@ paths:
           description: Agent status updated
   /vcs-roots:
     get:
-      summary: List VCS Roots
+      summary: JetBrains List VCS Roots
       description: Returns a list of VCS roots.
       operationId: listVcsRoots
       tags:
@@ -243,7 +243,7 @@ paths:
           description: Successful response with VCS root list
   /users:
     get:
-      summary: List Users
+      summary: JetBrains List Users
       description: Returns a list of TeamCity users.
       operationId: listUsers
       tags:
@@ -253,7 +253,7 @@ paths:
           description: Successful response with user list
   /changes:
     get:
-      summary: List Changes
+      summary: JetBrains List Changes
       description: Returns a list of VCS changes.
       operationId: listChanges
       tags:
@@ -268,7 +268,7 @@ paths:
           description: Successful response with change list
   /testOccurrences:
     get:
-      summary: List Test Occurrences
+      summary: JetBrains List Test Occurrences
       description: Returns a list of test results.
       operationId: listTestOccurrences
       tags:
@@ -283,7 +283,7 @@ paths:
           description: Successful response with test results
   /agentPools:
     get:
-      summary: List Agent Pools
+      summary: JetBrains List Agent Pools
       description: Returns a list of agent pools.
       operationId: listAgentPools
       tags:
@@ -293,7 +293,7 @@ paths:
           description: Successful response with agent pool list
   /swagger.json:
     get:
-      summary: Get Swagger Spec
+      summary: JetBrains Get Swagger Spec
       description: Returns the full Swagger/OpenAPI specification for the TeamCity REST API.
       operationId: getSwaggerSpec
       tags:

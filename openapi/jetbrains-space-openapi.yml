@@ -24,7 +24,7 @@ servers:
 paths:
   /http-api-model:
     get:
-      summary: Get HTTP API Model
+      summary: JetBrains Get HTTP API Model
       description: Returns the HTTP API model describing all available APIs.
       operationId: getHttpApiModel
       tags:
@@ -34,7 +34,7 @@ paths:
           description: Successful response with API model
   /projects:
     get:
-      summary: List Projects
+      summary: JetBrains List Projects
       description: Returns a list of all projects in the Space organization.
       operationId: listProjects
       tags:
@@ -53,7 +53,7 @@ paths:
           description: Successful response with project list
   /projects/{projectId}:
     get:
-      summary: Get Project
+      summary: JetBrains Get Project
       description: Returns details of a specific project.
       operationId: getProject
       tags:
@@ -69,7 +69,7 @@ paths:
           description: Successful response with project details
   /team-directory/profiles:
     get:
-      summary: List Team Members
+      summary: JetBrains List Team Members
       description: Returns a list of team member profiles.
       operationId: listTeamMembers
       tags:
@@ -79,7 +79,7 @@ paths:
           description: Successful response with member list
   /team-directory/teams:
     get:
-      summary: List Teams
+      summary: JetBrains List Teams
       description: Returns a list of teams in the organization.
       operationId: listTeams
       tags:
@@ -89,7 +89,7 @@ paths:
           description: Successful response with team list
   /chats/channels:
     get:
-      summary: List Channels
+      summary: JetBrains List Channels
       description: Returns a list of chat channels.
       operationId: listChannels
       tags:
@@ -99,7 +99,7 @@ paths:
           description: Successful response with channel list
   /chats/messages:
     post:
-      summary: Send Message
+      summary: JetBrains Send Message
       description: Sends a message to a chat channel.
       operationId: sendMessage
       tags:
@@ -115,7 +115,7 @@ paths:
           description: Message sent successfully
   /projects/{projectId}/code-reviews:
     get:
-      summary: List Code Reviews
+      summary: JetBrains List Code Reviews
       description: Returns a list of code reviews for a project.
       operationId: listCodeReviews
       tags:
@@ -131,7 +131,7 @@ paths:
           description: Successful response with code review list
   /projects/{projectId}/packages/repositories:
     get:
-      summary: List Package Repositories
+      summary: JetBrains List Package Repositories
       description: Returns package repositories for a project.
       operationId: listPackageRepositories
       tags:
@@ -147,7 +147,7 @@ paths:
           description: Successful response with repository list
   /projects/{projectId}/automation/jobs:
     get:
-      summary: List Automation Jobs
+      summary: JetBrains List Automation Jobs
       description: Returns automation jobs for a project.
       operationId: listAutomationJobs
       tags:
@@ -163,7 +163,7 @@ paths:
           description: Successful response with automation job list
   /applications:
     get:
-      summary: List Applications
+      summary: JetBrains List Applications
       description: Returns a list of registered applications.
       operationId: listApplications
       tags:

@@ -20,7 +20,7 @@ servers:
 paths:
   /plugins/list/:
     get:
-      summary: List Plugins
+      summary: JetBrains List Plugins
       description: >-
         Returns a list of all plugins compatible with a provided IDE build.
       operationId: listPlugins
@@ -37,7 +37,7 @@ paths:
           description: Successful response with plugin list
   /api/plugins/{pluginId}:
     get:
-      summary: Get Plugin Details
+      summary: JetBrains Get Plugin Details
       description: Returns details of a specific plugin.
       operationId: getPlugin
       tags:
@@ -53,7 +53,7 @@ paths:
           description: Successful response with plugin details
   /api/searchPlugins:
     get:
-      summary: Search Plugins
+      summary: JetBrains Search Plugins
       description: Searches for plugins by keyword and filters.
       operationId: searchPlugins
       tags:
@@ -80,7 +80,7 @@ paths:
           description: Successful response with search results
   /api/updates/upload:
     post:
-      summary: Upload Plugin
+      summary: JetBrains Upload Plugin
       description: >-
         Uploads a new plugin or plugin update to the marketplace.
       operationId: uploadPlugin
@@ -110,7 +110,7 @@ paths:
         - bearerAuth: []
   /plugin/download:
     get:
-      summary: Download Plugin
+      summary: JetBrains Download Plugin
       description: Downloads a specific version of a plugin.
       operationId: downloadPlugin
       tags:
@@ -134,7 +134,7 @@ paths:
                 format: binary
   /api/marketplace/plugin/{productCode}/license:
     get:
-      summary: Check Plugin License
+      summary: JetBrains Check Plugin License
       description: Checks the license status for a plugin.
       operationId: checkPluginLicense
       tags:

@@ -24,7 +24,7 @@ servers:
 paths:
   /users:
     get:
-      summary: List Users
+      summary: JetBrains List Users
       description: Returns a list of Hub users.
       operationId: listUsers
       tags:
@@ -47,7 +47,7 @@ paths:
           description: Successful response with user list
   /users/{userId}:
     get:
-      summary: Get User
+      summary: JetBrains Get User
       description: Returns details of a specific user.
       operationId: getUser
       tags:
@@ -63,7 +63,7 @@ paths:
           description: Successful response with user details
   /usergroups:
     get:
-      summary: List User Groups
+      summary: JetBrains List User Groups
       description: Returns a list of user groups.
       operationId: listUserGroups
       tags:
@@ -73,7 +73,7 @@ paths:
           description: Successful response with group list
   /projects:
     get:
-      summary: List Projects
+      summary: JetBrains List Projects
       description: Returns a list of Hub projects.
       operationId: listProjects
       tags:
@@ -83,7 +83,7 @@ paths:
           description: Successful response with project list
   /roles:
     get:
-      summary: List Roles
+      summary: JetBrains List Roles
       description: Returns a list of defined roles.
       operationId: listRoles
       tags:
@@ -93,7 +93,7 @@ paths:
           description: Successful response with role list
   /permissions:
     get:
-      summary: List Permissions
+      summary: JetBrains List Permissions
       description: Returns a list of permissions.
       operationId: listPermissions
       tags:
@@ -103,7 +103,7 @@ paths:
           description: Successful response with permission list
   /services:
     get:
-      summary: List Services
+      summary: JetBrains List Services
       description: Returns a list of connected services.
       operationId: listServices
       tags:
@@ -113,7 +113,7 @@ paths:
           description: Successful response with service list
   /oauth2clients:
     get:
-      summary: List OAuth2 Clients
+      summary: JetBrains List OAuth2 Clients
       description: Returns a list of registered OAuth2 clients.
       operationId: listOAuth2Clients
       tags:
