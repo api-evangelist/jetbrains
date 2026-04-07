@@ -29,8 +29,8 @@ apis:
   - aid: jetbrains:teamcity-api
     name: JetBrains TeamCity REST API
     tags:
-      - CI/CD
       - Build Automation
+      - CI/CD
       - Developer Tools
     humanURL: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
     properties:
@@ -56,9 +56,9 @@ apis:
   - aid: jetbrains:youtrack-api
     name: JetBrains YouTrack REST API
     tags:
+      - Developer Tools
       - Issue Tracking
       - Project Management
-      - Developer Tools
     humanURL: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
     properties:
       - url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
@@ -104,9 +104,9 @@ apis:
   - aid: jetbrains:marketplace-api
     name: JetBrains Marketplace API
     tags:
+      - Developer Tools
       - Marketplace
       - Plugins
-      - Developer Tools
     humanURL: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
     properties:
       - url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
@@ -126,9 +126,9 @@ apis:
       plugin ecosystem.
 name: JetBrains
 tags:
+  - CI/CD
   - Developer Tools
   - IDE
-  - CI/CD
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party

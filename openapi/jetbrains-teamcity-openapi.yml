@@ -315,25 +315,25 @@ security:
   - bearerAuth: []
   - basicAuth: []
 tags:
-  - name: Server
-    description: Server information and metadata
-  - name: Projects
-    description: Project management
-  - name: Build Configurations
-    description: Build type/configuration management
-  - name: Builds
-    description: Build execution and results
-  - name: Build Queue
-    description: Build queue management
-  - name: Agents
-    description: Build agent management
   - name: Agent Pools
     description: Agent pool management
-  - name: VCS Roots
-    description: Version control system root management
-  - name: Users
-    description: User management
+  - name: Agents
+    description: Build agent management
+  - name: Build Configurations
+    description: Build type/configuration management
+  - name: Build Queue
+    description: Build queue management
+  - name: Builds
+    description: Build execution and results
   - name: Changes
     description: VCS change tracking
+  - name: Projects
+    description: Project management
+  - name: Server
+    description: Server information and metadata
   - name: Tests
     description: Test result tracking
+  - name: Users
+    description: User management
+  - name: VCS Roots
+    description: Version control system root management

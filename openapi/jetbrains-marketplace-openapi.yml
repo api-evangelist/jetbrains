@@ -160,11 +160,11 @@ components:
       description: Marketplace token for authenticated operations
 security: []
 tags:
-  - name: Plugins
-    description: Plugin listing and search
-  - name: Plugin Upload
-    description: Plugin upload operations
-  - name: Plugin Download
-    description: Plugin download operations
   - name: Licenses
     description: License checking operations
+  - name: Plugin Download
+    description: Plugin download operations
+  - name: Plugin Upload
+    description: Plugin upload operations
+  - name: Plugins
+    description: Plugin listing and search

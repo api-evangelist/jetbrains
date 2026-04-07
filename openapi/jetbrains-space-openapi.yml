@@ -182,17 +182,17 @@ security:
 tags:
   - name: API Model
     description: HTTP API model and metadata
-  - name: Projects
-    description: Project management operations
-  - name: Team Directory
-    description: Team and member management
+  - name: Applications
+    description: Application management
+  - name: Automation
+    description: Automation and CI/CD operations
   - name: Chats
     description: Chat and messaging operations
   - name: Code Reviews
     description: Code review operations
   - name: Packages
     description: Package repository operations
-  - name: Automation
-    description: Automation and CI/CD operations
-  - name: Applications
-    description: Application management
+  - name: Projects
+    description: Project management operations
+  - name: Team Directory
+    description: Team and member management

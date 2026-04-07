@@ -270,8 +270,7 @@ paths:
       summary: JetBrains List Issue Tags
       description: Returns a list of issue tags.
       operationId: listIssueTags
-      tags:
-        - Tags
+      tags: []
       responses:
         '200':
           description: Successful response with tag list
@@ -294,19 +293,17 @@ components:
 security:
   - bearerAuth: []
 tags:
+  - name: Activities
+    description: Activity feed operations
+  - name: Agile Boards
+    description: Agile board management
   - name: Issues
     description: Issue management operations
   - name: Projects
     description: Project management operations
-  - name: Agile Boards
-    description: Agile board management
+  - name: Saved Queries
+    description: Saved search query management
   - name: Users
     description: User management
   - name: Work Items
     description: Time tracking and work item management
-  - name: Activities
-    description: Activity feed operations
-  - name: Tags
-    description: Issue tag management
-  - name: Saved Queries
-    description: Saved search query management

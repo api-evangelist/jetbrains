@@ -106,8 +106,7 @@ paths:
       summary: JetBrains List Services
       description: Returns a list of connected services.
       operationId: listServices
-      tags:
-        - Services
+      tags: []
       responses:
         '200':
           description: Successful response with service list
@@ -130,17 +129,15 @@ components:
 security:
   - bearerAuth: []
 tags:
-  - name: Users
-    description: User management
   - name: Groups
     description: User group management
+  - name: OAuth2
+    description: OAuth2 client management
+  - name: Permissions
+    description: Permission management
   - name: Projects
     description: Project management
   - name: Roles
     description: Role management
-  - name: Permissions
-    description: Permission management
-  - name: Services
-    description: Connected service management
-  - name: OAuth2
-    description: OAuth2 client management
+  - name: Users
+    description: User management
