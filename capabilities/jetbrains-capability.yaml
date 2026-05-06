@@ -1,0 +1,323 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains Hub REST API
+  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization
+    service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services.
+    Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+  tags:
+  - Jetbrains
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: jetbrains
+    baseUri: https://myinstance.youtrack.cloud/hub/api/rest
+    description: JetBrains Hub REST API HTTP API.
+    authentication:
+      type: bearer
+      token: '{{JETBRAINS_TOKEN}}'
+    resources:
+    - name: users
+      path: /users
+      operations:
+      - name: listusers
+        method: GET
+        description: JetBrains List Users
+        inputParameters:
+        - name: fields
+          in: query
+          type: string
+        - name: $skip
+          in: query
+          type: integer
+        - name: $top
+          in: query
+          type: integer
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users-userid
+      path: /users/{userId}
+      operations:
+      - name: getuser
+        method: GET
+        description: JetBrains Get User
+        inputParameters:
+        - name: userId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: usergroups
+      path: /usergroups
+      operations:
+      - name: listusergroups
+        method: GET
+        description: JetBrains List User Groups
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: projects
+      path: /projects
+      operations:
+      - name: listprojects
+        method: GET
+        description: JetBrains List Projects
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: roles
+      path: /roles
+      operations:
+      - name: listroles
+        method: GET
+        description: JetBrains List Roles
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: permissions
+      path: /permissions
+      operations:
+      - name: listpermissions
+        method: GET
+        description: JetBrains List Permissions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: services
+      path: /services
+      operations:
+      - name: listservices
+        method: GET
+        description: JetBrains List Services
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: oauth2clients
+      path: /oauth2clients
+      operations:
+      - name: listoauth2clients
+        method: GET
+        description: JetBrains List OAuth2 Clients
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: jetbrains-rest
+    description: REST adapter for JetBrains Hub REST API.
+    resources:
+    - path: /users
+      name: listusers
+      operations:
+      - method: GET
+        name: listusers
+        description: JetBrains List Users
+        call: jetbrains.listusers
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /users/{userId}
+      name: getuser
+      operations:
+      - method: GET
+        name: getuser
+        description: JetBrains Get User
+        call: jetbrains.getuser
+        with:
+          userId: rest.userId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /usergroups
+      name: listusergroups
+      operations:
+      - method: GET
+        name: listusergroups
+        description: JetBrains List User Groups
+        call: jetbrains.listusergroups
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /projects
+      name: listprojects
+      operations:
+      - method: GET
+        name: listprojects
+        description: JetBrains List Projects
+        call: jetbrains.listprojects
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /roles
+      name: listroles
+      operations:
+      - method: GET
+        name: listroles
+        description: JetBrains List Roles
+        call: jetbrains.listroles
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /permissions
+      name: listpermissions
+      operations:
+      - method: GET
+        name: listpermissions
+        description: JetBrains List Permissions
+        call: jetbrains.listpermissions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /services
+      name: listservices
+      operations:
+      - method: GET
+        name: listservices
+        description: JetBrains List Services
+        call: jetbrains.listservices
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /oauth2clients
+      name: listoauth2clients
+      operations:
+      - method: GET
+        name: listoauth2clients
+        description: JetBrains List OAuth2 Clients
+        call: jetbrains.listoauth2clients
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: jetbrains-mcp
+    transport: http
+    description: MCP adapter for JetBrains Hub REST API for AI agent use.
+    tools:
+    - name: listusers
+      description: JetBrains List Users
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.listusers
+      with:
+        fields: tools.fields
+        $skip: tools.$skip
+        $top: tools.$top
+      inputParameters:
+      - name: fields
+        type: string
+        description: fields
+      - name: $skip
+        type: integer
+        description: $skip
+      - name: $top
+        type: integer
+        description: $top
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getuser
+      description: JetBrains Get User
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.getuser
+      with:
+        userId: tools.userId
+      inputParameters:
+      - name: userId
+        type: string
+        description: userId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listusergroups
+      description: JetBrains List User Groups
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.listusergroups
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listprojects
+      description: JetBrains List Projects
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.listprojects
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listroles
+      description: JetBrains List Roles
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.listroles
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listpermissions
+      description: JetBrains List Permissions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.listpermissions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listservices
+      description: JetBrains List Services
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.listservices
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: listoauth2clients
+      description: JetBrains List OAuth2 Clients
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: jetbrains.listoauth2clients
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_TOKEN: JETBRAINS_TOKEN
