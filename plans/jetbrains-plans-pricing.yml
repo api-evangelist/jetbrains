@@ -4,148 +4,282 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: JetBrains
 providerId: jetbrains
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: true
 tags:
-  - CI/CD
   - Developer Tools
   - IDE
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+  - DevOps
+  - Issue Tracking
+  - Collaboration
+description: JetBrains products are licensed as per-user subscriptions, with separate pricing for individuals
+  and organizations. Annual subscriptions automatically reduce in price after the first and second years
+  of continuous use ("loyalty discount"). Most JetBrains REST APIs (TeamCity, YouTrack, Space, IntelliJ
+  Platform, Hub) ship with the underlying product and do not have a separate API fee — billing is per
+  user/seat or per build agent. JetBrains AI is a separate paid add-on with its own monthly tiers.
+sources:
+  - https://www.jetbrains.com/store/
+  - https://www.jetbrains.com/teamcity/buy/
+  - https://www.jetbrains.com/youtrack/buy/
+  - https://www.jetbrains.com/space/buy/
+  - https://www.jetbrains.com/ai-ides/buy/
 plans:
-  - id: jetbrains-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the JetBrains API surface. Intended for evaluation, prototyping,
-      and low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
+  - id: jetbrains-intellij-idea-ultimate
+    name: IntelliJ IDEA Ultimate (Individual / Organization)
+    type: subscription
+    description: Per-user IDE subscription. Individual pricing is non-commercial; Organization pricing
+      includes commercial use rights, mass-deployment, and centralized license management.
     entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
+      - label: Individual — annual
+        name: idea_ultimate_individual_annual
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '169.00'
+        userMultiplied: true
+      - label: Organization — annual (year 1)
+        name: idea_ultimate_org_annual_y1
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '599.00'
+        userMultiplied: true
+      - label: Organization — annual (year 3+, loyalty)
+        name: idea_ultimate_org_annual_y3
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '359.00'
+        userMultiplied: true
+    elements:
+      - name: IntelliJ IDEA Ultimate
+      - name: All language frameworks (Spring, Jakarta EE, etc.)
+      - name: Database tools
+      - name: Profiler
+  - id: jetbrains-all-products-pack
+    name: All Products Pack
+    type: subscription
+    description: Bundle of all JetBrains IDEs and select tools (IntelliJ IDEA Ultimate, PyCharm Professional,
+      WebStorm, GoLand, RubyMine, PhpStorm, CLion, RustRover, DataGrip, Rider, AppCode, Aqua, etc.)
+      under one per-user subscription.
+    entries:
+      - label: Individual — annual
+        name: all_products_individual_annual
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '289.00'
+        userMultiplied: true
+      - label: Organization — annual (year 1)
+        name: all_products_org_annual_y1
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '779.00'
+        userMultiplied: true
+      - label: Organization — annual (year 3+, loyalty)
+        name: all_products_org_annual_y3
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '467.00'
+        userMultiplied: true
+    elements:
+      - name: All JetBrains IDEs
+      - name: DataGrip
+      - name: Profiler / dotTrace / dotCover
+      - name: ReSharper bundle
+  - id: jetbrains-teamcity-cloud
+    name: TeamCity Cloud (Pipelines / Hosted CI)
+    type: subscription
+    description: Hosted TeamCity CI/CD as a tiered subscription priced by committer count and build-runner
+      hours. TeamCity REST API is included with the platform.
+    entries:
+      - label: Cloud subscription
+        name: teamcity_cloud_subscription
+        type: subscription
+        metric: month
+        limit: -1
         timeFrame: month
         geo: global
-        domains: []
+        unit: 1
+        price: see vendor pricing calculator
+        userMultiplied: false
+    elements:
+      - name: TeamCity REST API
+      - name: Cloud-hosted runners
+      - name: Build agents
+  - id: jetbrains-teamcity-on-premise
+    name: TeamCity On-Premise (Enterprise / Professional)
+    type: subscription
+    description: Self-hosted TeamCity. Professional edition is free for up to 100 build configurations
+      and 3 build agents; Enterprise scales by build agents.
+    entries:
+      - label: Professional (self-hosted)
+        name: teamcity_pro_selfhosted
+        type: subscription
+        metric: server
+        limit: 1
+        timeFrame: year
+        geo: global
         unit: 1
         price: '0.00'
         userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
+      - label: Enterprise — additional build agent (annual)
+        name: teamcity_enterprise_agent
+        type: subscription
+        metric: build_agent
+        limit: 1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '299.00'
+        userMultiplied: true
+    elements:
+      - name: TeamCity REST API
+      - name: Self-hosted CI server
+      - name: Unlimited users (Enterprise)
+  - id: jetbrains-youtrack
+    name: YouTrack
+    type: subscription
+    description: Issue tracking and agile project management. Cloud is per-user/month; Server is per-user
+      annual; Lite tier free for up to 10 users.
+    entries:
+      - label: Cloud — per user / month
+        name: youtrack_cloud_user_month
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '5.50'
+        userMultiplied: true
+      - label: Server (self-hosted) — annual, 25 users
+        name: youtrack_server_25
+        type: subscription
+        metric: bundle
+        limit: 25
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: '1500.00'
+        userMultiplied: false
+      - label: Lite (up to 10 users)
+        name: youtrack_lite
+        type: subscription
+        metric: month
         limit: 10
-        timeFrame: minute
+        timeFrame: month
         geo: global
-        domains: []
         unit: 1
         price: '0.00'
         userMultiplied: false
     elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: JetBrains Space HTTP API
-      - name: JetBrains TeamCity REST API
-      - name: JetBrains YouTrack REST API
-      - name: JetBrains Hub REST API
-      - name: JetBrains Marketplace API
-  - id: jetbrains-pro
-    name: Professional
-    type: paid
-    description: Production tier for JetBrains. Provides higher quotas, priority support, and access to
-      the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
+      - name: YouTrack REST API
+      - name: Agile boards
+      - name: Reports / dashboards
+  - id: jetbrains-space
+    name: Space
+    type: subscription
+    description: All-in-one team collaboration with code, issue, CI/CD, packages, and chat. Free tier
+      available; paid tiers per-user/month.
     entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
+      - label: Free
+        name: space_free
+        type: subscription
+        metric: seat
+        limit: -1
         timeFrame: month
         geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
         unit: 1
         price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
+        userMultiplied: true
+      - label: Team — per user/month
+        name: space_team
+        type: subscription
+        metric: seat
+        limit: 1
         timeFrame: month
         geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: JetBrains Space HTTP API
-      - name: JetBrains TeamCity REST API
-      - name: JetBrains YouTrack REST API
-      - name: JetBrains Hub REST API
-      - name: JetBrains Marketplace API
-  - id: jetbrains-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for JetBrains. Includes dedicated capacity, contractual SLAs,
-      security review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
+        unit: 1
+        price: '8.00'
+        userMultiplied: true
+      - label: Organization — per user/month
+        name: space_org
+        type: subscription
+        metric: seat
+        limit: 1
         timeFrame: month
-        geo: configurable
-        domains: []
+        geo: global
         unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
+        price: '20.00'
+        userMultiplied: true
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: JetBrains Space HTTP API
-      - name: JetBrains TeamCity REST API
-      - name: JetBrains YouTrack REST API
-      - name: JetBrains Hub REST API
-      - name: JetBrains Marketplace API
+      - name: Space HTTP API
+      - name: Code hosting + reviews
+      - name: Issue tracker
+      - name: Packages registry
+      - name: Automation / CI
+  - id: jetbrains-ai
+    name: JetBrains AI
+    type: subscription
+    description: AI assistant add-on for JetBrains IDEs. Free tier with limited credits; Pro and Ultimate
+      tiers expand AI credit allotment for chat, code completion, and agentic actions.
+    entries:
+      - label: AI Free
+        name: ai_free
+        type: subscription
+        metric: month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: true
+      - label: AI Pro — per user/month
+        name: ai_pro
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '10.00'
+        userMultiplied: true
+      - label: AI Ultimate — per user/month
+        name: ai_ultimate
+        type: subscription
+        metric: seat
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '20.00'
+        userMultiplied: true
+    elements:
+      - name: AI chat in IDE
+      - name: Inline code completion
+      - name: Multi-file edits and agentic actions
+      - name: Frontier model selection (Anthropic, OpenAI, Google, JetBrains)
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+  - FN: API Evangelist
+    email: info@apievangelist.com
