@@ -1,0 +1,13 @@
+{
+  "repo": "jetbrains",
+  "feeds": [
+    {
+      "source": "https://blog.jetbrains.com/",
+      "feed_url": "https://blog.jetbrains.com/feed/",
+      "title": "The JetBrains Blog",
+      "saved": 12
+    }
+  ],
+  "fetched": "2026-05-09T20:17:51Z",
+  "post_count": 12
+}
