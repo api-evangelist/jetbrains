@@ -1,0 +1,102 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains YouTrack REST API — Users
+  description: 'JetBrains YouTrack REST API — Users. 2 operations. Lead operation: JetBrains List Users. Self-contained Naftiko
+    capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Users
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: youtrack-users
+    baseUri: https://{instance}.youtrack.cloud/api
+    description: JetBrains YouTrack REST API — Users business capability. Self-contained, no shared references.
+    resources:
+    - name: users
+      path: /users
+      operations:
+      - name: listusers
+        method: GET
+        description: JetBrains List Users
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: users-me
+      path: /users/me
+      operations:
+      - name: getcurrentuser
+        method: GET
+        description: JetBrains Get Current User
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: youtrack-users-rest
+    port: 8080
+    description: REST adapter for JetBrains YouTrack REST API — Users. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/users
+      name: users
+      description: REST surface for users.
+      operations:
+      - method: GET
+        name: listusers
+        description: JetBrains List Users
+        call: youtrack-users.listusers
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/users/me
+      name: users-me
+      description: REST surface for users-me.
+      operations:
+      - method: GET
+        name: getcurrentuser
+        description: JetBrains Get Current User
+        call: youtrack-users.getcurrentuser
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: youtrack-users-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains YouTrack REST API — Users. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-list-users
+      description: JetBrains List Users
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: youtrack-users.listusers
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: jetbrains-get-current-user
+      description: JetBrains Get Current User
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: youtrack-users.getcurrentuser
+      outputParameters:
+      - type: object
+        mapping: $.

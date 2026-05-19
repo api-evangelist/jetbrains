@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains Hub REST API — Projects
+  description: 'JetBrains Hub REST API — Projects. 1 operations. Lead operation: JetBrains List Projects. Self-contained Naftiko
+    capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Projects
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: hub-projects
+    baseUri: https://{instance}.youtrack.cloud/hub/api/rest
+    description: JetBrains Hub REST API — Projects business capability. Self-contained, no shared references.
+    resources:
+    - name: projects
+      path: /projects
+      operations:
+      - name: listprojects
+        method: GET
+        description: JetBrains List Projects
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: hub-projects-rest
+    port: 8080
+    description: REST adapter for JetBrains Hub REST API — Projects. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/projects
+      name: projects
+      description: REST surface for projects.
+      operations:
+      - method: GET
+        name: listprojects
+        description: JetBrains List Projects
+        call: hub-projects.listprojects
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: hub-projects-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains Hub REST API — Projects. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-list-projects
+      description: JetBrains List Projects
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: hub-projects.listprojects
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains Hub REST API — OAuth2
+  description: 'JetBrains Hub REST API — OAuth2. 1 operations. Lead operation: JetBrains List OAuth2 Clients. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - OAuth2
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: hub-oauth2
+    baseUri: https://{instance}.youtrack.cloud/hub/api/rest
+    description: JetBrains Hub REST API — OAuth2 business capability. Self-contained, no shared references.
+    resources:
+    - name: oauth2clients
+      path: /oauth2clients
+      operations:
+      - name: listoauth2clients
+        method: GET
+        description: JetBrains List OAuth2 Clients
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: hub-oauth2-rest
+    port: 8080
+    description: REST adapter for JetBrains Hub REST API — OAuth2. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/oauth2clients
+      name: oauth2clients
+      description: REST surface for oauth2clients.
+      operations:
+      - method: GET
+        name: listoauth2clients
+        description: JetBrains List OAuth2 Clients
+        call: hub-oauth2.listoauth2clients
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: hub-oauth2-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains Hub REST API — OAuth2. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: jetbrains-list-oauth2-clients
+      description: JetBrains List OAuth2 Clients
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: hub-oauth2.listoauth2clients
+      outputParameters:
+      - type: object
+        mapping: $.

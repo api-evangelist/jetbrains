@@ -1,0 +1,78 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains TeamCity REST API — Changes
+  description: 'JetBrains TeamCity REST API — Changes. 1 operations. Lead operation: JetBrains List Changes. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Changes
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: teamcity-changes
+    baseUri: https://{server}/app/rest
+    description: JetBrains TeamCity REST API — Changes business capability. Self-contained, no shared references.
+    resources:
+    - name: changes
+      path: /changes
+      operations:
+      - name: listchanges
+        method: GET
+        description: JetBrains List Changes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: locator
+          in: query
+          type: string
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: teamcity-changes-rest
+    port: 8080
+    description: REST adapter for JetBrains TeamCity REST API — Changes. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/changes
+      name: changes
+      description: REST surface for changes.
+      operations:
+      - method: GET
+        name: listchanges
+        description: JetBrains List Changes
+        call: teamcity-changes.listchanges
+        with:
+          locator: rest.locator
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: teamcity-changes-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains TeamCity REST API — Changes. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-list-changes
+      description: JetBrains List Changes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: teamcity-changes.listchanges
+      with:
+        locator: tools.locator
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,129 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains TeamCity REST API — Builds
+  description: 'JetBrains TeamCity REST API — Builds. 2 operations. Lead operation: JetBrains List Builds. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Builds
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: teamcity-builds
+    baseUri: https://{server}/app/rest
+    description: JetBrains TeamCity REST API — Builds business capability. Self-contained, no shared references.
+    resources:
+    - name: builds
+      path: /builds
+      operations:
+      - name: listbuilds
+        method: GET
+        description: JetBrains List Builds
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: locator
+          in: query
+          type: string
+        - name: fields
+          in: query
+          type: string
+    - name: builds-buildLocator
+      path: /builds/{buildLocator}
+      operations:
+      - name: getbuild
+        method: GET
+        description: JetBrains Get Build
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: buildLocator
+          in: path
+          type: string
+          required: true
+        - name: fields
+          in: query
+          type: string
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: teamcity-builds-rest
+    port: 8080
+    description: REST adapter for JetBrains TeamCity REST API — Builds. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/builds
+      name: builds
+      description: REST surface for builds.
+      operations:
+      - method: GET
+        name: listbuilds
+        description: JetBrains List Builds
+        call: teamcity-builds.listbuilds
+        with:
+          locator: rest.locator
+          fields: rest.fields
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/builds/{buildlocator}
+      name: builds-buildlocator
+      description: REST surface for builds-buildLocator.
+      operations:
+      - method: GET
+        name: getbuild
+        description: JetBrains Get Build
+        call: teamcity-builds.getbuild
+        with:
+          buildLocator: rest.buildLocator
+          fields: rest.fields
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: teamcity-builds-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains TeamCity REST API — Builds. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-list-builds
+      description: JetBrains List Builds
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: teamcity-builds.listbuilds
+      with:
+        locator: tools.locator
+        fields: tools.fields
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: jetbrains-get-build
+      description: JetBrains Get Build
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: teamcity-builds.getbuild
+      with:
+        buildLocator: tools.buildLocator
+        fields: tools.fields
+      outputParameters:
+      - type: object
+        mapping: $.

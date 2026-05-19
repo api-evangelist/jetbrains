@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains TeamCity REST API — VCS Roots
+  description: 'JetBrains TeamCity REST API — VCS Roots. 1 operations. Lead operation: JetBrains List VCS Roots. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - VCS Roots
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: teamcity-vcs-roots
+    baseUri: https://{server}/app/rest
+    description: JetBrains TeamCity REST API — VCS Roots business capability. Self-contained, no shared references.
+    resources:
+    - name: vcs-roots
+      path: /vcs-roots
+      operations:
+      - name: listvcsroots
+        method: GET
+        description: JetBrains List VCS Roots
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: teamcity-vcs-roots-rest
+    port: 8080
+    description: REST adapter for JetBrains TeamCity REST API — VCS Roots. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/vcs-roots
+      name: vcs-roots
+      description: REST surface for vcs-roots.
+      operations:
+      - method: GET
+        name: listvcsroots
+        description: JetBrains List VCS Roots
+        call: teamcity-vcs-roots.listvcsroots
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: teamcity-vcs-roots-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains TeamCity REST API — VCS Roots. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-list-vcs-roots
+      description: JetBrains List VCS Roots
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: teamcity-vcs-roots.listvcsroots
+      outputParameters:
+      - type: object
+        mapping: $.

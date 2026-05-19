@@ -1,0 +1,175 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains Marketplace API — Plugins
+  description: 'JetBrains Marketplace API — Plugins. 3 operations. Lead operation: JetBrains Get Plugin Details. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Plugins
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: marketplace-plugins
+    baseUri: https://plugins.jetbrains.com
+    description: JetBrains Marketplace API — Plugins business capability. Self-contained, no shared references.
+    resources:
+    - name: api-plugins-pluginId
+      path: /api/plugins/{pluginId}
+      operations:
+      - name: getplugin
+        method: GET
+        description: JetBrains Get Plugin Details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: pluginId
+          in: path
+          type: integer
+          required: true
+    - name: api-searchPlugins
+      path: /api/searchPlugins
+      operations:
+      - name: searchplugins
+        method: GET
+        description: JetBrains Search Plugins
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: search
+          in: query
+          type: string
+        - name: max
+          in: query
+          type: integer
+        - name: offset
+          in: query
+          type: integer
+        - name: orderBy
+          in: query
+          type: string
+    - name: plugins-list
+      path: /plugins/list/
+      operations:
+      - name: listplugins
+        method: GET
+        description: JetBrains List Plugins
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: build
+          in: query
+          type: string
+          description: IDE build number (e.g., IC-232.8660.185)
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: marketplace-plugins-rest
+    port: 8080
+    description: REST adapter for JetBrains Marketplace API — Plugins. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/plugins/{pluginid}
+      name: api-plugins-pluginid
+      description: REST surface for api-plugins-pluginId.
+      operations:
+      - method: GET
+        name: getplugin
+        description: JetBrains Get Plugin Details
+        call: marketplace-plugins.getplugin
+        with:
+          pluginId: rest.pluginId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/searchplugins
+      name: api-searchplugins
+      description: REST surface for api-searchPlugins.
+      operations:
+      - method: GET
+        name: searchplugins
+        description: JetBrains Search Plugins
+        call: marketplace-plugins.searchplugins
+        with:
+          search: rest.search
+          max: rest.max
+          offset: rest.offset
+          orderBy: rest.orderBy
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/plugins/list
+      name: plugins-list
+      description: REST surface for plugins-list.
+      operations:
+      - method: GET
+        name: listplugins
+        description: JetBrains List Plugins
+        call: marketplace-plugins.listplugins
+        with:
+          build: rest.build
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: marketplace-plugins-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains Marketplace API — Plugins. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-get-plugin-details
+      description: JetBrains Get Plugin Details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: marketplace-plugins.getplugin
+      with:
+        pluginId: tools.pluginId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: jetbrains-search-plugins
+      description: JetBrains Search Plugins
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: marketplace-plugins.searchplugins
+      with:
+        search: tools.search
+        max: tools.max
+        offset: tools.offset
+        orderBy: tools.orderBy
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: jetbrains-list-plugins
+      description: JetBrains List Plugins
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: marketplace-plugins.listplugins
+      with:
+        build: tools.build
+      outputParameters:
+      - type: object
+        mapping: $.

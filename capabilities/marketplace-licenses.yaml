@@ -1,0 +1,84 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains Marketplace API — Licenses
+  description: 'JetBrains Marketplace API — Licenses. 1 operations. Lead operation: JetBrains Check Plugin License. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Licenses
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: marketplace-licenses
+    baseUri: https://plugins.jetbrains.com
+    description: JetBrains Marketplace API — Licenses business capability. Self-contained, no shared references.
+    resources:
+    - name: api-marketplace-plugin-productCode-license
+      path: /api/marketplace/plugin/{productCode}/license
+      operations:
+      - name: checkpluginlicense
+        method: GET
+        description: JetBrains Check Plugin License
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: productCode
+          in: path
+          type: string
+          required: true
+        - name: email
+          in: query
+          type: string
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: marketplace-licenses-rest
+    port: 8080
+    description: REST adapter for JetBrains Marketplace API — Licenses. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/api/marketplace/plugin/{productcode}/license
+      name: api-marketplace-plugin-productcode-license
+      description: REST surface for api-marketplace-plugin-productCode-license.
+      operations:
+      - method: GET
+        name: checkpluginlicense
+        description: JetBrains Check Plugin License
+        call: marketplace-licenses.checkpluginlicense
+        with:
+          productCode: rest.productCode
+          email: rest.email
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: marketplace-licenses-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains Marketplace API — Licenses. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-check-plugin-license
+      description: JetBrains Check Plugin License
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: marketplace-licenses.checkpluginlicense
+      with:
+        productCode: tools.productCode
+        email: tools.email
+      outputParameters:
+      - type: object
+        mapping: $.

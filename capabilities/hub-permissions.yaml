@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains Hub REST API — Permissions
+  description: 'JetBrains Hub REST API — Permissions. 1 operations. Lead operation: JetBrains List Permissions. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Permissions
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: hub-permissions
+    baseUri: https://{instance}.youtrack.cloud/hub/api/rest
+    description: JetBrains Hub REST API — Permissions business capability. Self-contained, no shared references.
+    resources:
+    - name: permissions
+      path: /permissions
+      operations:
+      - name: listpermissions
+        method: GET
+        description: JetBrains List Permissions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: hub-permissions-rest
+    port: 8080
+    description: REST adapter for JetBrains Hub REST API — Permissions. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/permissions
+      name: permissions
+      description: REST surface for permissions.
+      operations:
+      - method: GET
+        name: listpermissions
+        description: JetBrains List Permissions
+        call: hub-permissions.listpermissions
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: hub-permissions-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains Hub REST API — Permissions. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-list-permissions
+      description: JetBrains List Permissions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: hub-permissions.listpermissions
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,79 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: JetBrains Space HTTP API — Automation
+  description: 'JetBrains Space HTTP API — Automation. 1 operations. Lead operation: JetBrains List Automation Jobs. Self-contained
+    Naftiko capability covering one Jetbrains business surface.'
+  tags:
+  - Jetbrains
+  - Automation
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    JETBRAINS_API_KEY: JETBRAINS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: space-automation
+    baseUri: https://{organization}.jetbrains.space/api/http
+    description: JetBrains Space HTTP API — Automation business capability. Self-contained, no shared references.
+    resources:
+    - name: projects-projectId-automation-jobs
+      path: /projects/{projectId}/automation/jobs
+      operations:
+      - name: listautomationjobs
+        method: GET
+        description: JetBrains List Automation Jobs
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.JETBRAINS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: space-automation-rest
+    port: 8080
+    description: REST adapter for JetBrains Space HTTP API — Automation. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/projects/{projectid}/automation/jobs
+      name: projects-projectid-automation-jobs
+      description: REST surface for projects-projectId-automation-jobs.
+      operations:
+      - method: GET
+        name: listautomationjobs
+        description: JetBrains List Automation Jobs
+        call: space-automation.listautomationjobs
+        with:
+          projectId: rest.projectId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: space-automation-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for JetBrains Space HTTP API — Automation. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: jetbrains-list-automation-jobs
+      description: JetBrains List Automation Jobs
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: space-automation.listautomationjobs
+      with:
+        projectId: tools.projectId
+      outputParameters:
+      - type: object
+        mapping: $.
