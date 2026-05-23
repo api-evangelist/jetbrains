@@ -1,0 +1,173 @@
+{
+  "provider": "JetBrains",
+  "providerId": "jetbrains",
+  "kind": "json-structure",
+  "description": "Structural overview of the JetBrains API surface; extracted from openapi/.",
+  "schemaCount": 0,
+  "operationCount": 18,
+  "schemas": [],
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/server",
+      "operationId": "getServerInfo",
+      "summary": "JetBrains Get Server Info",
+      "tags": [
+        "Server"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/projects",
+      "operationId": "listProjects",
+      "summary": "JetBrains List Projects",
+      "tags": [
+        "Projects"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/projects",
+      "operationId": "createProject",
+      "summary": "JetBrains Create Project",
+      "tags": [
+        "Projects"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/projects/{projectLocator}",
+      "operationId": "getProject",
+      "summary": "JetBrains Get Project",
+      "tags": [
+        "Projects"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/buildTypes",
+      "operationId": "listBuildTypes",
+      "summary": "JetBrains List Build Configurations",
+      "tags": [
+        "Build Configurations"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/builds",
+      "operationId": "listBuilds",
+      "summary": "JetBrains List Builds",
+      "tags": [
+        "Builds"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/builds/{buildLocator}",
+      "operationId": "getBuild",
+      "summary": "JetBrains Get Build",
+      "tags": [
+        "Builds"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/buildQueue",
+      "operationId": "listBuildQueue",
+      "summary": "JetBrains List Build Queue",
+      "tags": [
+        "Build Queue"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/buildQueue",
+      "operationId": "triggerBuild",
+      "summary": "JetBrains Trigger Build",
+      "tags": [
+        "Build Queue"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/agents",
+      "operationId": "listAgents",
+      "summary": "JetBrains List Agents",
+      "tags": [
+        "Agents"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/agents/{agentLocator}",
+      "operationId": "getAgent",
+      "summary": "JetBrains Get Agent",
+      "tags": [
+        "Agents"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/agents/{agentLocator}/enabledInfo",
+      "operationId": "setAgentEnabled",
+      "summary": "JetBrains Enable/Disable Agent",
+      "tags": [
+        "Agents"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/vcs-roots",
+      "operationId": "listVcsRoots",
+      "summary": "JetBrains List VCS Roots",
+      "tags": [
+        "VCS Roots"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/users",
+      "operationId": "listUsers",
+      "summary": "JetBrains List Users",
+      "tags": [
+        "Users"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/changes",
+      "operationId": "listChanges",
+      "summary": "JetBrains List Changes",
+      "tags": [
+        "Changes"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/testOccurrences",
+      "operationId": "listTestOccurrences",
+      "summary": "JetBrains List Test Occurrences",
+      "tags": [
+        "Tests"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/agentPools",
+      "operationId": "listAgentPools",
+      "summary": "JetBrains List Agent Pools",
+      "tags": [
+        "Agent Pools"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/swagger.json",
+      "operationId": "getSwaggerSpec",
+      "summary": "JetBrains Get Swagger Spec",
+      "tags": [
+        "Server"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+name: JetBrains Domain Vocabulary
+provider: JetBrains
+providerId: jetbrains
+description: Tag-derived vocabulary for the JetBrains API surface; sourced from openapi/ tags.
+terms:
+- term: Agent Pools
+  description: Agent pool management
+- term: Agents
+  description: Build agent management
+- term: Build Configurations
+  description: Build type/configuration management
+- term: Build Queue
+  description: Build queue management
+- term: Builds
+  description: Build execution and results
+- term: Changes
+  description: VCS change tracking
+- term: Projects
+  description: Project management
+- term: Server
+  description: Server information and metadata
+- term: Tests
+  description: Test result tracking
+- term: Users
+  description: User management
+- term: VCS Roots
+  description: Version control system root management
