@@ -1,0 +1,8 @@
+---
+title: "How We Use AlphaEvolve to Make Complex IDE Algorithms Faster"
+url: "https://blog.jetbrains.com/ai/2026/05/how-we-use-alphaevolve-to-make-complex-ide-algorithms-faster/"
+date: "2026-05-29"
+author: "Denis Shiryaev"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+AlphaEvolve is a Google DeepMind algorithm-discovery system that uses Gemini to generate, test, and refine possible algorithm improvements. Its job is not to answer questions; it searches for faster ways to solve complex algorithmic problems. We tried it on a narrow but important part of IntelliJ-based IDEs: indexing, the background work that makes navigation, search, […]
