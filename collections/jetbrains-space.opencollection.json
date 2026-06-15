@@ -1,0 +1,245 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Space HTTP API",
+    "version": "2024.1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "API Model",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains Get HTTP API Model",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/http-api-model"
+          },
+          "docs": "Returns the HTTP API model describing all available APIs."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/projects",
+            "params": [
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of all projects in the Space organization."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/projects/:projectId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific project."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Team Directory",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Team Members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/team-directory/profiles"
+          },
+          "docs": "Returns a list of team member profiles."
+        },
+        {
+          "info": {
+            "name": "JetBrains List Teams",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/team-directory/teams"
+          },
+          "docs": "Returns a list of teams in the organization."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Chats",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Channels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/chats/channels"
+          },
+          "docs": "Returns a list of chat channels."
+        },
+        {
+          "info": {
+            "name": "JetBrains Send Message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{organization}.jetbrains.space/api/http/chats/messages",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sends a message to a chat channel."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Code Reviews",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Code Reviews",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/projects/:projectId/code-reviews",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns a list of code reviews for a project."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Packages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Package Repositories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/projects/:projectId/packages/repositories",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns package repositories for a project."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Automation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Automation Jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/projects/:projectId/automation/jobs",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns automation jobs for a project."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Applications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Applications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{organization}.jetbrains.space/api/http/applications"
+          },
+          "docs": "Returns a list of registered applications."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

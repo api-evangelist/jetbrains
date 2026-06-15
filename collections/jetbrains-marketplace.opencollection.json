@@ -1,0 +1,193 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Marketplace API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Plugins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Plugins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://plugins.jetbrains.com/plugins/list/",
+            "params": [
+              {
+                "name": "build",
+                "value": "",
+                "type": "query",
+                "description": "IDE build number (e.g., IC-232.8660.185)"
+              }
+            ]
+          },
+          "docs": "Returns a list of all plugins compatible with a provided IDE build."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Plugin Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://plugins.jetbrains.com/api/plugins/:pluginId",
+            "params": [
+              {
+                "name": "pluginId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific plugin."
+        },
+        {
+          "info": {
+            "name": "JetBrains Search Plugins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://plugins.jetbrains.com/api/searchPlugins",
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "orderBy",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Searches for plugins by keyword and filters."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Plugin Upload",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains Upload Plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://plugins.jetbrains.com/api/updates/upload",
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "pluginId",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "channel",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Uploads a new plugin or plugin update to the marketplace."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Plugin Download",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains Download Plugin",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://plugins.jetbrains.com/plugin/download",
+            "params": [
+              {
+                "name": "pluginId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Downloads a specific version of a plugin."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Licenses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains Check Plugin License",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://plugins.jetbrains.com/api/marketplace/plugin/:productCode/license",
+            "params": [
+              {
+                "name": "productCode",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Checks the license status for a plugin."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

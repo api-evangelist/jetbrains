@@ -1,117 +1,142 @@
 # JetBrains (jetbrains)
+
 JetBrains is a software development company that provides integrated development environments, CI/CD tools, issue tracking, and team collaboration platforms for software developers. Their product suite includes IntelliJ IDEA, TeamCity, YouTrack, Space, Hub, and the JetBrains Marketplace, all of which offer APIs for programmatic integration and automation of development workflows.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/jetbrains/refs/heads/main/apis.yml)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/jetbrains/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/jetbrains/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
 
-## Tags:
+## Tags
 
- - Developer Tools, IDE, CI/CD
+- CI/CD
+- Developer Tools
+- IDE
 
 ## Timestamps
 
-- **Created:** 2025-01-01 
-- **Modified:** 2026-04-28 
+- **Created:** 2025-01-01
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### JetBrains Space HTTP API
+
 The JetBrains Space HTTP API provides programmatic access to Space functionality including projects, teams, chats, documents, code reviews, packages, and automation jobs. The API uses JSON format and supports OAuth 2.0 authentication. An HTTP API playground is available within Space for interactive exploration of all available endpoints.
 
-**Human URL:** [https://www.jetbrains.com/help/space/http-api-model.html](https://www.jetbrains.com/help/space/http-api-model.html)
+- **Human URL:** [https://www.jetbrains.com/help/space/http-api-model.html](https://www.jetbrains.com/help/space/http-api-model.html)
 
+#### Tags
 
-#### Tags:
-
- - Collaboration, Developer Tools, Project Management
+- Collaboration
+- Developer Tools
+- Project Management
 
 #### Properties
 
 - [Documentation](https://www.jetbrains.com/help/space/http-api-model.html)
-- [OpenAPI](openapi/jetbrains-space-openapi.yml)
-- [JSONSchema](json-schema/project.json)
-- [JSONSchema](json-schema/user.json)
-- [JSONLD](json-ld/jetbrains-context.jsonld)
+- [OpenAPI](openapi/jetbrains-space-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/jetbrains-space.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/jetbrains-space.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [JSON Schema](json-schema/project.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](json-schema/user.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
 
 ### JetBrains TeamCity REST API
+
 The TeamCity REST API provides programmatic access to TeamCity CI/CD server functionality. It allows management of projects, build configurations, builds, agents, VCS roots, users, and more. The API uses locators for flexible filtering and supports both JSON and XML formats. The full Swagger specification is available via the /app/rest/swagger.json endpoint.
 
-**Human URL:** [https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html)
+- **Human URL:** [https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html)
 
+#### Tags
 
-#### Tags:
-
- - CI/CD, Build Automation, Developer Tools
+- Build Automation
+- CI/CD
+- Developer Tools
 
 #### Properties
 
 - [Documentation](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html)
-- [OpenAPI](openapi/jetbrains-teamcity-openapi.yml)
-- [JSONSchema](json-schema/build.json)
-- [JSONSchema](json-schema/build-agent.json)
-- [JSONSchema](json-schema/project.json)
-- [JSONLD](json-ld/jetbrains-context.jsonld)
+- [OpenAPI](openapi/jetbrains-teamcity-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/jetbrains-teamcity.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/jetbrains-teamcity.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [JSON Schema](json-schema/build.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](json-schema/build-agent.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](json-schema/project.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
 
 ### JetBrains YouTrack REST API
+
 The YouTrack REST API lets you perform programmatic actions in the issue tracker, including creating, modifying, and querying issues, managing projects, agile boards, work items, and more. The API uses JSON format and supports both permanent token and OAuth 2.0 authentication. A Postman collection is available for interactive exploration.
 
-**Human URL:** [https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html](https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html)
+- **Human URL:** [https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html](https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html)
 
+#### Tags
 
-#### Tags:
-
- - Issue Tracking, Project Management, Developer Tools
+- Developer Tools
+- Issue Tracking
+- Project Management
 
 #### Properties
 
 - [Documentation](https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html)
-- [OpenAPI](openapi/jetbrains-youtrack-openapi.yml)
-- [JSONSchema](json-schema/issue.json)
-- [JSONSchema](json-schema/project.json)
-- [JSONSchema](json-schema/user.json)
-- [JSONLD](json-ld/jetbrains-context.jsonld)
+- [OpenAPI](openapi/jetbrains-youtrack-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/jetbrains-youtrack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/jetbrains-youtrack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [JSON Schema](json-schema/issue.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](json-schema/project.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON Schema](json-schema/user.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
 
 ### JetBrains Hub REST API
+
 The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
 
-**Human URL:** [https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html](https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html)
+- **Human URL:** [https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html](https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html)
 
+#### Tags
 
-#### Tags:
-
- - Authentication, Authorization, Identity Management
+- Authentication
+- Authorization
+- Identity Management
 
 #### Properties
 
 - [Documentation](https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html)
-- [OpenAPI](openapi/jetbrains-hub-openapi.yml)
-- [JSONSchema](json-schema/user.json)
-- [JSONLD](json-ld/jetbrains-context.jsonld)
+- [OpenAPI](openapi/jetbrains-hub-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/jetbrains-hub.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/jetbrains-hub.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [JSON Schema](json-schema/user.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
 
 ### JetBrains Marketplace API
+
 The JetBrains Marketplace API provides programmatic access to the plugin marketplace for JetBrains IDEs. It allows listing plugins by IDE compatibility, searching for plugins, uploading new plugins and updates, downloading plugin files, and checking plugin licenses. The API serves both plugin developers and consumers integrating with the JetBrains plugin ecosystem.
 
-**Human URL:** [https://plugins.jetbrains.com/docs/marketplace/api-reference.html](https://plugins.jetbrains.com/docs/marketplace/api-reference.html)
+- **Human URL:** [https://plugins.jetbrains.com/docs/marketplace/api-reference.html](https://plugins.jetbrains.com/docs/marketplace/api-reference.html)
 
+#### Tags
 
-#### Tags:
-
- - Marketplace, Plugins, Developer Tools
+- Developer Tools
+- Marketplace
+- Plugins
 
 #### Properties
 
 - [Documentation](https://plugins.jetbrains.com/docs/marketplace/api-reference.html)
-- [OpenAPI](openapi/jetbrains-marketplace-openapi.yml)
-- [JSONSchema](json-schema/plugin.json)
-- [JSONLD](json-ld/jetbrains-context.jsonld)
+- [OpenAPI](openapi/jetbrains-marketplace-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/jetbrains-marketplace.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/jetbrains-marketplace.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [JSON Schema](json-schema/plugin.json) — [JSON Schema](https://json-schema.org/specification)
+- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
 
 ## Common Properties
 
+- [GitHub Organization](https://github.com/jetbrains)
+- [LinkedIn](https://www.linkedin.com/company/jetbrains)
 - [Documentation](https://www.jetbrains.com/help/)
 - [Blog](https://blog.jetbrains.com/)
 - [Support](https://www.jetbrains.com/support/)
@@ -120,5 +145,4 @@ The JetBrains Marketplace API provides programmatic access to the plugin marketp
 ## Maintainers
 
 **FN:** Kin Lane
-
 **Email:** kin@apievangelist.com

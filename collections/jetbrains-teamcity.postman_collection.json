@@ -1,0 +1,1906 @@
+{
+  "item": [
+    {
+      "id": "07ca7a57-d1b0-4414-b6f5-b1cd4d7aaecb",
+      "name": "Agent Pools",
+      "description": {
+        "content": "Agent pool management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d7ac10ae-e50b-45e8-a8a0-ffe6f96d278f",
+          "name": "JetBrains List Agent Pools",
+          "request": {
+            "name": "JetBrains List Agent Pools",
+            "description": {
+              "content": "Returns a list of agent pools.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "agentPools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ede6eac1-6899-49aa-aaba-44e6f2214991",
+              "name": "Successful response with agent pool list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "agentPools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0d3b5572-78d8-4456-9837-7811fb04d87c",
+      "name": "Agents",
+      "description": {
+        "content": "Build agent management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2385111d-7bf9-418e-8031-0f136be880bf",
+          "name": "JetBrains List Agents",
+          "request": {
+            "name": "JetBrains List Agents",
+            "description": {
+              "content": "Returns a list of build agents.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "agents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "locator",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "968f8e1c-2f29-4411-af37-db02d6621ce8",
+              "name": "Successful response with agent list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "agents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "locator",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ecaad727-8d62-4c47-a255-d8fb543760e5",
+          "name": "JetBrains Get Agent",
+          "request": {
+            "name": "JetBrains Get Agent",
+            "description": {
+              "content": "Returns details of a specific build agent.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "agents",
+                ":agentLocator"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "agentLocator",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c14e0916-6819-4658-b5cf-4451cdf5819b",
+              "name": "Successful response with agent details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "agents",
+                    ":agentLocator"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "agentLocator",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70532c6f-4630-472d-a5d1-967fa5949355",
+          "name": "JetBrains Enable/Disable Agent",
+          "request": {
+            "name": "JetBrains Enable/Disable Agent",
+            "description": {
+              "content": "Enables or disables a build agent.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "agents",
+                ":agentLocator",
+                "enabledInfo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "agentLocator",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "04f7e487-8534-43dd-ab43-4df862f5f3f5",
+              "name": "Agent status updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "agents",
+                    ":agentLocator",
+                    "enabledInfo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "agentLocator",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "7e62d095-f2fd-41ac-b12a-dbbd2a523c80",
+      "name": "Build Configurations",
+      "description": {
+        "content": "Build type/configuration management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0532b2a7-719e-4ef8-bf0f-5a3f019e7868",
+          "name": "JetBrains List Build Configurations",
+          "request": {
+            "name": "JetBrains List Build Configurations",
+            "description": {
+              "content": "Returns a list of build configurations (build types).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "buildTypes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "locator",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1f705e96-140d-4538-9e71-0858298bc197",
+              "name": "Successful response with build configuration list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "buildTypes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "locator",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "db38a1ba-88ec-438c-9502-8bcc0b826b2e",
+      "name": "Build Queue",
+      "description": {
+        "content": "Build queue management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ee4fcd8a-2138-4bb8-b054-f7f8f18386c8",
+          "name": "JetBrains List Build Queue",
+          "request": {
+            "name": "JetBrains List Build Queue",
+            "description": {
+              "content": "Returns builds currently in the build queue.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "buildQueue"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "locator",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6ab9914e-7991-4437-9d68-546fe5abf8f1",
+              "name": "Successful response with build queue",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "buildQueue"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "locator",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6ca29026-21f5-4cf9-9f87-a977a3b7b02a",
+          "name": "JetBrains Trigger Build",
+          "request": {
+            "name": "JetBrains Trigger Build",
+            "description": {
+              "content": "Adds a build to the queue (triggers a build).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "buildQueue"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4fc38c7d-bd7c-446f-be08-d5cb7bea285e",
+              "name": "Build triggered successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "buildQueue"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "325427e7-c5b6-4211-ae7b-b787f9a990f2",
+      "name": "Builds",
+      "description": {
+        "content": "Build execution and results",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "20e5f2fb-985c-4662-a02b-64e6d3bdd94a",
+          "name": "JetBrains List Builds",
+          "request": {
+            "name": "JetBrains List Builds",
+            "description": {
+              "content": "Returns a list of builds matching the specified locator.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "builds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "locator",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5545db36-0a10-4cc0-a4a4-e975d2316293",
+              "name": "Successful response with build list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "builds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "locator",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "884ab6d3-f4c0-4f1d-8ee5-cf6eda81a7bb",
+          "name": "JetBrains Get Build",
+          "request": {
+            "name": "JetBrains Get Build",
+            "description": {
+              "content": "Returns details of a specific build.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "builds",
+                ":buildLocator"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "buildLocator",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ba6c3392-1ba6-4254-a025-671447026bfa",
+              "name": "Successful response with build details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "builds",
+                    ":buildLocator"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "buildLocator",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "a096dc50-cc4d-452a-b2b2-16ba10d0adeb",
+      "name": "Changes",
+      "description": {
+        "content": "VCS change tracking",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8b95c858-4f8e-447f-a05b-a6fc526ec743",
+          "name": "JetBrains List Changes",
+          "request": {
+            "name": "JetBrains List Changes",
+            "description": {
+              "content": "Returns a list of VCS changes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "changes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "locator",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "68628a70-752f-4be7-9ccf-88039a7733e8",
+              "name": "Successful response with change list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "changes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "locator",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "979dbdb7-9ade-4d24-99d1-186146436e21",
+      "name": "Projects",
+      "description": {
+        "content": "Project management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "63d5b42c-0dd1-4778-b7c0-10d12430b055",
+          "name": "JetBrains List Projects",
+          "request": {
+            "name": "JetBrains List Projects",
+            "description": {
+              "content": "Returns the complete list of all TeamCity projects.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "locator",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "15bd79e2-cc08-4c78-b555-414325f71a5e",
+              "name": "Successful response with project list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "locator",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3d786f7f-56ad-4410-a9d9-f900660ceea8",
+          "name": "JetBrains Create Project",
+          "request": {
+            "name": "JetBrains Create Project",
+            "description": {
+              "content": "Creates a new project.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1acb05ca-9d13-48e8-a5b7-dc66cb7cd42b",
+              "name": "Project created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de1769ec-e46c-4b1e-b75e-c1a2c413db51",
+          "name": "JetBrains Get Project",
+          "request": {
+            "name": "JetBrains Get Project",
+            "description": {
+              "content": "Returns details of a specific project.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectLocator"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectLocator",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4a44f20c-94f0-492a-bda8-9c82a6cfc334",
+              "name": "Successful response with project details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectLocator"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectLocator",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "d4202e12-c82d-4fa7-8264-96d9d260fbae",
+      "name": "Server",
+      "description": {
+        "content": "Server information and metadata",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fcdb67bc-1c0c-4107-93f5-87b8d68cc8c6",
+          "name": "JetBrains Get Server Info",
+          "request": {
+            "name": "JetBrains Get Server Info",
+            "description": {
+              "content": "Returns TeamCity server information and API navigation links.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "server"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "41082bcd-7260-47ef-ac93-750203d36806",
+              "name": "Successful response with server info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "server"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d3cc9efd-0b8f-4721-b7aa-9ad911cb7114",
+          "name": "JetBrains Get Swagger Spec",
+          "request": {
+            "name": "JetBrains Get Swagger Spec",
+            "description": {
+              "content": "Returns the full Swagger/OpenAPI specification for the TeamCity REST API.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "swagger.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "68c3fe85-c9e5-4a1a-a2f7-5c9ad3e79aee",
+              "name": "Swagger JSON specification",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "swagger.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e9fd2070-ceeb-427e-8f4d-071eaf9b18ba",
+      "name": "Tests",
+      "description": {
+        "content": "Test result tracking",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bc26ddc0-8c30-460d-95f6-7e07137f2932",
+          "name": "JetBrains List Test Occurrences",
+          "request": {
+            "name": "JetBrains List Test Occurrences",
+            "description": {
+              "content": "Returns a list of test results.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "testOccurrences"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "locator",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "784118cd-0d28-4d7c-9295-1ce6e0a3f6cf",
+              "name": "Successful response with test results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "testOccurrences"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "locator",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "aa7e4dba-fa82-494f-8f8d-903811693686",
+      "name": "Users",
+      "description": {
+        "content": "User management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c646c746-036d-4818-a669-2332477b0b7f",
+          "name": "JetBrains List Users",
+          "request": {
+            "name": "JetBrains List Users",
+            "description": {
+              "content": "Returns a list of TeamCity users.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "26d00268-dc5e-4c77-86c3-a9c8a4bae65a",
+              "name": "Successful response with user list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "01bdf50f-6b98-4c38-8bca-c05d19f62a32",
+      "name": "VCS Roots",
+      "description": {
+        "content": "Version control system root management",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4beb885c-30f7-4923-a950-3c224f90dbbb",
+          "name": "JetBrains List VCS Roots",
+          "request": {
+            "name": "JetBrains List VCS Roots",
+            "description": {
+              "content": "Returns a list of VCS roots.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "vcs-roots"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your TeamCity server hostname",
+                  "type": "any",
+                  "value": "{{server}}",
+                  "key": "server"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "753eca7f-7f06-4c7b-a187-097c6ce7a1c0",
+              "name": "Successful response with VCS root list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "vcs-roots"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your TeamCity server hostname",
+                      "type": "any",
+                      "value": "{{server}}",
+                      "key": "server"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your TeamCity server hostname",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "teamcity.example.com",
+      "key": "server"
+    },
+    {
+      "type": "string",
+      "value": "https://{{server}}/app/rest",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "37e90461-7e69-4bd9-9ce8-a25b6749a8dc",
+    "name": "JetBrains TeamCity REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The TeamCity REST API provides programmatic access to TeamCity CI/CD server functionality. It allows management of projects, build configurations, builds, agents, VCS roots, users, and more. The API uses locators for flexible filtering and supports both JSON and XML formats. The full API specification is available via the /app/rest/swagger.json endpoint on any TeamCity instance.\n\nContact Support:\n Name: JetBrains",
+      "type": "text/plain"
+    }
+  }
+}

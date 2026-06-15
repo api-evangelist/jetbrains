@@ -1,0 +1,376 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains YouTrack REST API",
+    "version": "2024.1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Issues",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Issues",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/issues",
+            "params": [
+              {
+                "name": "query",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$skip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "$top",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of issues matching the query."
+        },
+        {
+          "info": {
+            "name": "JetBrains Create Issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{instance}.youtrack.cloud/api/issues",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new issue."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/issues/:issueId",
+            "params": [
+              {
+                "name": "issueId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific issue."
+        },
+        {
+          "info": {
+            "name": "JetBrains Update Issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{instance}.youtrack.cloud/api/issues/:issueId",
+            "params": [
+              {
+                "name": "issueId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing issue."
+        },
+        {
+          "info": {
+            "name": "JetBrains Delete Issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{instance}.youtrack.cloud/api/issues/:issueId",
+            "params": [
+              {
+                "name": "issueId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes an issue."
+        },
+        {
+          "info": {
+            "name": "JetBrains List Issue Comments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/issues/:issueId/comments",
+            "params": [
+              {
+                "name": "issueId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns comments for an issue."
+        },
+        {
+          "info": {
+            "name": "JetBrains Add Issue Comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{instance}.youtrack.cloud/api/issues/:issueId/comments",
+            "params": [
+              {
+                "name": "issueId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds a comment to an issue."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Work Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Work Items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/issues/:issueId/timeTracking/workItems",
+            "params": [
+              {
+                "name": "issueId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns work items for an issue."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/admin/projects",
+            "params": [
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of projects."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/admin/projects/:projectId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific project."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Agile Boards",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Agile Boards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/agiles"
+          },
+          "docs": "Returns a list of agile boards."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Agile Board",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/agiles/:agileId",
+            "params": [
+              {
+                "name": "agileId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific agile board."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/users"
+          },
+          "docs": "Returns a list of users."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Current User",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/users/me"
+          },
+          "docs": "Returns the currently authenticated user."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Activities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/activities",
+            "params": [
+              {
+                "name": "categories",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of activity items."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Default",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Issue Tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/issueTags"
+          },
+          "docs": "Returns a list of issue tags."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Saved Queries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Saved Queries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/api/savedQueries"
+          },
+          "docs": "Returns a list of saved search queries."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

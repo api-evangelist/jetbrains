@@ -1,0 +1,639 @@
+{
+  "item": [
+    {
+      "id": "bf8d0711-9dbd-47c0-a337-3cef2383e0e9",
+      "name": "Licenses",
+      "description": {
+        "content": "License checking operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "74fd2750-6025-44b4-8a5a-d5da35d97589",
+          "name": "JetBrains Check Plugin License",
+          "request": {
+            "name": "JetBrains Check Plugin License",
+            "description": {
+              "content": "Checks the license status for a plugin.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "marketplace",
+                "plugin",
+                ":productCode",
+                "license"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "productCode",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d5ef2095-1849-4f72-88dc-633d3dedc435",
+              "name": "Successful response with license info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "marketplace",
+                    "plugin",
+                    ":productCode",
+                    "license"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "productCode",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "61052811-baed-431e-a5b5-d1adc3cb6e30",
+      "name": "Plugin Download",
+      "description": {
+        "content": "Plugin download operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6b34fd88-269c-4f9f-b165-074eabb0634c",
+          "name": "JetBrains Download Plugin",
+          "request": {
+            "name": "JetBrains Download Plugin",
+            "description": {
+              "content": "Downloads a specific version of a plugin.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugin",
+                "download"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "pluginId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/octet-stream"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b4fbd602-08c3-429a-9166-b6e693059dae",
+              "name": "Plugin file download",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugin",
+                    "download"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "pluginId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/octet-stream"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/octet-stream"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b1a0b071-78dd-4e78-98a1-67a4ab9fc497",
+      "name": "Plugin Upload",
+      "description": {
+        "content": "Plugin upload operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fd095f96-3825-41f5-b06a-7d6f78f9c218",
+          "name": "JetBrains Upload Plugin",
+          "request": {
+            "name": "JetBrains Upload Plugin",
+            "description": {
+              "content": "Uploads a new plugin or plugin update to the marketplace.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "updates",
+                "upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "pluginId",
+                  "value": "<integer>",
+                  "type": "text",
+                  "description": "Plugin ID (for updates)"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": "Plugin JAR or ZIP file"
+                },
+                {
+                  "key": "channel",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Release channel"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d09b15d4-c352-42c5-bafd-072346f0ed94",
+              "name": "Plugin uploaded successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "updates",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Plugin ID (for updates)",
+                        "type": "text/plain"
+                      },
+                      "key": "pluginId",
+                      "value": "<integer>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Plugin JAR or ZIP file",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Release channel",
+                        "type": "text/plain"
+                      },
+                      "key": "channel",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b6e0c2d8-d10e-4101-8777-45cf8a119731",
+      "name": "Plugins",
+      "description": {
+        "content": "Plugin listing and search",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "18eaca20-efcf-4172-8318-16a22e34346a",
+          "name": "JetBrains List Plugins",
+          "request": {
+            "name": "JetBrains List Plugins",
+            "description": {
+              "content": "Returns a list of all plugins compatible with a provided IDE build.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "plugins",
+                "list",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "build",
+                  "value": "<string>",
+                  "description": "IDE build number (e.g., IC-232.8660.185)"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "168a06de-3024-48bf-91b8-9e97c50f5ccd",
+              "name": "Successful response with plugin list",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "plugins",
+                    "list",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "build",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b6658ec2-ac05-4c46-b0fa-586fbe2f111b",
+          "name": "JetBrains Get Plugin Details",
+          "request": {
+            "name": "JetBrains Get Plugin Details",
+            "description": {
+              "content": "Returns details of a specific plugin.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "plugins",
+                ":pluginId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "pluginId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dd1231e8-45f1-478b-b450-c97ca7613534",
+              "name": "Successful response with plugin details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "plugins",
+                    ":pluginId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "pluginId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7fd8f744-3f68-4883-a133-529f212b6b50",
+          "name": "JetBrains Search Plugins",
+          "request": {
+            "name": "JetBrains Search Plugins",
+            "description": {
+              "content": "Searches for plugins by keyword and filters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "searchPlugins"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "search",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "max",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "orderBy",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "488d209c-6d41-49bf-a57d-4376bdeecf55",
+              "name": "Successful response with search results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "searchPlugins"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "search",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "max",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "orderBy",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://plugins.jetbrains.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f997c745-cbbf-490f-95d0-f5d838cf5f2a",
+    "name": "JetBrains Marketplace API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The JetBrains Marketplace API provides programmatic access to the plugin marketplace for JetBrains IDEs. It allows listing plugins by IDE compatibility, searching for plugins, uploading new plugins and updates, downloading plugin files, and checking plugin licenses. The API serves both plugin developers and consumers who need to integrate with the JetBrains plugin ecosystem.\n\nContact Support:\n Name: JetBrains",
+      "type": "text/plain"
+    }
+  }
+}

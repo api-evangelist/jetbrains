@@ -1,0 +1,421 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains TeamCity REST API",
+    "version": "2024.12.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Server",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains Get Server Info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/server"
+          },
+          "docs": "Returns TeamCity server information and API navigation links."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Swagger Spec",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/swagger.json"
+          },
+          "docs": "Returns the full Swagger/OpenAPI specification for the TeamCity REST API."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Projects",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Projects",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/projects",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns the complete list of all TeamCity projects."
+        },
+        {
+          "info": {
+            "name": "JetBrains Create Project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{server}/app/rest/projects",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new project."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Project",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/projects/:projectLocator",
+            "params": [
+              {
+                "name": "projectLocator",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific project."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Build Configurations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Build Configurations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/buildTypes",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of build configurations (build types)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Builds",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Builds",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/builds",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of builds matching the specified locator."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Build",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/builds/:buildLocator",
+            "params": [
+              {
+                "name": "buildLocator",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific build."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Build Queue",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Build Queue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/buildQueue",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns builds currently in the build queue."
+        },
+        {
+          "info": {
+            "name": "JetBrains Trigger Build",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{server}/app/rest/buildQueue",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds a build to the queue (triggers a build)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Agents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Agents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/agents",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of build agents."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/agents/:agentLocator",
+            "params": [
+              {
+                "name": "agentLocator",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific build agent."
+        },
+        {
+          "info": {
+            "name": "JetBrains Enable/Disable Agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{server}/app/rest/agents/:agentLocator/enabledInfo",
+            "params": [
+              {
+                "name": "agentLocator",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Enables or disables a build agent."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "VCS Roots",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List VCS Roots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/vcs-roots"
+          },
+          "docs": "Returns a list of VCS roots."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/users"
+          },
+          "docs": "Returns a list of TeamCity users."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Changes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Changes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/changes",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of VCS changes."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tests",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Test Occurrences",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/testOccurrences",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns a list of test results."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Agent Pools",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Agent Pools",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{server}/app/rest/agentPools"
+          },
+          "docs": "Returns a list of agent pools."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
