@@ -1,0 +1,24 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/jetbrains-hub-openapi.yml, openapi/jetbrains-marketplace-openapi.yml, openapi/jetbrains-space-openapi.yml,
+  openapi/jetbrains-teamcity-openapi.yml, openapi/jetbrains-youtrack-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: Permanent token or OAuth 2.0 Bearer Token
+  sources:
+  - openapi/jetbrains-hub-openapi.yml
+  - openapi/jetbrains-marketplace-openapi.yml
+  - openapi/jetbrains-space-openapi.yml
+  - openapi/jetbrains-teamcity-openapi.yml
+  - openapi/jetbrains-youtrack-openapi.yml
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: Username and password authentication
+  sources:
+  - openapi/jetbrains-teamcity-openapi.yml

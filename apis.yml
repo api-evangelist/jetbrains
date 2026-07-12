@@ -123,6 +123,12 @@ type: Index
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 common:
+  - type: VulnerabilityDisclosure
+    url: security/jetbrains-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/jetbrains-domain-security.yml
+  - type: Authentication
+    url: authentication/jetbrains-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/jetbrains
   - type: LinkedIn
