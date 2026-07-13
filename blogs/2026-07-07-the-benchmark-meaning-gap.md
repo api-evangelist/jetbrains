@@ -1,0 +1,8 @@
+---
+title: "The Benchmark Meaning Gap"
+url: "https://blog.jetbrains.com/research/2026/07/benchmark-meaning-gap/"
+date: "2026-07-07"
+author: "Katie Fraser"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+In any recent model comparison, you’ve probably seen a single number from a coding benchmark to represent “How good this model is at coding”. Those scores are tempting: they’re simple, they’re leaderboard-friendly, and they seem to tell a clear story about progress. But that story didn’t hold up when we looked more closely at benchmarks […]
