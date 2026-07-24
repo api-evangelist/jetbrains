@@ -1,0 +1,87 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Hub REST Activities Agents API
+  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+- url: https://{instance}.youtrack.cloud/hub/api/rest
+  description: Hub API (via YouTrack Cloud)
+  variables:
+    instance:
+      default: myinstance
+      description: Your instance name
+security:
+- bearerAuth: []
+tags:
+- name: Agents
+  description: Build agent management
+paths:
+  /agents:
+    get:
+      summary: JetBrains List Agents
+      description: Returns a list of build agents.
+      operationId: listAgents
+      tags:
+      - Agents
+      parameters:
+      - name: locator
+        in: query
+        schema:
+          type: string
+      - name: fields
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with agent list
+  /agents/{agentLocator}:
+    get:
+      summary: JetBrains Get Agent
+      description: Returns details of a specific build agent.
+      operationId: getAgent
+      tags:
+      - Agents
+      parameters:
+      - name: agentLocator
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with agent details
+  /agents/{agentLocator}/enabledInfo:
+    put:
+      summary: JetBrains Enable/Disable Agent
+      description: Enables or disables a build agent.
+      operationId: setAgentEnabled
+      tags:
+      - Agents
+      parameters:
+      - name: agentLocator
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Agent status updated
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Permanent token or OAuth 2.0 Bearer Token

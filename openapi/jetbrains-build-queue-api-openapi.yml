@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Hub REST Activities Build Queue API
+  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+- url: https://{instance}.youtrack.cloud/hub/api/rest
+  description: Hub API (via YouTrack Cloud)
+  variables:
+    instance:
+      default: myinstance
+      description: Your instance name
+security:
+- bearerAuth: []
+tags:
+- name: Build Queue
+  description: Build queue management
+paths:
+  /buildQueue:
+    get:
+      summary: JetBrains List Build Queue
+      description: Returns builds currently in the build queue.
+      operationId: listBuildQueue
+      tags:
+      - Build Queue
+      parameters:
+      - name: locator
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with build queue
+    post:
+      summary: JetBrains Trigger Build
+      description: Adds a build to the queue (triggers a build).
+      operationId: triggerBuild
+      tags:
+      - Build Queue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Build triggered successfully
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Permanent token or OAuth 2.0 Bearer Token

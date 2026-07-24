@@ -1,0 +1,54 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Hub REST Activities Plugin Download API
+  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+- url: https://{instance}.youtrack.cloud/hub/api/rest
+  description: Hub API (via YouTrack Cloud)
+  variables:
+    instance:
+      default: myinstance
+      description: Your instance name
+security:
+- bearerAuth: []
+tags:
+- name: Plugin Download
+  description: Plugin download operations
+paths:
+  /plugin/download:
+    get:
+      summary: JetBrains Download Plugin
+      description: Downloads a specific version of a plugin.
+      operationId: downloadPlugin
+      tags:
+      - Plugin Download
+      parameters:
+      - name: pluginId
+        in: query
+        schema:
+          type: string
+      - name: version
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Plugin file download
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Permanent token or OAuth 2.0 Bearer Token

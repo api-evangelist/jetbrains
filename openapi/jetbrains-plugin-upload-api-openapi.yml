@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Hub REST Activities Plugin Upload API
+  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+- url: https://{instance}.youtrack.cloud/hub/api/rest
+  description: Hub API (via YouTrack Cloud)
+  variables:
+    instance:
+      default: myinstance
+      description: Your instance name
+security:
+- bearerAuth: []
+tags:
+- name: Plugin Upload
+  description: Plugin upload operations
+paths:
+  /api/updates/upload:
+    post:
+      summary: JetBrains Upload Plugin
+      description: Uploads a new plugin or plugin update to the marketplace.
+      operationId: uploadPlugin
+      tags:
+      - Plugin Upload
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                pluginId:
+                  type: integer
+                  description: Plugin ID (for updates)
+                file:
+                  type: string
+                  format: binary
+                  description: Plugin JAR or ZIP file
+                channel:
+                  type: string
+                  description: Release channel
+      responses:
+        '200':
+          description: Plugin uploaded successfully
+      security:
+      - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Permanent token or OAuth 2.0 Bearer Token

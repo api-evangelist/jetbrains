@@ -1,0 +1,165 @@
+openapi: 3.0.3
+info:
+  title: JetBrains Hub REST Activities Issues API
+  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+  version: 2024.1.0
+  contact:
+    name: JetBrains
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  license:
+    name: Proprietary
+    url: https://www.jetbrains.com/legal/
+servers:
+- url: https://{instance}.youtrack.cloud/hub/api/rest
+  description: Hub API (via YouTrack Cloud)
+  variables:
+    instance:
+      default: myinstance
+      description: Your instance name
+security:
+- bearerAuth: []
+tags:
+- name: Issues
+  description: Issue management operations
+paths:
+  /issues:
+    get:
+      summary: JetBrains List Issues
+      description: Returns a list of issues matching the query.
+      operationId: listIssues
+      tags:
+      - Issues
+      parameters:
+      - name: query
+        in: query
+        schema:
+          type: string
+      - name: fields
+        in: query
+        schema:
+          type: string
+      - name: $skip
+        in: query
+        schema:
+          type: integer
+      - name: $top
+        in: query
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Successful response with issue list
+    post:
+      summary: JetBrains Create Issue
+      description: Creates a new issue.
+      operationId: createIssue
+      tags:
+      - Issues
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Issue created successfully
+  /issues/{issueId}:
+    get:
+      summary: JetBrains Get Issue
+      description: Returns details of a specific issue.
+      operationId: getIssue
+      tags:
+      - Issues
+      parameters:
+      - name: issueId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fields
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with issue details
+    post:
+      summary: JetBrains Update Issue
+      description: Updates an existing issue.
+      operationId: updateIssue
+      tags:
+      - Issues
+      parameters:
+      - name: issueId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Issue updated successfully
+    delete:
+      summary: JetBrains Delete Issue
+      description: Deletes an issue.
+      operationId: deleteIssue
+      tags:
+      - Issues
+      parameters:
+      - name: issueId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Issue deleted successfully
+  /issues/{issueId}/comments:
+    get:
+      summary: JetBrains List Issue Comments
+      description: Returns comments for an issue.
+      operationId: listIssueComments
+      tags:
+      - Issues
+      parameters:
+      - name: issueId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response with comment list
+    post:
+      summary: JetBrains Add Issue Comment
+      description: Adds a comment to an issue.
+      operationId: addIssueComment
+      tags:
+      - Issues
+      parameters:
+      - name: issueId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Comment added successfully
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Permanent token or OAuth 2.0 Bearer Token
