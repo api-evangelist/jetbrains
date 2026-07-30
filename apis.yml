@@ -1,126 +1,1115 @@
 aid: jetbrains
 url: https://raw.githubusercontent.com/api-evangelist/jetbrains/refs/heads/main/apis.yml
 apis:
-  - aid: jetbrains:space-api
-    name: JetBrains Space HTTP API
-    tags:
-      - Collaboration
-      - Developer Tools
-      - Project Management
-    humanURL: https://www.jetbrains.com/help/space/http-api-model.html
-    properties:
-      - url: https://www.jetbrains.com/help/space/http-api-model.html
-        type: Documentation
-      - url: openapi/jetbrains-space-openapi.yml
-        type: OpenAPI
-      - url: json-schema/project.json
-        type: JSONSchema
-      - url: json-schema/user.json
-        type: JSONSchema
-      - url: json-ld/jetbrains-context.jsonld
-        type: JSONLD
-    description: >-
-      The JetBrains Space HTTP API provides programmatic access to Space functionality including projects, teams, chats,
-      documents, code reviews, packages, and automation jobs. The API uses JSON format and supports OAuth 2.0
-      authentication. An HTTP API playground is available within Space for interactive exploration of all available
-      endpoints.
-  - aid: jetbrains:teamcity-api
-    name: JetBrains TeamCity REST API
-    tags:
-      - Build Automation
-      - CI/CD
-      - Developer Tools
-    humanURL: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
-    properties:
-      - url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
-        type: Documentation
-      - url: openapi/jetbrains-teamcity-openapi.yml
-        type: OpenAPI
-      - url: json-schema/build.json
-        type: JSONSchema
-      - url: json-schema/build-agent.json
-        type: JSONSchema
-      - url: json-schema/project.json
-        type: JSONSchema
-      - url: json-ld/jetbrains-context.jsonld
-        type: JSONLD
-    description: >-
-      The TeamCity REST API provides programmatic access to TeamCity CI/CD server functionality. It allows management of
-      projects, build configurations, builds, agents, VCS roots, users, and more. The API uses locators for flexible
-      filtering and supports both JSON and XML formats. The full Swagger specification is available via the
-      /app/rest/swagger.json endpoint.
-  - aid: jetbrains:youtrack-api
-    name: JetBrains YouTrack REST API
-    tags:
-      - Developer Tools
-      - Issue Tracking
-      - Project Management
-    humanURL: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
-    properties:
-      - url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
-        type: Documentation
-      - url: openapi/jetbrains-youtrack-openapi.yml
-        type: OpenAPI
-      - url: json-schema/issue.json
-        type: JSONSchema
-      - url: json-schema/project.json
-        type: JSONSchema
-      - url: json-schema/user.json
-        type: JSONSchema
-      - url: json-ld/jetbrains-context.jsonld
-        type: JSONLD
-    description: >-
-      The YouTrack REST API lets you perform programmatic actions in the issue tracker, including creating, modifying,
-      and querying issues, managing projects, agile boards, work items, and more. The API uses JSON format and supports
-      both permanent token and OAuth 2.0 authentication. A Postman collection is available for interactive exploration.
-  - aid: jetbrains:hub-api
-    name: JetBrains Hub REST API
-    tags:
-      - Authentication
-      - Authorization
-      - Identity Management
-    humanURL: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
-    properties:
-      - url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
-        type: Documentation
-      - url: openapi/jetbrains-hub-openapi.yml
-        type: OpenAPI
-      - url: json-schema/user.json
-        type: JSONSchema
-      - url: json-ld/jetbrains-context.jsonld
-        type: JSONLD
-    description: >-
-      The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization
-      service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0
-      services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
-  - aid: jetbrains:marketplace-api
-    name: JetBrains Marketplace API
-    tags:
-      - Developer Tools
-      - Marketplace
-      - Plugins
-    humanURL: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
-    properties:
-      - url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
-        type: Documentation
-      - url: openapi/jetbrains-marketplace-openapi.yml
-        type: OpenAPI
-      - url: json-schema/plugin.json
-        type: JSONSchema
-      - url: json-ld/jetbrains-context.jsonld
-        type: JSONLD
-    description: >-
-      The JetBrains Marketplace API provides programmatic access to the plugin marketplace for JetBrains IDEs. It allows
-      listing plugins by IDE compatibility, searching for plugins, uploading new plugins and updates, downloading plugin
-      files, and checking plugin licenses. The API serves both plugin developers and consumers integrating with the
-      JetBrains plugin ecosystem.
+- aid: jetbrains:jetbrains-activities-api
+  name: JetBrains Activities API
+  description: Activity feed operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Activities
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-activities-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-agent-pools-api
+  name: JetBrains Agent Pools API
+  description: Agent pool management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Agent Pools
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-agent-pools-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-agents-api
+  name: JetBrains Agents API
+  description: Build agent management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Agents
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-agents-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-agile-boards-api
+  name: JetBrains Agile Boards API
+  description: Agile board management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Agile Boards
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-agile-boards-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-api-model-api
+  name: JetBrains API Model API
+  description: HTTP API model and metadata
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - API Model
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-api-model-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-applications-api
+  name: JetBrains Applications API
+  description: Application management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Applications
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-applications-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-automation-api
+  name: JetBrains Automation API
+  description: Automation and CI/CD operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Automation
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-automation-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-build-configurations-api
+  name: JetBrains Build Configurations API
+  description: Build type/configuration management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Build Configurations
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-build-configurations-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-build-queue-api
+  name: JetBrains Build Queue API
+  description: Build queue management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Build Queue
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-build-queue-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-builds-api
+  name: JetBrains Builds API
+  description: Build execution and results
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Builds
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-builds-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-changes-api
+  name: JetBrains Changes API
+  description: VCS change tracking
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Changes
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-changes-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-chats-api
+  name: JetBrains Chats API
+  description: Chat and messaging operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Chats
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-chats-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-code-reviews-api
+  name: JetBrains Code Reviews API
+  description: Code review operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Code Reviews
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-code-reviews-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-groups-api
+  name: JetBrains Groups API
+  description: User group management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-groups-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-issues-api
+  name: JetBrains Issues API
+  description: Issue management operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Issues
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-issues-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-issuetags-api
+  name: JetBrains IssueTags API
+  description: The IssueTags API from JetBrains — 1 operation(s) for issuetags.
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - IssueTags
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-issuetags-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-licenses-api
+  name: JetBrains Licenses API
+  description: License checking operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Licenses
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-licenses-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-oauth2-api
+  name: JetBrains OAuth2 API
+  description: OAuth2 client management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - OAuth2
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-oauth2-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-packages-api
+  name: JetBrains Packages API
+  description: Package repository operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Packages
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-packages-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-permissions-api
+  name: JetBrains Permissions API
+  description: Permission management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Permissions
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-permissions-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-plugin-download-api
+  name: JetBrains Plugin Download API
+  description: Plugin download operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Plugin Download
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-plugin-download-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-plugin-upload-api
+  name: JetBrains Plugin Upload API
+  description: Plugin upload operations
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Plugin Upload
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-plugin-upload-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-plugins-api
+  name: JetBrains Plugins API
+  description: Plugin listing and search
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Plugins
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-plugins-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-projects-api
+  name: JetBrains Projects API
+  description: Project management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-projects-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-roles-api
+  name: JetBrains Roles API
+  description: Role management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Roles
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-roles-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-saved-queries-api
+  name: JetBrains Saved Queries API
+  description: Saved search query management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Saved Queries
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-saved-queries-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-server-api
+  name: JetBrains Server API
+  description: Server information and metadata
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Server
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-server-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-services-api
+  name: JetBrains Services API
+  description: The Services API from JetBrains — 1 operation(s) for services.
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Services
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-services-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-team-directory-api
+  name: JetBrains Team Directory API
+  description: Team and member management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Team Directory
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-team-directory-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-tests-api
+  name: JetBrains Tests API
+  description: Test result tracking
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Tests
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-tests-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-users-api
+  name: JetBrains Users API
+  description: User management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-users-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-vcs-roots-api
+  name: JetBrains VCS Roots API
+  description: Version control system root management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - VCS Roots
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-vcs-roots-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
+- aid: jetbrains:jetbrains-work-items-api
+  name: JetBrains Work Items API
+  description: Time tracking and work item management
+  humanURL: https://www.jetbrains.com/help/space/http-api-model.html
+  tags:
+  - Work Items
+  properties:
+  - type: OpenAPI
+    url: openapi/jetbrains-work-items-api-openapi.yml
+  - type: Documentation
+    url: https://www.jetbrains.com/help/space/http-api-model.html
+  - type: JSONSchema
+    url: json-schema/project.json
+  - type: JSONSchema
+    url: json-schema/user.json
+  - type: JSONLD
+    url: json-ld/jetbrains-context.jsonld
+  - type: Documentation
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
+  - type: JSONSchema
+    url: json-schema/build.json
+  - type: JSONSchema
+    url: json-schema/build-agent.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html
+  - type: JSONSchema
+    url: json-schema/issue.json
+  - type: Documentation
+    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  - type: Documentation
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
+  - type: JSONSchema
+    url: json-schema/plugin.json
 name: JetBrains
 tags:
   - CI/CD
   - Developer Tools
   - IDE
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jetbrains.png
 access: 3rd-Party
 common:
   - type: AgenticAccess
