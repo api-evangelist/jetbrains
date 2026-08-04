@@ -1,0 +1,8 @@
+---
+title: "What’s New in RustRover 2026.2"
+url: "https://blog.jetbrains.com/rust/2026/07/22/whats-new-in-rustrover-2026-2/"
+date: "2026-07-22"
+author: "Irina Mihajlovic"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+RustRover 2026.2 adds endpoint discovery and route–handler navigation for axum-based projects, brings support for Ferrocene, a qualified Rust toolchain, and improves your everyday experience with macros, imports, struct creation, module paths, benchmarks, .env files, and split mode. Key Higlights Faster navigation for axum and reqwest In axum projects, route strings are the entry points to […]

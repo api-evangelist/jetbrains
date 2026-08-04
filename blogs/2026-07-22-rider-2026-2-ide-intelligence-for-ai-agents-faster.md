@@ -1,0 +1,8 @@
+---
+title: "Rider 2026.2: IDE Intelligence for AI Agents, Faster Performance, and Spectacular Game Dev Updates"
+url: "https://blog.jetbrains.com/dotnet/2026/07/22/rider-2026-2-release/"
+date: "2026-07-22"
+author: "Sasha Ivanova"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+Rider 2026.2 opens up the IDE’s own intelligence to your AI coding agents, so they work from real project knowledge instead of reconstructing it from files and terminal output. A new set of agent skills covers testing, profiling, refactoring, and official Microsoft .NET workflows, and GitHub Copilot now joins the lineup as a natively integrated […]

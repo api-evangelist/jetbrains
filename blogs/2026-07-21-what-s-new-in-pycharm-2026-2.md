@@ -1,0 +1,8 @@
+---
+title: "What’s New in PyCharm 2026.2"
+url: "https://blog.jetbrains.com/pycharm/2026/07/what-s-new-in-pycharm-2026-2/"
+date: "2026-07-21"
+author: "Ilia Afanasiev"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+In PyCharm 2026.2, you can build Python extensions with the new Rust plugin and debug them using debugpy, which is now the default engine. Running external utilities is now managed through a redesigned settings UI for uvx, while multi-project setups are supported out of the box for uv, Poetry, and Hatch workspaces. This release also […]

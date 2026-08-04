@@ -1,0 +1,8 @@
+---
+title: "The Complete Package: Why Debugging Is Only Half the C# Productivity Story"
+url: "https://blog.jetbrains.com/dotnet/2026/07/30/the-complete-package-why-debugging-is-only-half-the-csharp-productivity-story/"
+date: "2026-07-30"
+author: "Isaac Levin"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+As .NET developers, we need to iterate on our applications while building, and part of that developer inner loop is the debugging experience. The rise of multi-platform code editors further requires developers to have all the functionality they need to build and debug their application out of the box, wherever they’re coding. Previously, .NET developers […]
