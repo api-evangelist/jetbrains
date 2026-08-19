@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Hub REST Activities API Model API",
+    "version": "2024.1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "API Model",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains Get HTTP API Model",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/http-api-model"
+          },
+          "docs": "Returns the HTTP API model describing all available APIs."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

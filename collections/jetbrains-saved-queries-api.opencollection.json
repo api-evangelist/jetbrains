@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Hub REST Activities Saved Queries API",
+    "version": "2024.1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Saved Queries",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Saved Queries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/savedQueries"
+          },
+          "docs": "Returns a list of saved search queries."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

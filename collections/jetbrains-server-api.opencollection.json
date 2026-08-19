@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Hub REST Activities Server API",
+    "version": "2024.1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Server",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains Get Server Info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/server"
+          },
+          "docs": "Returns TeamCity server information and API navigation links."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Swagger Spec",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/swagger.json"
+          },
+          "docs": "Returns the full Swagger/OpenAPI specification for the TeamCity REST API."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

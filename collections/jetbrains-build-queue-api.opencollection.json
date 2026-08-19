@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Hub REST Activities Build Queue API",
+    "version": "2024.1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Build Queue",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Build Queue",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/buildQueue",
+            "params": [
+              {
+                "name": "locator",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns builds currently in the build queue."
+        },
+        {
+          "info": {
+            "name": "JetBrains Trigger Build",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/buildQueue",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds a build to the queue (triggers a build)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

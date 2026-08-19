@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "JetBrains Hub REST Activities Plugins API",
+    "version": "2024.1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Plugins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "JetBrains List Plugins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/plugins/list/",
+            "params": [
+              {
+                "name": "build",
+                "value": "",
+                "type": "query",
+                "description": "IDE build number (e.g., IC-232.8660.185)"
+              }
+            ]
+          },
+          "docs": "Returns a list of all plugins compatible with a provided IDE build."
+        },
+        {
+          "info": {
+            "name": "JetBrains Get Plugin Details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/api/plugins/:pluginId",
+            "params": [
+              {
+                "name": "pluginId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Returns details of a specific plugin."
+        },
+        {
+          "info": {
+            "name": "JetBrains Search Plugins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.youtrack.cloud/hub/api/rest/api/searchPlugins",
+            "params": [
+              {
+                "name": "search",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "max",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "orderBy",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Searches for plugins by keyword and filters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
