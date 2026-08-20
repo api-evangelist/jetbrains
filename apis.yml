@@ -171,6 +171,8 @@ apis:
   description: Application management
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - Application
+  tags_raw:
   - Applications
   properties:
   - type: OpenAPI
@@ -402,6 +404,8 @@ apis:
   description: Code review operations
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - Codereviews
+  tags_raw:
   - Code Reviews
   properties:
   - type: OpenAPI
@@ -435,6 +439,8 @@ apis:
   description: User group management
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -567,6 +573,8 @@ apis:
   description: OAuth2 client management
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - Authentication
+  tags_raw:
   - OAuth2
   properties:
   - type: OpenAPI
@@ -765,6 +773,8 @@ apis:
   description: Project management
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -996,6 +1006,8 @@ apis:
   description: User management
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
