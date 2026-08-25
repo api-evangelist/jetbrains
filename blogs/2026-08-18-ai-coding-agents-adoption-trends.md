@@ -1,0 +1,8 @@
+---
+title: "AI Coding Agents: Adoption Trends"
+url: "https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/"
+date: "2026-08-18"
+author: "Mikhail Bogdanov"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+Based on the Developer Ecosystem Survey 2026, the tenth edition of our large-scale, globally representative study run by the Strategic Research and Market Intelligence team. This post picks up where our previous report on the adoption of the main AI coding tools left off in April 2026. We recently ran the Developer Ecosystem Survey 2026 […]
