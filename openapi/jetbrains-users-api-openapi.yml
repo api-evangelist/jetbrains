@@ -1,14 +1,11 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: JetBrains Hub REST Activities Users API
-  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
-  version: 2024.1.0
-  contact:
-    name: JetBrains
-    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+  title: Jetbrains Users API
   license:
     name: Proprietary
     url: https://www.jetbrains.com/legal/
+  version: '1.0'
+  description: 'Operations tagged Users across 3 of this provider''s published API definitions: jetbrains-hub-openapi.yml, jetbrains-teamcity-openapi.yml, jetbrains-youtrack-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://{instance}.youtrack.cloud/hub/api/rest
   description: Hub API (via YouTrack Cloud)
@@ -16,8 +13,18 @@ servers:
     instance:
       default: myinstance
       description: Your instance name
-security:
-- bearerAuth: []
+- url: https://{server}/app/rest
+  description: TeamCity Server
+  variables:
+    server:
+      default: teamcity.example.com
+      description: Your TeamCity server hostname
+- url: https://{instance}.youtrack.cloud/api
+  description: YouTrack Cloud
+  variables:
+    instance:
+      default: myinstance
+      description: Your YouTrack instance name
 tags:
 - name: Users
   description: User management
@@ -45,6 +52,15 @@ paths:
       responses:
         '200':
           description: Successful response with user list
+      security:
+      - bearerAuth: []
+    servers:
+    - url: https://{instance}.youtrack.cloud/hub/api/rest
+      description: Hub API (via YouTrack Cloud)
+      variables:
+        instance:
+          default: myinstance
+          description: Your instance name
   /users/{userId}:
     get:
       summary: JetBrains Get User
@@ -61,6 +77,15 @@ paths:
       responses:
         '200':
           description: Successful response with user details
+      security:
+      - bearerAuth: []
+    servers:
+    - url: https://{instance}.youtrack.cloud/hub/api/rest
+      description: Hub API (via YouTrack Cloud)
+      variables:
+        instance:
+          default: myinstance
+          description: Your instance name
   /users/me:
     get:
       summary: JetBrains Get Current User
@@ -71,9 +96,26 @@ paths:
       responses:
         '200':
           description: Successful response with current user details
+      security:
+      - bearerAuth: []
+    servers:
+    - url: https://{instance}.youtrack.cloud/api
+      description: YouTrack Cloud
+      variables:
+        instance:
+          default: myinstance
+          description: Your YouTrack instance name
 components:
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
       description: Permanent token or OAuth 2.0 Bearer Token
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Username and password authentication
+x-refined-from:
+- jetbrains-hub-openapi.yml
+- jetbrains-teamcity-openapi.yml
+- jetbrains-youtrack-openapi.yml

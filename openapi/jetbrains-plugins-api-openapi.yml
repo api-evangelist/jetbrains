@@ -1,23 +1,18 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: JetBrains Hub REST Activities Plugins API
-  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
-  version: 2024.1.0
+  title: JetBrains Marketplace Plugins API
+  description: The JetBrains Marketplace API provides programmatic access to the plugin marketplace for JetBrains IDEs. It allows listing plugins by IDE compatibility, searching for plugins, uploading new plugins and updates, downloading plugin files, and checking plugin licenses. The API serves both plugin developers and consumers who need to integrate with the JetBrains plugin ecosystem.
+  version: 1.0.0
   contact:
     name: JetBrains
-    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+    url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
   license:
     name: Proprietary
     url: https://www.jetbrains.com/legal/
 servers:
-- url: https://{instance}.youtrack.cloud/hub/api/rest
-  description: Hub API (via YouTrack Cloud)
-  variables:
-    instance:
-      default: myinstance
-      description: Your instance name
-security:
-- bearerAuth: []
+- url: https://plugins.jetbrains.com
+  description: JetBrains Marketplace
+security: []
 tags:
 - name: Plugins
   description: Plugin listing and search
@@ -86,4 +81,4 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
-      description: Permanent token or OAuth 2.0 Bearer Token
+      description: Marketplace token for authenticated operations

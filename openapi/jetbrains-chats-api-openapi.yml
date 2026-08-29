@@ -1,21 +1,21 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: JetBrains Hub REST Activities Chats API
-  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+  title: JetBrains Space HTTP Chats API
+  description: The JetBrains Space HTTP API provides programmatic access to Space functionality including projects, teams, chats, documents, code reviews, packages, automation jobs, and more. The API uses JSON format and supports OAuth 2.0 authentication. An HTTP API playground is available within Space for interactive exploration.
   version: 2024.1.0
   contact:
     name: JetBrains
-    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+    url: https://www.jetbrains.com/help/space/
   license:
     name: Proprietary
     url: https://www.jetbrains.com/legal/
 servers:
-- url: https://{instance}.youtrack.cloud/hub/api/rest
-  description: Hub API (via YouTrack Cloud)
+- url: https://{organization}.jetbrains.space/api/http
+  description: JetBrains Space Cloud
   variables:
-    instance:
-      default: myinstance
-      description: Your instance name
+    organization:
+      default: myorg
+      description: Your Space organization name
 security:
 - bearerAuth: []
 tags:
@@ -53,4 +53,4 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
-      description: Permanent token or OAuth 2.0 Bearer Token
+      description: OAuth 2.0 Bearer Token or permanent token

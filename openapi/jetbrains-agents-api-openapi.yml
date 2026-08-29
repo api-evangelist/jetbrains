@@ -1,23 +1,24 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: JetBrains Hub REST Activities Agents API
-  description: The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
-  version: 2024.1.0
+  title: JetBrains TeamCity REST Agents API
+  description: The TeamCity REST API provides programmatic access to TeamCity CI/CD server functionality. It allows management of projects, build configurations, builds, agents, VCS roots, users, and more. The API uses locators for flexible filtering and supports both JSON and XML formats. The full API specification is available via the /app/rest/swagger.json endpoint on any TeamCity instance.
+  version: 2024.12.0
   contact:
     name: JetBrains
-    url: https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html
+    url: https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html
   license:
     name: Proprietary
     url: https://www.jetbrains.com/legal/
 servers:
-- url: https://{instance}.youtrack.cloud/hub/api/rest
-  description: Hub API (via YouTrack Cloud)
+- url: https://{server}/app/rest
+  description: TeamCity Server
   variables:
-    instance:
-      default: myinstance
-      description: Your instance name
+    server:
+      default: teamcity.example.com
+      description: Your TeamCity server hostname
 security:
 - bearerAuth: []
+- basicAuth: []
 tags:
 - name: Agents
   description: Build agent management
@@ -84,4 +85,8 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
-      description: Permanent token or OAuth 2.0 Bearer Token
+      description: Access token authentication
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Username and password authentication
