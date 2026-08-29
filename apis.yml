@@ -1108,6 +1108,17 @@ tags:
   - Developer Tools
   - IDE
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
@@ -1124,6 +1135,9 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jetbrains.png
 access: 3rd-Party
 common:
+  - type: CapabilityMap
+    url: capabilities/jetbrains-capability-edges.yml
+    name: JetBrains Business Capability Map
   - type: AgenticAccess
     url: agentic-access/jetbrains-agentic-access.yml
   - type: VulnerabilityDisclosure
