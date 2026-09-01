@@ -404,7 +404,7 @@ apis:
   description: Code review operations
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
-  - Code Reviews
+  - Codereviews
   tags_raw:
   - Code Reviews
   properties:
