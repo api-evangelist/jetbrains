@@ -1,0 +1,8 @@
+---
+title: "Learning to Code in the Age of AI: Advice From a Top Udemy Instructor"
+url: "https://blog.jetbrains.com/education/2026/09/03/learning-to-code-in-the-age-of-ai-advice-from-a-top-udemy-instructor/"
+date: "2026-09-03"
+author: "Regina Muradova"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+What should a beginner developer learn in order to keep up in the AI era? This is one of the most debated questions in tech right now. We got in touch with Ardit Sulce, a Python educator with over 650,000 students on Udemy, and talked about the value of struggling when learning something new, the […]
