@@ -1,0 +1,8 @@
+---
+title: "Join our live webinars: Migrating from Atlassian to YouTrack"
+url: "https://blog.jetbrains.com/youtrack/2026/09/migrating-from-atlassian-to-youtrack-webinar/"
+date: "2026-09-09"
+author: "Elena Pishkova"
+feed_url: "https://blog.jetbrains.com/feed/"
+---
+Atlassian is discontinuing sales and support for Data Center products. If you’re exploring alternatives, join us for a live session on September 30 to see how Jira-to-YouTrack migration works, including a demo and real customer stories. Register for the worldwide English-language webinar, hosted by the YouTrack team, or attend a regional session in Japanese hosted […]
