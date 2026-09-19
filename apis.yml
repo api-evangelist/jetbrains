@@ -804,6 +804,8 @@ apis:
   description: Server information and metadata
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - Servers
+  tags_raw:
   - Server
   properties:
   - type: OpenAPI
@@ -1037,6 +1039,8 @@ apis:
   description: OAuth2 client management
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
+  - Authentication
+  tags_raw:
   - OAuth2
   properties:
   - type: OpenAPI
