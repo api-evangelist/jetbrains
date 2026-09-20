@@ -11,6 +11,10 @@ provenance:
   grounding: every price_text was found verbatim in the fetched page text
 audience: business-product
 pricing_basis: per-seat
+delivery:
+  delivery: unclear
+  method: page
+  read: '2026-09-20'
 published: true
 note: Commercial, yearly-billed subscription list. All yearly subscriptions include a perpetual fallback
   license; taxes may be added. Monthly and multi-year options mentioned but not priced on this view.
