@@ -1,0 +1,117 @@
+slug: jetbrains
+provider: JetBrains
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 11
+edges:
+- tag: Build Queue
+  spec_file: jetbrains-build-queue-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.9
+  evidence: POST /buildQueue triggerBuild "JetBrains Trigger Build"
+  reason: Queueing and triggering builds is squarely continuous integration pipeline operation.
+- tag: Builds
+  spec_file: jetbrains-builds-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.9
+  evidence: GET /builds listBuilds; GET /builds/{buildLocator} getBuild
+  reason: Reading CI build records from TeamCity — build pipeline/artefact production visibility, i.e.
+    continuous integration management.
+- tag: Build Configurations
+  spec_file: jetbrains-build-configurations-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.85
+  evidence: GET /buildTypes listBuildTypes "JetBrains List Build Configurations"
+  reason: TeamCity buildTypes are build pipeline configurations — continuous integration management, not
+    any business-domain configuration.
+- tag: Code Reviews
+  spec_file: jetbrains-code-reviews-api-openapi.yml
+  capability_id: BC-4200.40
+  capability_id_l1: BC-4200
+  capability_name: Software Construction Management
+  confidence: 0.85
+  evidence: GET /projects/{projectId}/code-reviews listCodeReviews "JetBrains List Code Reviews"
+  reason: Code review is explicitly part of software construction management (implementation practice
+    including source control and code review).
+- tag: Permissions
+  spec_file: jetbrains-permissions-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: GET /permissions listPermissions; "management of users, groups, projects, roles, permissions"
+  reason: Permission enumeration in a centralized authentication and authorization service is squarely
+    access management.
+- tag: Roles
+  spec_file: jetbrains-roles-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: GET /roles listRoles; "management of users, groups, projects, roles, permissions"
+  reason: Role enumeration within the identity provider is role-based access administration.
+- tag: Groups
+  spec_file: jetbrains-groups-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: GET /usergroups listUserGroups; Hub "allows management of users, groups, projects, roles,
+    permissions"
+  reason: User groups in the Hub identity provider are access-control principals, so this is identity
+    & access management rather than any HR or customer grouping.
+- tag: Automation
+  spec_file: jetbrains-automation-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.7
+  evidence: GET /projects/{projectId}/automation/jobs listAutomationJobs "JetBrains List Automation Jobs"
+  reason: Project-scoped automation jobs in JetBrains Space are CI pipeline jobs, so this surfaces build/pipeline
+    execution rather than generic workflow automation. Only one read operation, so moderate confidence.
+- tag: Issues
+  spec_file: jetbrains-issues-api-openapi.yml
+  capability_id: BC-4200.50
+  capability_id_l1: BC-4200
+  capability_name: Software Quality Engineering
+  confidence: 0.7
+  evidence: POST /issues createIssue; POST /issues/{issueId}/comments addIssueComment
+  reason: Full CRUD plus commenting on YouTrack issues is developer issue/defect tracking, mapped to software
+    quality engineering (defect management); some chance these issues serve as backlog items instead.
+- tag: OAuth2
+  spec_file: jetbrains-oauth2-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: GET /oauth2clients listOAuth2Clients; Hub is "the centralized authentication and authorization
+    service for JetBrains tools ... management of ... OAuth 2.0 services"
+  reason: Operation lists registered OAuth2 clients within an identity/authorization service, i.e. federation
+    and credential administration — Identity & Access Management rather than any developer-marketplace
+    capability.
+- tag: Users
+  spec_file: jetbrains-users-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: Hub, the centralized authentication and authorization service for JetBrains tools ... GET
+    /users/me  getCurrentUser
+  reason: Operations list and retrieve user accounts within Hub, described as the identity provider handling
+    users, groups, roles and permissions — identity and access management. Read-only scope keeps confidence
+    moderate.
