@@ -40,7 +40,8 @@ edges:
   reason: TeamCity buildTypes are build pipeline configurations — continuous integration management, not
     any business-domain configuration.
 - tag: Code Reviews
-  spec_file: jetbrains-code-reviews-api-openapi.yml
+  spec_file: jetbrains-codereviews-api-openapi.yml
+  reanchored_from: jetbrains-code-reviews-api-openapi.yml
   capability_id: BC-4200.40
   capability_id_l1: BC-4200
   capability_name: Software Construction Management
