@@ -19,7 +19,7 @@ servers:
 security:
 - bearerAuth: []
 tags:
-- name: Code Reviews
+- name: Codereviews
   description: Code review operations
 paths:
   /projects/{projectId}/code-reviews:
@@ -28,7 +28,7 @@ paths:
       description: Returns a list of code reviews for a project.
       operationId: listCodeReviews
       tags:
-      - Code Reviews
+      - Codereviews
       parameters:
       - name: projectId
         in: path
