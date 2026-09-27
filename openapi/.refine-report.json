@@ -43,7 +43,7 @@
     "jetbrains-work-items-api-openapi.yml"
   ],
   "archived": [
-    "deleted 2 superseded output(s) from the previous generation"
+    "deleted 1 superseded output(s) from the previous generation"
   ],
   "errors": [],
   "warnings": [],
@@ -60,8 +60,8 @@
     "jetbrains-youtrack-openapi.yml: declared missing tag: IssueTags",
     "tag 'Projects' spans 4 source specs (jetbrains-hub-openapi.yml, jetbrains-space-openapi.yml, jetbrains-teamcity-openapi.yml, jetbrains-youtrack-openapi.yml): per-path servers applied",
     "tag 'Users' spans 3 source specs (jetbrains-hub-openapi.yml, jetbrains-teamcity-openapi.yml, jetbrains-youtrack-openapi.yml): per-path servers applied",
-    "superseded outputs removed: jetbrains-codereviews-api-openapi.yml, jetbrains-o-auth2-api-openapi.yml",
-    "apis.yml register: written (+2 apis, 33 total)"
+    "superseded outputs removed: jetbrains-codereviews-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 33 total)"
   ],
   "skipped": [
     "jetbrains-activities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -81,7 +81,7 @@
     "jetbrains-issues-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jetbrains-issuetags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jetbrains-licenses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "jetbrains-o-auth2-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "jetbrains-oauth2-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jetbrains-packages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jetbrains-permissions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "jetbrains-plugin-download-api-openapi.yml: previously refined output, superseded by openapi/_original/",

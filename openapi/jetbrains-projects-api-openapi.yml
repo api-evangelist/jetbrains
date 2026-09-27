@@ -100,7 +100,7 @@ paths:
     get:
       summary: JetBrains Get Project
       description: Returns details of a specific project.
-      operationId: getProject
+      operationId: getProjectsByProjectLocator
       tags:
       - Projects
       parameters:
@@ -119,6 +119,8 @@ paths:
       security:
       - bearerAuth: []
       - basicAuth: []
+      x-operation-id-source: normalized
+      x-operation-id-original: getProject
     servers:
     - url: https://{server}/app/rest
       description: TeamCity Server
@@ -130,7 +132,7 @@ paths:
     get:
       summary: JetBrains List Projects
       description: Returns a list of projects.
-      operationId: listProjects
+      operationId: getAdminProjects
       tags:
       - Projects
       parameters:
@@ -143,6 +145,8 @@ paths:
           description: Successful response with project list
       security:
       - bearerAuth: []
+      x-operation-id-source: normalized
+      x-operation-id-original: listProjects
     servers:
     - url: https://{instance}.youtrack.cloud/api
       description: YouTrack Cloud
@@ -154,7 +158,7 @@ paths:
     get:
       summary: JetBrains Get Project
       description: Returns details of a specific project.
-      operationId: getProject
+      operationId: getAdminProjectsByProjectId
       tags:
       - Projects
       parameters:
@@ -168,6 +172,8 @@ paths:
           description: Successful response with project details
       security:
       - bearerAuth: []
+      x-operation-id-source: normalized
+      x-operation-id-original: getProject
     servers:
     - url: https://{instance}.youtrack.cloud/api
       description: YouTrack Cloud
