@@ -1,0 +1,25 @@
+# YouTrack
+
+> Public entry points for this YouTrack instance that are useful for LLM-based tools and assistants.
+
+Version: `2026.3`
+
+This file points to stable, instance-local resources. Always respect project visibility, issue visibility, and user permissions. If a page or API response is not available to the guest user, it should not be treated as public context for this instance.
+
+## Public Pages
+
+- [Issues](https://youtrack.jetbrains.com/issues): Public issue search and list pages. Individual issue pages are available under `/issues/<ISSUE_ID>` and `/projects/<PROJECT_ID>/issues/<ISSUE_ID>`.
+- [Articles](https://youtrack.jetbrains.com/articles): Public knowledge base article index. Individual article pages are typically under `/articles/<ARTICLE_ID>` or `/projects/<PROJECT_ID>/articles/<ARTICLE_ID>`.
+- [Projects](https://youtrack.jetbrains.com/projects): Public project list page. Individual project pages are available under `/projects/<PROJECT_KEY>`.
+
+## Structured Data
+
+- [REST API root](https://youtrack.jetbrains.com/api): Main REST API entry point for this instance.
+- [OpenAPI schema](https://youtrack.jetbrains.com/api/openapi.json): Machine-readable API documentation for the running instance.
+- [Hub](https://youtrack.jetbrains.com/hub): Authentication and user directory for this instance.
+- [Sitemap](https://youtrack.jetbrains.com/sitemap.xml): Publicly discoverable pages for this instance.
+
+## Documentation
+
+- [YouTrack product documentation](https://www.jetbrains.com/help/youtrack/server/2026.3): Version-specific documentation for this YouTrack build.
+- [YouTrack REST API documentation](https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html): Human-oriented REST API reference and usage guide.

@@ -1,0 +1,23 @@
+generated: '2026-10-04'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/jetbrains-projects-api-openapi.yml
+skills:
+- file: skills/jetbrains-create-issue-with-comment.md
+  name: jetbrains-create-issue-with-comment
+  api: openapi/jetbrains-issues-api-openapi.yml
+  operations:
+  - createIssue
+  - addIssueComment
+- file: skills/jetbrains-build-queue-trigger-and-list.md
+  name: jetbrains-build-queue-trigger-and-list
+  api: openapi/jetbrains-build-queue-api-openapi.yml
+  operations:
+  - triggerBuild
+  - listBuildQueue
+- file: skills/jetbrains-chats-send-message.md
+  name: jetbrains-chats-send-message
+  api: openapi/jetbrains-chats-api-openapi.yml
+  operations:
+  - listChannels
+  - sendMessage

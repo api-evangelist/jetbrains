@@ -1,0 +1,184 @@
+generated: '2026-10-04'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 15
+  own: 13
+  other_domain: 0
+  platform: 2
+  roles:
+  - api
+  - identity
+  - marketing
+  - other
+  - source
+  - status
+  - website
+hosts:
+- host: academy.jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own
+- host: account.jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: identity
+  relation: own
+- host: api.jetbrains.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: api
+  relation: own
+- host: blog.jetbrains.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Security
+  - Blog
+  serves: []
+  registrable_domain: jetbrains.com
+  role: marketing
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: hub.jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own
+- host: info.jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own
+- host: jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own
+- host: junie.jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own
+- host: plugins.jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own
+- host: status.jetbrains.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: jetbrains.com
+  role: status
+  relation: own
+- host: trust-center.jetbrains.com
+  found_by:
+  - probed
+  - site-links
+  types: []
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own
+- host: www.jetbrains.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - SignUp
+  - PrivacyPolicy
+  - GettingStarted
+  - Pricing
+  - Website
+  - Documentation
+  - Support
+  serves:
+  - docs
+  - cdn
+  vendor: cloudfront
+  registrable_domain: jetbrains.com
+  role: website
+  relation: own
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: youtrack.jetbrains.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Issues
+  serves: []
+  registrable_domain: jetbrains.com
+  role: other
+  relation: own

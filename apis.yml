@@ -1,12 +1,170 @@
 aid: jetbrains
+
 url: https://raw.githubusercontent.com/api-evangelist/jetbrains/refs/heads/main/apis.yml
+
+name: JetBrains
+
+tags:
+- CI/CD
+- Developer Tools
+- IDE
+- JetBrains
+- IDEs
+- Continuous Integration
+- Project Management
+- Code Quality
+- Data Science
+- AI Coding
+  - CI/CD
+  - Developer Tools
+  - IDE
+  - JetBrains
+
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
+
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  - authentication
+  - security
+  generated: '2026-09-03'
+  method: derived
+
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jetbrains.png
+
+access: 3rd-Party
+
+created: '2025-01-01'
+
+modified: '2026-05-19'
+
+position: Consuming
+
+description: >-
+  JetBrains is a software development company that provides integrated development environments, CI/CD tools, issue
+  tracking, and team collaboration platforms for software developers. Their product suite includes IntelliJ IDEA,
+  TeamCity, YouTrack, Space, Hub, and the JetBrains Marketplace, all of which offer APIs for programmatic integration
+  and automation of development workflows.
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+
+specificationVersion: '0.23'
+
+common:
+  - type: FinOps
+    url: finops/jetbrains-finops.yml
+  - type: RateLimits
+    url: rate-limits/jetbrains-rate-limits.yml
+  - type: Spectral
+    url: rules/jetbrains-rules.yml
+  - type: Spectral
+    url: rules/jetbrains-jsonschema-spectral-rules.yml
+  - type: Vocabulary
+    url: vocabulary/jetbrains-vocabulary.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: Conformance
+    url: conformance/jetbrains-conformance.yml
+  - type: LLMsTxt
+    url: llms/jetbrains-llms.txt
+  - type: SecurityTxt
+    url: well-known/jetbrains-youtrack-security.txt
+  - type: SecurityTxt
+    url: well-known/jetbrains-status-security.txt
+  - type: SecurityTxt
+    url: well-known/jetbrains-security.txt
+  - type: SecurityTxt
+    url: well-known/jetbrains-jetbrains-security.txt
+  - type: SecurityTxt
+    url: well-known/jetbrains-hub-security.txt
+  - type: WellKnown
+    url: well-known/jetbrains-well-known.yml
+  - type: Hosts
+    url: hosts/jetbrains-hosts.yml
+  - type: Vendors
+    url: vendors/jetbrains-vendors.yml
+  - type: StatusPage
+    url: https://status.jetbrains.com/
+  - type: SignUp
+    url: https://www.jetbrains.com/teamcity/signup/cloud-enterprise/
+  - type: Security
+    url: https://blog.jetbrains.com/security/
+  - type: PrivacyPolicy
+    url: https://www.jetbrains.com/legal/docs/privacy/privacy/
+  - type: GettingStarted
+    url: https://www.jetbrains.com/youtrack/features/onboarding_pack.html
+  - type: Pricing
+    url: https://www.jetbrains.com/store/?section=commercial&billing=yearly
+  - type: Plans
+    url: plans/jetbrains-plans-pricing.yml
+  - type: Website
+    url: https://www.jetbrains.com/
+  - type: CapabilityMap
+    url: capabilities/jetbrains-capability-edges.yml
+    name: JetBrains Business Capability Map
+  - type: AgenticAccess
+    url: agentic-access/jetbrains-agentic-access.yml
+  - type: VulnerabilityDisclosure
+    url: security/jetbrains-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/jetbrains-domain-security.yml
+  - type: Authentication
+    url: authentication/jetbrains-authentication.yml
+  - type: GitHubOrganization
+    url: https://github.com/jetbrains
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/jetbrains
+  - url: https://www.jetbrains.com/help/
+    name: JetBrains Documentation
+    type: Documentation
+    description: 'null'
+  - url: https://blog.jetbrains.com/
+    name: JetBrains Blog
+    type: Blog
+    description: 'null'
+  - url: https://www.jetbrains.com/support/
+    name: JetBrains Support
+    type: Support
+    description: 'null'
+  - url: https://youtrack.jetbrains.com/
+    name: JetBrains Issue Tracker
+    type: Issues
+    description: 'null'
+
 apis:
 - aid: jetbrains:jetbrains-activities-api
   name: JetBrains Activities API
-  description: Activity feed operations
+  description: >-
+    JetBrains Activities API provides access to activity feeds across JetBrains Space, enabling retrieval
+    of recent events, notifications, and user actions for integration with external tools and services.
+    It supports filtering, pagination, and detailed metadata for each activity item, facilitating automation
+    and analytics.
   humanURL: https://www.jetbrains.com/help/space/http-api-model.html
   tags:
   - Activities
+  - Space
+  - Collaboration
+  - Productivity
+  - Integration
   properties:
   - type: OpenAPI
     url: openapi/jetbrains-activities-api-openapi.yml
@@ -1102,87 +1260,10 @@ apis:
     url: https://plugins.jetbrains.com/docs/marketplace/api-reference.html
   - type: JSONSchema
     url: json-schema/plugin.json
-name: JetBrains
-tags:
-  - CI/CD
-  - Developer Tools
-  - IDE
-  - JetBrains
 type: Index
-deliveryModel:
-  model: unknown
-  open_source: false
-  commercial: false
-  callable_host: true
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
-  source:
-  - openapi
-  generated: '2026-08-28'
-  method: derived
-accessModel:
-  pricing: paid
-  onboarding: unknown
-  trial: false
-  try_now: false
-  public: false
-  label: Paid
-  confidence: medium
-  source:
-  - plans
-  - authentication
-  - security
-  generated: '2026-09-03'
-  method: derived
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jetbrains.png
-access: 3rd-Party
-common:
-  - type: Pricing
-    url: https://www.jetbrains.com/store/?section=commercial&billing=yearly
-  - type: Plans
-    url: plans/jetbrains-plans-pricing.yml
-  - type: Website
-    url: https://www.jetbrains.com/
-  - type: CapabilityMap
-    url: capabilities/jetbrains-capability-edges.yml
-    name: JetBrains Business Capability Map
-  - type: AgenticAccess
-    url: agentic-access/jetbrains-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/jetbrains-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/jetbrains-domain-security.yml
-  - type: Authentication
-    url: authentication/jetbrains-authentication.yml
-  - type: GitHubOrganization
-    url: https://github.com/jetbrains
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/jetbrains
-  - url: https://www.jetbrains.com/help/
-    name: JetBrains Documentation
-    type: Documentation
-    description: 'null'
-  - url: https://blog.jetbrains.com/
-    name: JetBrains Blog
-    type: Blog
-    description: 'null'
-  - url: https://www.jetbrains.com/support/
-    name: JetBrains Support
-    type: Support
-    description: 'null'
-  - url: https://youtrack.jetbrains.com/
-    name: JetBrains Issue Tracker
-    type: Issues
-    description: 'null'
-created: '2025-01-01'
-modified: '2026-05-19'
-position: Consuming
-description: >-
-  JetBrains is a software development company that provides integrated development environments, CI/CD tools, issue
-  tracking, and team collaboration platforms for software developers. Their product suite includes IntelliJ IDEA,
-  TeamCity, YouTrack, Space, Hub, and the JetBrains Marketplace, all of which offer APIs for programmatic integration
-  and automation of development workflows.
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-10-04'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

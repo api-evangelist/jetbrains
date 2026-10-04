@@ -1,0 +1,4 @@
+Contact: mailto:security@jetbrains.com
+Contact: https://youtrack.jetbrains.com/issues/JPS
+Policy: https://www.jetbrains.com/legal/terms/responsible-disclosure.html
+Preferred-Languages: en
