@@ -1,0 +1,1424 @@
+generated: '2026-10-14'
+method: searched
+checked:
+- https://plugins.jetbrains.com/
+marketplace_apps:
+- marketplace: own
+  channel: partner-built
+  app: jetbrains
+  url: https://plugins.jetbrains.com/
+  app_count: null
+  adapter: sweep-devtools.py:jetbrains
+  listed: 4000
+  filter: top 4000 by popularity
+  dropped_by_cap: more beyond cap (count not published)
+  publishers: 2606
+  publishers_linked: 79
+  publishers_platform: 1
+  listings_partner_built: 3373
+  listings_platform_built: 627
+  note: one edge per linked publisher (listing_count on the edge); unlinked publishers counted, not written
+edges:
+- partner_name: 'JetBrains Marketplace: platform-built'
+  partner: null
+  partner_match: null
+  type: marketplace
+  marketplace: own
+  channel: provider-built
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://plugins.jetbrains.com/
+  listing_count: 627
+  publishers:
+  - JetBrains s.r.o.
+  apps:
+  - .env files
+  - Chinese (Simplified) Language Pack / 中文语言包
+  - IdeaVim
+  - JPA Buddy
+  - Protocol Buffers
+  platform_built: true
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Red Hat
+  partner: red-hat
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Red-Hat
+  partner_url: https://www.redhat.com
+  partner_domain: redhat.com
+  listing_count: 5
+  apps:
+  - LSP4IJ
+  - Quarkus Tools
+  - Telemetry by Red Hat
+  - Red Hat Dependency Analytics
+  - Kubernetes by Red Hat
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Amazon Web Services
+  partner: amazon-web-services
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/AWS
+  partner_url: https://aws.amazon.com/intellij/
+  partner_domain: amazon.com
+  listing_count: 3
+  apps:
+  - AWS Toolkit
+  - Amazon Q
+  - AWS Core
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Windsurf
+  partner: windsurf
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Codeium
+  partner_url: https://windsurf.com
+  partner_domain: windsurf.com
+  listing_count: 3
+  apps:
+  - Windsurf Plugin for Python, JS, Java, Go...
+  - Codeium Enterprise Updater
+  - Windsurf (Remote Development)
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Huawei Cloud ToolKit
+  partner: huaweicloud
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/HuaweiCloudToolKit
+  partner_url: https://www.huaweicloud.com
+  partner_domain: huaweicloud.com
+  listing_count: 3
+  apps:
+  - CodeArts Agent
+  - Huawei Cloud CodeArts Check
+  - Huawei Cloud Toolkit Platform
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Oracle
+  partner: oracle
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/oracle
+  partner_url: https://www.oracle.com
+  partner_domain: oracle.com
+  listing_count: 2
+  apps:
+  - Database Navigator
+  - Oracle NoSQL Database Connector
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Tabnine
+  partner: tabnine
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Tabnine
+  partner_url: https://tabnine.com
+  partner_domain: tabnine.com
+  listing_count: 2
+  apps:
+  - (Legacy) Tabnine
+  - Tabnine for Enterprise
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: JFrog
+  partner: jfrog
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/a3ed0d6b-1461-477e-8ac8-b8445a17e289
+  partner_url: https://jfrog.com
+  partner_domain: jfrog.com
+  listing_count: 2
+  apps:
+  - JFrog
+  - Conan
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Coder Technologies, Inc.
+  partner: coder
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/coder
+  partner_url: https://coder.com/
+  partner_domain: coder.com
+  listing_count: 2
+  apps:
+  - Coder
+  - Coder
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Baidu Inc.
+  partner: baidu
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/baidu
+  partner_url: https://comate.baidu.com/
+  partner_domain: baidu.com
+  listing_count: 2
+  apps:
+  - Baidu Comate
+  - Baidu Comate (Gitee版)
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Aiven
+  partner: aiven
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/EverSQL
+  partner_url: https://www.aiven.io/
+  partner_domain: aiven.io
+  listing_count: 2
+  apps:
+  - SQL Optimizer, SQL Formatter, SQL Minifier, PostgreSQL and MySQL
+  - 'Kafka UI: Manage your Kafka clusters, Produce and View Messages'
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Apache Software Foundation
+  partner: apache-software-foundation
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/apache
+  partner_url: https://apache.org
+  partner_domain: apache.org
+  listing_count: 2
+  apps:
+  - Apache Grails
+  - Apache Struts
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Microsoft Corporation
+  partner: microsoft
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Microsoft
+  partner_url: https://www.microsoft.com
+  partner_domain: microsoft.com
+  listing_count: 2
+  apps:
+  - GitHub Copilot modernization
+  - Azure Toolkit for IntelliJ
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Dynatrace LLC
+  partner: dynatrace
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Dynatrace
+  partner_url: https://www.dynatrace.com
+  partner_domain: dynatrace.com
+  listing_count: 2
+  apps:
+  - Dynatrace Live Debugger
+  - Dynatrace Query Language
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Mend
+  partner: mend
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/55a55509-b338-41d4-ac4f-79850dcd6cbb
+  partner_url: https://www.mend.io/
+  partner_domain: mend.io
+  listing_count: 2
+  apps:
+  - Mend Advise for PyCharm
+  - Mend Advise
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Confluent
+  partner: confluent
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/confluentinc
+  partner_url: https://confluent.io
+  partner_domain: confluent.io
+  listing_count: 1
+  apps:
+  - Confluent
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Perforce Software
+  partner: perforce
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Perforce
+  partner_url: https://www.perforce.com/
+  partner_domain: perforce.com
+  listing_count: 1
+  apps:
+  - JRebel and XRebel
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: WakaTime
+  partner: wakatime
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/1268b6d9-e228-4ea4-bfce-780350a39078
+  partner_url: https://wakatime.com
+  partner_domain: wakatime.com
+  listing_count: 1
+  apps:
+  - WakaTime
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: New Relic
+  partner: new-relic
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/newrelic
+  partner_url: https://www.newrelic.com
+  partner_domain: newrelic.com
+  listing_count: 1
+  apps:
+  - New Relic CodeStream
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: SonarSource
+  partner: sonarsource
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/SonarSource
+  partner_url: https://www.sonarsource.com/
+  partner_domain: sonarsource.com
+  listing_count: 1
+  apps:
+  - SonarQube for IDE
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Qodo
+  partner: qodo
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/CodiumAI
+  partner_url: https://www.qodo.ai/
+  partner_domain: qodo.ai
+  listing_count: 1
+  apps:
+  - Qodo
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: EPAM Systems
+  partner: epam-systems
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/EPAM_Systems
+  partner_url: https://www.epam.com/
+  partner_domain: epam.com
+  listing_count: 1
+  apps:
+  - SAP Commerce Developers Toolset
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: 42Crunch
+  partner: 42crunch
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/42Crunch
+  partner_url: https://42crunch.com
+  partner_domain: 42crunch.com
+  listing_count: 1
+  apps:
+  - OpenAPI (Swagger) Editor
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Netflix
+  partner: netflix
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/netflix
+  partner_url: https://netflix.com
+  partner_domain: netflix.com
+  listing_count: 1
+  apps:
+  - DGS
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Datadog Inc
+  partner: datadog
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Datadog
+  partner_url: https://www.datadoghq.com/
+  partner_domain: datadoghq.com
+  listing_count: 1
+  apps:
+  - Datadog
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Bito
+  partner: bito
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Bito
+  partner_url: https://bito.ai
+  partner_domain: bito.ai
+  listing_count: 1
+  apps:
+  - Bito AI Code Reviews
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Sourcery
+  partner: sourceryai
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Sourcery
+  partner_url: https://sourcery.ai/
+  partner_domain: sourcery.ai
+  listing_count: 1
+  apps:
+  - Sourcery
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Cline Bot Inc
+  partner: cline
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/cline-bot-inc
+  partner_url: https://cline.bot
+  partner_domain: cline.bot
+  listing_count: 1
+  apps:
+  - Cline
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Apollo GraphQL
+  partner: apollo-graphql
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/apollographql
+  partner_url: https://www.apollographql.com/
+  partner_domain: apollographql.com
+  listing_count: 1
+  apps:
+  - Apollo GraphQL
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Jenkins project
+  partner: jenkins
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/jenkins
+  partner_url: https://www.jenkins.io/
+  partner_domain: jenkins.io
+  listing_count: 1
+  apps:
+  - Jenkins Development Support
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Checkmarx
+  partner: checkmarx
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Checkmarx
+  partner_url: https://www.checkmarx.com/
+  partner_domain: checkmarx.com
+  listing_count: 1
+  apps:
+  - Checkmarx
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Robocorp
+  partner: robocorp
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/robocorp
+  partner_url: https://robocorp.com
+  partner_domain: robocorp.com
+  listing_count: 1
+  apps:
+  - Robot Framework Language Server
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Buf
+  partner: buf
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Buf
+  partner_url: https://buf.build/
+  partner_domain: buf.build
+  listing_count: 1
+  apps:
+  - Buf for Protocol Buffers
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: SmartBear Software
+  partner: smartbear
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/SmartBear
+  partner_url: https://smartbear.com/
+  partner_domain: smartbear.com
+  listing_count: 1
+  apps:
+  - intellij-swaggerhub
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Aikido Security
+  partner: aikido-security
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/aikidoSecurity
+  partner_url: https://www.aikido.dev
+  partner_domain: aikido.dev
+  listing_count: 1
+  apps:
+  - Aikido Security
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Anthropic PBC
+  partner: anthropic
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/anthropic
+  partner_url: https://www.anthropic.com/
+  partner_domain: anthropic.com
+  listing_count: 1
+  apps:
+  - Claude Code [Beta]
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Lightrun
+  partner: lightrun
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Lightrun
+  partner_url: https://www.lightrun.com
+  partner_domain: lightrun.com
+  listing_count: 1
+  apps:
+  - Lightrun
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Nx Developers
+  partner: nx-dev
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/NxDev
+  partner_url: https://nx.dev
+  partner_domain: nx.dev
+  listing_count: 1
+  apps:
+  - Nx Console
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Sonatype Inc
+  partner: sonatype
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/00204479-c057-4138-bc70-252ea2f9574d
+  partner_url: https://www.sonatype.com
+  partner_domain: sonatype.com
+  listing_count: 1
+  apps:
+  - Sonatype Nexus IQ
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Apidog Team
+  partner: apidog
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/apidog
+  partner_url: https://apidog.com/
+  partner_domain: apidog.com
+  listing_count: 1
+  apps:
+  - Apidog Fast Request
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: LeTech Group at Aalto University
+  partner: aalto
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/LeTech
+  partner_url: https://research.cs.aalto.fi/LeTech/
+  partner_domain: aalto.fi
+  listing_count: 1
+  apps:
+  - A+ Courses
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Mintlify
+  partner: mintlify
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/mintlify
+  partner_url: https://mintlify.com/
+  partner_domain: mintlify.com
+  listing_count: 1
+  apps:
+  - Mintlify Doc Writer
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Zebra Technologies
+  partner: zebra-technologies
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/edbd80e2-35e8-4a5e-b752-67cbd8cd3f88
+  partner_url: http://www.zebra.com
+  partner_domain: zebra.com
+  listing_count: 1
+  apps:
+  - EMDK for Android
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Sourcegraph
+  partner: sourcegraph
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/sourcegraph
+  partner_url: https://sourcegraph.com
+  partner_domain: sourcegraph.com
+  listing_count: 1
+  apps:
+  - 'Cody: AI Code Assistant'
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Lokalise Inc.
+  partner: lokalise
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/34728fae-e84c-46ab-9570-836762045563
+  partner_url: https://www.lokalise.com
+  partner_domain: lokalise.com
+  listing_count: 1
+  apps:
+  - i18n Ally
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Kotzilla
+  partner: kotzilla
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Kotzilla
+  partner_url: https://kotzilla.io/
+  partner_domain: kotzilla.io
+  listing_count: 1
+  apps:
+  - Koin Dependency Injection (Official)
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Snyk Ltd
+  partner: snyk
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/5409d2e6-f7fc-46ce-9cc3-e582b0e4eefa
+  partner_url: https://snyk.io
+  partner_domain: snyk.io
+  listing_count: 1
+  apps:
+  - Snyk Security
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: SAP OSS
+  partner: sap
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/sap-oss
+  partner_url: https://www.sap.com/
+  partner_domain: sap.com
+  listing_count: 1
+  apps:
+  - SAP CDS Language Support
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Octopus Deploy
+  partner: octopus-deploy
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/60c2c639-0d82-460f-9509-90c79f0a665c
+  partner_url: https://octopus.com/
+  partner_domain: octopus.com
+  listing_count: 1
+  apps:
+  - Octopus Deploy integration
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: browserstack
+  partner: browserstack
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/bc5bae5c-8609-43fd-8b90-25d831e458b6
+  partner_url: https://www.browserstack.com
+  partner_domain: browserstack.com
+  listing_count: 1
+  apps:
+  - BrowserStack
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Spotify
+  partner: spotify
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Spotify
+  partner_url: https://spotify.com/
+  partner_domain: spotify.com
+  listing_count: 1
+  apps:
+  - Scio
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Pandora Media
+  partner: pandora
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/4ea67b5e-334c-4aa7-9264-b9bb389d6b74
+  partner_url: http://www.pandora.com
+  partner_domain: pandora.com
+  listing_count: 1
+  apps:
+  - Multiple File Kotlin Converter
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: OpenText
+  partner: opentext-cybersecurity
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/021628f3-c71b-4df0-9720-36cf01b0521c
+  partner_url: https://www.opentext.com/products/functional-testing-lab-for-mobile-and-web
+  partner_domain: opentext.com
+  listing_count: 1
+  apps:
+  - OpenText Functional Testing Lab for Mobile and Web
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Demisto
+  partner: demisto
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/432745cb-467a-4881-bf88-ec2ac54e6701
+  partner_url: http://www.demisto.com
+  partner_domain: demisto.com
+  listing_count: 1
+  apps:
+  - Demisto Add-on for PyCharm
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: HCL Software
+  partner: hcl-software
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/HCL
+  partner_url: https://www.hcl-software.com/appscan/home
+  partner_domain: hcl-software.com
+  listing_count: 1
+  apps:
+  - HCL AppScan
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: GitLab, Inc.
+  partner: gitlab
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/GitLab
+  partner_url: https://about.gitlab.com
+  partner_domain: gitlab.com
+  listing_count: 1
+  apps:
+  - GitLab Duo
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Aqua Security
+  partner: aqua-security
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/AquaSecurity
+  partner_url: https://www.aquasec.com
+  partner_domain: aquasec.com
+  listing_count: 1
+  apps:
+  - Aqua Trivy
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: packmind
+  partner: packmind
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/packmind
+  partner_url: https://packmind.com
+  partner_domain: packmind.com
+  listing_count: 1
+  apps:
+  - Packmind
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Cycode
+  partner: cycode
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/cycodehq
+  partner_url: https://www.cycode.com
+  partner_domain: cycode.com
+  listing_count: 1
+  apps:
+  - Cycode
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Crowdin
+  partner: crowdin
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/8c4bdb1a-15cf-4a47-9b97-913daf2956ac
+  partner_url: https://crowdin.com
+  partner_domain: crowdin.com
+  listing_count: 1
+  apps:
+  - Crowdin
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Liferay, Inc.
+  partner: liferay
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/a0855ed1-6037-407c-920d-97e73337c40b
+  partner_url: https://www.liferay.com
+  partner_domain: liferay.com
+  listing_count: 1
+  apps:
+  - Liferay
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: TabbyML
+  partner: tabby-ml
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/TabbyML
+  partner_url: https://www.tabbyml.com
+  partner_domain: tabbyml.com
+  listing_count: 1
+  apps:
+  - Tabby
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: AppDynamics Inc.
+  partner: appdynamics
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/71c2ab96-f5e4-4f06-8860-335b710f1fd7
+  partner_url: http://www.appdynamics.com
+  partner_domain: appdynamics.com
+  listing_count: 1
+  apps:
+  - AppDynamics Android Agent Installer
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Couchbase
+  partner: couchbase
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Couchbase
+  partner_url: https://www.couchbase.com
+  partner_domain: couchbase.com
+  listing_count: 1
+  apps:
+  - Couchbase
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Black Duck
+  partner: black-duck
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/blackduck
+  partner_url: https://www.blackduck.com
+  partner_domain: blackduck.com
+  listing_count: 1
+  apps:
+  - Code Sight (Security)
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Unblocked
+  partner: unblocked
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/unblocked
+  partner_url: https://getunblocked.com/
+  partner_domain: getunblocked.com
+  listing_count: 1
+  apps:
+  - Unblocked
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Swimm
+  partner: swimm
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Swimm
+  partner_url: https://swimm.io
+  partner_domain: swimm.io
+  listing_count: 1
+  apps:
+  - 'Swimm: Application Understanding Platform'
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Open Liberty
+  partner: open-liberty
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Open-Liberty
+  partner_url: https://openliberty.io/
+  partner_domain: openliberty.io
+  listing_count: 1
+  apps:
+  - Liberty Tools
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: TestFairy
+  partner: testfairy
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/testfairy
+  partner_url: https://www.testfairy.com
+  partner_domain: testfairy.com
+  listing_count: 1
+  apps:
+  - TestFairy Integration
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Eclipse Scout
+  partner: eclipse
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/3c5f9e33-6783-410e-b4ac-a30866d2bc0b
+  partner_url: https://www.eclipse.org/scout/
+  partner_domain: eclipse.org
+  listing_count: 1
+  apps:
+  - Eclipse Scout
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: GetYourGuide
+  partner: getyourguide
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/GetYourGuide
+  partner_url: https://code.getyourguide.com
+  partner_domain: getyourguide.com
+  listing_count: 1
+  apps:
+  - Paparazzi
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Veracode Publisher
+  partner: veracode
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/9c87f209-f72a-4080-ac87-b280161c29fb
+  partner_url: https://www.veracode.com/
+  partner_domain: veracode.com
+  listing_count: 1
+  apps:
+  - Veracode Scan
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Kobiton Admin
+  partner: kobiton
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Kobiton
+  partner_url: https://kobiton.com
+  partner_domain: kobiton.com
+  listing_count: 1
+  apps:
+  - Kobiton ADB Tunnel
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Odoo
+  partner: odoo
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/odoo
+  partner_url: https://www.odoo.com
+  partner_domain: odoo.com
+  listing_count: 1
+  apps:
+  - Odoo
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Dataiku
+  partner: dataiku
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/335a40ec-ef47-494a-b6ae-ac7033a25ddd
+  partner_url: http://www.dataiku.com
+  partner_domain: dataiku.com
+  listing_count: 1
+  apps:
+  - Dataiku DSS
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Component Kit Talend
+  partner: talend
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/21562d65-c750-4cc8-b5d3-dd4769853c86
+  partner_url: https://www.talend.com
+  partner_domain: talend.com
+  listing_count: 1
+  apps:
+  - Talend Component Kit
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Optimizely Fullstack
+  partner: optimizely
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/f7937294-3335-436f-9722-07c5a1318805
+  partner_url: https://www.optimizely.com
+  partner_domain: optimizely.com
+  listing_count: 1
+  apps:
+  - Optimizely
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Palo Alto Networks
+  partner: palo-alto-networks
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/prismacloud
+  partner_url: https://www.paloaltonetworks.com/
+  partner_domain: paloaltonetworks.com
+  listing_count: 1
+  apps:
+  - Cortex Cloud
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Open Text
+  partner: opentext-cybersecurity
+  partner_match: domain+name-among-holders
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/OpenText
+  partner_url: https://www.opentext.com/
+  partner_domain: opentext.com
+  listing_count: 1
+  apps:
+  - Core Software Delivery Platform
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+- partner_name: Wiz
+  partner: wiz
+  partner_match: domain
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  relationship: platform-app
+  direction: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Wiz
+  partner_url: https://www.wiz.io/
+  partner_domain: wiz.io
+  listing_count: 1
+  apps:
+  - Wiz
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+  badges:
+  - Verified vendor
+source:
+- https://plugins.jetbrains.com/
