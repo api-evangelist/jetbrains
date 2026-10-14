@@ -1,6 +1,8 @@
 generated: '2026-10-14'
 method: searched
 checked:
+- https://marketplace.atlassian.com/
+- https://marketplace.visualstudio.com/vscode
 - https://plugins.jetbrains.com/
 marketplace_apps:
 - marketplace: own
@@ -1420,5 +1422,40 @@ edges:
   detected: '2026-10-14'
   badges:
   - Verified vendor
+- partner_name: Atlassian Marketplace
+  partner: atlassian
+  partner_match: aggregator
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://marketplace.atlassian.com/vendors/1211898/jetbrains
+  listing_count: 1
+  apps:
+  - JetBrains SpaceCode for Jira Cloud
+  publisher_name: JetBrains
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
+- partner_name: Visual Studio Code Marketplace
+  partner: vs-code-marketplace
+  partner_match: aggregator
+  type: marketplace
+  marketplace: vscode
+  channel: partner-built
+  relationship: platform-app
+  direction: third-party
+  evidence: https://marketplace.visualstudio.com/publishers/JetBrains
+  listing_count: 3
+  apps:
+  - C# by ReSharper
+  - Kotlin by JetBrains
+  - AI Assistant by JetBrains
+  publisher_name: JetBrains
+  badges:
+  - Verified publisher
+  - Verified domain
+  detected_by: sweep-devtools.py
+  detected: '2026-10-14'
 source:
 - https://plugins.jetbrains.com/

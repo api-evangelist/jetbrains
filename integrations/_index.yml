@@ -962,3 +962,27 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: jetbrains-atlassian-marketplace
+  label: Atlassian Marketplace
+  partner: atlassian
+  partner_name: Atlassian Marketplace
+  type: marketplace
+  marketplace: atlassian
+  channel: partner-built
+  evidence: https://marketplace.atlassian.com/vendors/1211898/jetbrains
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-visual-studio-code-marketplace
+  label: Visual Studio Code Marketplace
+  partner: vs-code-marketplace
+  partner_name: Visual Studio Code Marketplace
+  type: marketplace
+  marketplace: vscode
+  channel: partner-built
+  evidence: https://marketplace.visualstudio.com/publishers/JetBrains
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
