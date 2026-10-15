@@ -4,6 +4,8 @@ checked:
 - https://marketplace.atlassian.com/
 - https://marketplace.visualstudio.com/vscode
 - https://plugins.jetbrains.com/
+- https://registry.npmjs.org/-/v1/search?text=keywords:n8n-community-node-package
+- https://zapier.com/api/v4/apps/
 - unity/integrations/unity-integration-edges.yml
 marketplace_apps:
 - marketplace: own
@@ -1477,5 +1479,57 @@ edges:
   category: Unity Verified Solutions
   publisher_verified:
   - Unity Verified Solution
+- partner_name: Zapier
+  partner: zapier
+  partner_match: aggregator
+  type: marketplace
+  marketplace: zapier-directory
+  channel: ipaas-listing
+  relationship: ipaas-bridge
+  direction: third-party
+  evidence: https://zapier.com/apps/jetbrains-space/integrations
+  category: null
+  contract_reference:
+    register: Zapier app directory (zapier.com/api/v4/apps)
+    spec_file: null
+    role: ipaas-connector:zapier
+    registered_name: JetBrains Space
+    matched_domain: jetbrains.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    app_slug: jetbrains-space
+    beta: false
+    builder: unknown (not in the directory record)
+  detected_by: sweep-workflow-automation.py
+  first_seen: '2026-10-15'
+- partner_name: n8n
+  partner: n8n
+  partner_match: aggregator
+  type: marketplace
+  marketplace: n8n-community
+  channel: open-source-node
+  relationship: ipaas-bridge
+  direction: provider-built
+  evidence: https://www.npmjs.com/package/@jetbrains/n8n-nodes-youtrack
+  category: null
+  contract_reference:
+    register: n8n community nodes (npm keyword n8n-community-node-package)
+    spec_file: null
+    role: ipaas-connector:n8n-community
+    registered_name: '@jetbrains/n8n-nodes-youtrack'
+    matched_domain: jetbrains.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    package: '@jetbrains/n8n-nodes-youtrack'
+    version: 0.1.8
+    published: '2026-02-05T11:40:25.416Z'
+    matched_on: publisher-email
+    builder: provider (package published from the provider's own domain)
+  detected_by: sweep-workflow-automation.py
+  first_seen: '2026-10-15'
 source:
 - https://plugins.jetbrains.com/
