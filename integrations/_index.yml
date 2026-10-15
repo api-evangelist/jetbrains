@@ -986,3 +986,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: jetbrains-unity-own
+  label: Unity (own)
+  partner: unity
+  partner_name: Unity (own)
+  category: Unity Verified Solutions
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://assetstore.unity.com/packages/tools/level-design/riderflow-218574
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
