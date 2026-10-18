@@ -10,6 +10,7 @@ checked:
 - https://spdx.dev/use/spdx-tools/
 - https://www.openchainproject.org/community-of-conformance
 - https://zapier.com/api/v4/apps/
+- slack/integrations/slack-integration-edges.yml
 - unity/integrations/unity-integration-edges.yml
 marketplace_apps:
 - marketplace: own
@@ -1564,5 +1565,22 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-software-supply-chain.py
   first_seen: '2026-10-18'
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/AEJG9S4LC-youtrack
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - YouTrack
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
 source:
 - https://plugins.jetbrains.com/
