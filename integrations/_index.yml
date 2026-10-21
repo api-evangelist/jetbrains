@@ -1105,3 +1105,1415 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: jetbrains-winget-windows-package-manager
+  label: winget (Windows Package Manager)
+  partner_name: winget (Windows Package Manager)
+  category: official CLI (winget (Windows Package Manager))
+  type: register
+  channel: package-registry
+  evidence: https://github.com/microsoft/winget-pkgs/tree/master/manifests/j/JetBrains/TeamCityCLI
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: winget (Windows Package Manager) (public package index)
+    spec_file: null
+    packages:
+    - name: JetBrains.TeamCityCLI
+      kind: manifest
+      version: 1.6.0
+      released: '2026-10-15'
+      lapsed: false
+      page: https://github.com/microsoft/winget-pkgs/tree/master/manifests/j/JetBrains/TeamCityCLI
+      cli: 'winget: A command-line interface for TeamCity CI/CD server'
+      repo_leg: domain:jetbrains.com
+      publisher_leg: artifact-shared-github-org:jetbrains
+      matched_by: domain+name-among-holders
+    current: true
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-4paradigm
+  label: 4Paradigm
+  partner: 4paradigm
+  partner_name: 4Paradigm
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/fea449f6-1999-4d1f-8d63-82653184260a
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: 4Paradigm Developer
+    publisher_id: 4Paradigm Developer
+    matched_domain: 4paradigm.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-ab-tasty
+  label: AB Tasty
+  partner: ab-tasty
+  partner_name: AB Tasty
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/ABTasty
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: AB Tasty
+    publisher_id: AB Tasty
+    matched_domain: abtasty.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-abacatepay
+  label: AbacatePay
+  partner: abacatepay
+  partner_name: AbacatePay
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/abacatepay-theme
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: AbacatePay Theme
+    publisher_id: AbacatePay Theme
+    matched_domain: abacatepay.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-adacore
+  label: AdaCore
+  partner: adacore
+  partner_name: AdaCore
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/a64c07ef-d3da-47f1-9316-9b0216111580
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: AdaCore
+    publisher_id: AdaCore
+    matched_domain: adacore.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-akamai
+  label: Akamai
+  partner: akamai
+  partner_name: Akamai
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/AkamaiTechnologies
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Akamai Technologies
+    publisher_id: Akamai Technologies
+    matched_domain: akamai.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-applitools
+  label: Applitools
+  partner: applitools
+  partner_name: Applitools
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/applitools
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Applitools
+    publisher_id: Applitools
+    matched_domain: applitools.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-autorabit
+  label: AutoRABIT
+  partner: autorabit
+  partner_name: AutoRABIT
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/CodeScan
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: AutoRabit CodeScan
+    publisher_id: AutoRabit CodeScan
+    matched_domain: autorabit.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-circleci
+  label: CircleCI
+  partner: circleci
+  partner_name: CircleCI
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/circleci
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: CircleCI
+    publisher_id: CircleCI
+    matched_domain: circleci.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-cloudbees
+  label: CloudBees
+  partner: cloudbees
+  partner_name: CloudBees
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/cloudbees
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: CloudBees, Inc.
+    publisher_id: CloudBees, Inc.
+    matched_domain: cloudbees.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-codacy
+  label: Codacy
+  partner: codacy
+  partner_name: Codacy
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/codacy
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Codacy
+    publisher_id: Codacy
+    matched_domain: codacy.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-codekarma
+  label: CodeKarma
+  partner: codekarma
+  partner_name: CodeKarma
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/codekarma-ai
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: CODEKARMA TECHNOLOGIES PRIVATE LIMITED
+    publisher_id: CODEKARMA TECHNOLOGIES PRIVATE LIMITED
+    matched_domain: codekarma.ai
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-contrast-security
+  label: Contrast Security
+  partner: contrast-security
+  partner_name: Contrast Security
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/contrast-security
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Contrast Security
+    publisher_id: Contrast Security
+    matched_domain: contrastsecurity.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-datastax
+  label: DataStax
+  partner: datastax
+  partner_name: DataStax
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/datastax
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: DataStax
+    publisher_id: DataStax
+    matched_domain: datastax.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-developerhub
+  label: DeveloperHub
+  partner: developerhub
+  partner_name: DeveloperHub
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/DeveloperHub
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: DeveloperHub
+    publisher_id: DeveloperHub
+    matched_domain: developerhub.io
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-encore
+  label: Encore
+  partner: encore-dev
+  partner_name: Encore
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Encore
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Encore
+    publisher_id: Encore
+    matched_domain: encore.dev
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-factory
+  label: Factory
+  partner: factory-ai
+  partner_name: Factory
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/factory
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Factory
+    publisher_id: Factory
+    matched_domain: factory.ai
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-faros-ai
+  label: Faros AI
+  partner: faros
+  partner_name: Faros AI
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/faros-ai
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Faros AI
+    publisher_id: Faros AI
+    matched_domain: faros.ai
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-google
+  label: Google
+  partner: google
+  partner_name: Google
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Google
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Google
+    publisher_id: Google
+    matched_domain: google.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    other_publisher_ids:
+    - Google Device and Service Partner Engineering
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-h2o-ai
+  label: H2O.ai
+  partner: h2o-ai
+  partner_name: H2O.ai
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/e093f663-1bdf-4802-b1c6-9bd22fa7a34b
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: H2O.ai
+    publisher_id: H2O.ai
+    matched_domain: h2o.ai
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-harness
+  label: Harness
+  partner: harness
+  partner_name: Harness
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/harness-ai-inc
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Harness Inc
+    publisher_id: Harness Inc
+    matched_domain: harness.io
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-ibm
+  label: IBM
+  partner: ibm
+  partner_name: IBM
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/ibm
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: IBM
+    publisher_id: IBM
+    matched_domain: ibm.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    other_publisher_ids:
+    - IBM Global Cloud Acceleration Team
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-infracost
+  label: Infracost
+  partner: infracost
+  partner_name: Infracost
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/infracost
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Infracost
+    publisher_id: Infracost
+    matched_domain: infracost.io
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-intuit
+  label: Intuit
+  partner: intuit
+  partner_name: Intuit
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Intuit
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Intuit
+    publisher_id: Intuit
+    matched_domain: intuit.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-invicti
+  label: Invicti
+  partner: invicti
+  partner_name: Invicti
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/invicti-formerly-netsparker
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Invicti (formerly Netsparker)
+    publisher_id: Invicti (formerly Netsparker)
+    matched_domain: invicti.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-kadena
+  label: Kadena
+  partner: kadena
+  partner_name: Kadena
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Kadena
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Kadena
+    publisher_id: Kadena
+    matched_domain: kadena.io
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-kcl
+  label: KCL
+  partner: kcl
+  partner_name: KCL
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/kcl
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: KCL
+    publisher_id: KCL
+    matched_domain: kcl-lang.io
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-keeper-security
+  label: Keeper Security
+  partner: keeper-security
+  partner_name: Keeper Security
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/KeeperSecurity
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Keeper Security
+    publisher_id: Keeper Security
+    matched_domain: keepersecurity.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-kodem
+  label: Kodem
+  partner: kodem
+  partner_name: Kodem
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/kodem-security
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Kodem Security
+    publisher_id: Kodem Security
+    matched_domain: kodemsecurity.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-lambdatest
+  label: LambdaTest
+  partner: lambdatest
+  partner_name: LambdaTest
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/77c2f5b9-a6a8-4948-bc6b-bf2b47d58fe5
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: LambdaTest
+    publisher_id: LambdaTest
+    matched_domain: lambdatest.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-launchdarkly
+  label: LaunchDarkly
+  partner: launchdarkly
+  partner_name: LaunchDarkly
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/LaunchDarkly
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: LaunchDarkly
+    publisher_id: LaunchDarkly
+    matched_domain: launchdarkly.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-mistral-ai
+  label: Mistral AI
+  partner: mistral
+  partner_name: Mistral AI
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/mistralai
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Mistral AI
+    publisher_id: Mistral AI
+    matched_domain: mistral.ai
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-nanovms
+  label: NanoVMs
+  partner: nanovms
+  partner_name: NanoVMs
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/NanoVMs
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: OPS
+    publisher_id: OPS
+    matched_domain: nanovms.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-nobl9
+  label: Nobl9
+  partner: nobl9
+  partner_name: Nobl9
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/nobl9
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Nobl9
+    publisher_id: Nobl9
+    matched_domain: nobl9.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-openfga
+  label: OpenFGA
+  partner: openfga
+  partner_name: OpenFGA
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/openfga
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: OpenFGA
+    publisher_id: OpenFGA
+    matched_domain: openfga.dev
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-orca-security
+  label: Orca Security
+  partner: orca-security
+  partner_name: Orca Security
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/orca-security
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Orca Security
+    publisher_id: Orca Security
+    matched_domain: orca.security
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-pluralsight
+  label: Pluralsight
+  partner: pluralsight
+  partner_name: Pluralsight
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Pluralsight
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Pluralsight
+    publisher_id: Pluralsight
+    matched_domain: pluralsight.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-pokkt
+  label: Pokkt
+  partner: pokkt
+  partner_name: Pokkt
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/plugindevpokkt
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: plugindevpokkt
+    publisher_id: plugindevpokkt
+    matched_domain: pokkt.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-poolside
+  label: Poolside
+  partner: poolside-ai
+  partner_name: Poolside
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/poolside
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: poolside
+    publisher_id: poolside
+    matched_domain: poolside.ai
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-postman
+  label: Postman
+  partner: postman
+  partner_name: Postman
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/postman
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Postman
+    publisher_id: Postman
+    matched_domain: postman.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-prismic
+  label: Prismic
+  partner: prismic
+  partner_name: Prismic
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/prismicio
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Prismic.io
+    publisher_id: Prismic.io
+    matched_domain: prismic.io
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-qi-anxin
+  label: Qi Anxin
+  partner: qi-anxin
+  partner_name: Qi Anxin
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/QI-ANXIN-GROUP
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: QI-ANXIN GROUP
+    publisher_id: QI-ANXIN GROUP
+    matched_domain: qianxin.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-qt
+  label: Qt
+  partner: qt
+  partner_name: Qt
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/qt-group
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Qt Group
+    publisher_id: Qt Group
+    matched_domain: qt.io
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-qwiet-ai
+  label: Qwiet Ai
+  partner: qwiet-ai
+  partner_name: Qwiet Ai
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/qwiet-ai
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Qwiet AI
+    publisher_id: Qwiet AI
+    matched_domain: qwiet.ai
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-revenuecat
+  label: RevenueCat
+  partner: revenuecat
+  partner_name: RevenueCat
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/revenuecat
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: RevenueCat
+    publisher_id: RevenueCat
+    matched_domain: revenuecat.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-semgrep
+  label: Semgrep
+  partner: semgrep
+  partner_name: Semgrep
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/Semgrep
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Semgrep
+    publisher_id: Semgrep
+    matched_domain: semgrep.dev
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-simplelocalize
+  label: SimpleLocalize
+  partner: simplelocalize
+  partner_name: SimpleLocalize
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/simplelocalize
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: SimpleLocalize
+    publisher_id: SimpleLocalize
+    matched_domain: simplelocalize.io
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-sinch
+  label: Sinch
+  partner: sinch
+  partner_name: Sinch
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/sinch
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Sinch
+    publisher_id: Sinch
+    matched_domain: sinch.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-sumo-logic
+  label: Sumo Logic
+  partner: sumo-logic
+  partner_name: Sumo Logic
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/SumoLogic
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Sumo Logic
+    publisher_id: Sumo Logic
+    matched_domain: sumologic.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-surrealdb
+  label: SurrealDB
+  partner: surrealdb
+  partner_name: SurrealDB
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/surrealdb
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: SurrealDB
+    publisher_id: SurrealDB
+    matched_domain: surrealdb.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-thunder-client
+  label: Thunder Client
+  partner: thunder-client
+  partner_name: Thunder Client
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/thunder-client
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Thunder Client
+    publisher_id: Thunder Client
+    matched_domain: thunderclient.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-unity
+  label: Unity
+  partner: unity
+  partner_name: Unity
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/unity-technologies
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Unity Technologies SF
+    publisher_id: Unity Technologies SF
+    matched_domain: unity.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-you-com
+  label: You.com
+  partner: you-com
+  partner_name: You.com
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/You-OpenSource
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: You.com
+    publisher_id: You.com
+    matched_domain: you.com
+    matched_by: domain
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
+- slug: jetbrains-zoho
+  label: Zoho
+  partner: zoho
+  partner_name: Zoho
+  category: IDE / developer extension marketplace listing
+  type: marketplace
+  marketplace: jetbrains-marketplace
+  channel: partner-built
+  evidence: https://plugins.jetbrains.com/vendor/zoho-corporation
+  source: edge
+  relationship: platform-app
+  contract_reference:
+    register: JetBrains Marketplace
+    spec_file: null
+    role: jetbrains-marketplace-publisher
+    registered_name: Zoho Corporation
+    publisher_id: Zoho Corporation
+    matched_domain: zoho.com
+    matched_by: domain+name-among-holders
+    detected_by: sweep-ide-extension-marketplaces.py
+    detected: '2026-10-20'
+    signal_note: one edge per (provider, store); listing alone = participation. Listing / install / download counts
+      are context, never counted. Publisher vetting badges -> publisher_verified (weight 0)
+    vendor_type: Organization
+  status: not-a-workflow
+  arazzo: null
