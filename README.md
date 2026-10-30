@@ -1,4 +1,4 @@
-# JetBrains (jetbrains)
+# JetBrains
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,147 +66,219 @@
 
 JetBrains is a software development company that provides integrated development environments, CI/CD tools, issue tracking, and team collaboration platforms for software developers. Their product suite includes IntelliJ IDEA, TeamCity, YouTrack, Space, Hub, and the JetBrains Marketplace, all of which offer APIs for programmatic integration and automation of development workflows.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/jetbrains/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/jetbrains/refs/heads/main/apis.yml)
+**Areas:** CI/CD · Developer Tools · IDE · JetBrains · IDEs · Continuous Integration · Project Management · Code Quality · Data Science · AI Coding - CI/CD - Developer Tools - IDE - JetBrains
 
-## Scope
+## JetBrains on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for JetBrains is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/jetbrains/](https://apis.io/providers/jetbrains/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (33)
 
-- CI/CD
-- Developer Tools
-- IDE
+- [JetBrains Activities API](https://apis.io/apis/jetbrains/jetbrains-activities-api/) — JetBrains Activities API provides access to activity feeds across JetBrains Space, enabling retrieval of recent events, notifications, and user actions for…
+- [JetBrains Agent Pools API](https://apis.io/apis/jetbrains/jetbrains-agent-pools-api/) — Agent pool management
+- [JetBrains Agents API](https://apis.io/apis/jetbrains/jetbrains-agents-api/) — Build agent management
+- [JetBrains Agile Boards API](https://apis.io/apis/jetbrains/jetbrains-agile-boards-api/) — Agile board management
+- [JetBrains API Model API](https://apis.io/apis/jetbrains/jetbrains-api-model-api/) — HTTP API model and metadata
+- [JetBrains Applications API](https://apis.io/apis/jetbrains/jetbrains-applications-api/) — Application management
+- [JetBrains Automation API](https://apis.io/apis/jetbrains/jetbrains-automation-api/) — Automation and CI/CD operations
+- [JetBrains Build Configurations API](https://apis.io/apis/jetbrains/jetbrains-build-configurations-api/) — Build type/configuration management
+- [JetBrains Build Queue API](https://apis.io/apis/jetbrains/jetbrains-build-queue-api/) — Build queue management
+- [JetBrains Builds API](https://apis.io/apis/jetbrains/jetbrains-builds-api/) — Build execution and results
+- [JetBrains Changes API](https://apis.io/apis/jetbrains/jetbrains-changes-api/) — VCS change tracking
+- [JetBrains Chats API](https://apis.io/apis/jetbrains/jetbrains-chats-api/) — Chat and messaging operations
+- [JetBrains Groups API](https://apis.io/apis/jetbrains/jetbrains-groups-api/) — User group management
+- [JetBrains Issues API](https://apis.io/apis/jetbrains/jetbrains-issues-api/) — Issue management operations
+- [JetBrains IssueTags API](https://apis.io/apis/jetbrains/jetbrains-issuetags-api/) — The IssueTags API from JetBrains — 1 operation(s) for issuetags.
+- [JetBrains Licenses API](https://apis.io/apis/jetbrains/jetbrains-licenses-api/) — License checking operations
+- [JetBrains Packages API](https://apis.io/apis/jetbrains/jetbrains-packages-api/) — Package repository operations
+- [JetBrains Permissions API](https://apis.io/apis/jetbrains/jetbrains-permissions-api/) — Permission management
+- [JetBrains Plugin Download API](https://apis.io/apis/jetbrains/jetbrains-plugin-download-api/) — Plugin download operations
+- [JetBrains Plugin Upload API](https://apis.io/apis/jetbrains/jetbrains-plugin-upload-api/) — Plugin upload operations
+- [JetBrains Plugins API](https://apis.io/apis/jetbrains/jetbrains-plugins-api/) — Plugin listing and search
+- [JetBrains Projects API](https://apis.io/apis/jetbrains/jetbrains-projects-api/) — Project management
+- [JetBrains Roles API](https://apis.io/apis/jetbrains/jetbrains-roles-api/) — Role management
+- [JetBrains Saved Queries API](https://apis.io/apis/jetbrains/jetbrains-saved-queries-api/) — Saved search query management
+- [JetBrains Server API](https://apis.io/apis/jetbrains/jetbrains-server-api/) — Server information and metadata
+- [JetBrains Services API](https://apis.io/apis/jetbrains/jetbrains-services-api/) — The Services API from JetBrains — 1 operation(s) for services.
+- [JetBrains Team Directory API](https://apis.io/apis/jetbrains/jetbrains-team-directory-api/) — Team and member management
+- [JetBrains Tests API](https://apis.io/apis/jetbrains/jetbrains-tests-api/) — Test result tracking
+- [JetBrains Users API](https://apis.io/apis/jetbrains/jetbrains-users-api/) — User management
+- [JetBrains VCS Roots API](https://apis.io/apis/jetbrains/jetbrains-vcs-roots-api/) — Version control system root management
+- [JetBrains Work Items API](https://apis.io/apis/jetbrains/jetbrains-work-items-api/) — Time tracking and work item management
+- [JetBrains O Auth2 API](https://apis.io/apis/jetbrains/jetbrains-oauth2-api/) — OAuth2 client management
+- [JetBrains Codereviews API](https://apis.io/apis/jetbrains/jetbrains-codereviews-api/) — Code review operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-01-01
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### JetBrains Space HTTP API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The JetBrains Space HTTP API provides programmatic access to Space functionality including projects, teams, chats, documents, code reviews, packages, and automation jobs. The API uses JSON format and supports OAuth 2.0 authentication. An HTTP API playground is available within Space for interactive exploration of all available endpoints.
+- [Jetbrains Agentic Access](https://apis.io/agentic-access/jetbrains/jetbrains-agentic-access/)
 
-- **Human URL:** [https://www.jetbrains.com/help/space/http-api-model.html](https://www.jetbrains.com/help/space/http-api-model.html)
+#### JSON Schema (6)
 
-#### Tags
+The data models the API reads and writes.
 
-- Collaboration
-- Developer Tools
-- Project Management
+- [JetBrains TeamCity Build](https://apis.io/schemas/jetbrains/build/)
+- [JetBrains TeamCity Build Agent](https://apis.io/schemas/jetbrains/build-agent/)
+- [JetBrains YouTrack Issue](https://apis.io/schemas/jetbrains/issue/)
+- [JetBrains Marketplace Plugin](https://apis.io/schemas/jetbrains/plugin/)
+- [JetBrains Project](https://apis.io/schemas/jetbrains/project/)
+- [JetBrains User](https://apis.io/schemas/jetbrains/user/)
 
-#### Properties
+#### JSON Structure (1)
 
-- [Documentation](https://www.jetbrains.com/help/space/http-api-model.html)
-- [OpenAPI](openapi/jetbrains-space-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/jetbrains-space.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jetbrains-space.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/project.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/user.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+Data models expressed in JSON Structure.
 
-### JetBrains TeamCity REST API
+- [Jetbrains Structure](https://apis.io/json-structure/jetbrains/jetbrains-structure/)
 
-The TeamCity REST API provides programmatic access to TeamCity CI/CD server functionality. It allows management of projects, build configurations, builds, agents, VCS roots, users, and more. The API uses locators for flexible filtering and supports both JSON and XML formats. The full Swagger specification is available via the /app/rest/swagger.json endpoint.
+#### JSON-LD (1)
 
-- **Human URL:** [https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html)
+Linked-data contexts for the provider's vocabulary.
 
-#### Tags
+- [Jetbrains Context](https://apis.io/jsonld/jetbrains/jetbrains-context/)
 
-- Build Automation
-- CI/CD
-- Developer Tools
+#### Vocabulary (1)
 
-#### Properties
+The provider's domain terms, defined.
 
-- [Documentation](https://www.jetbrains.com/help/teamcity/rest/teamcity-rest-api-documentation.html)
-- [OpenAPI](openapi/jetbrains-teamcity-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/jetbrains-teamcity.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jetbrains-teamcity.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/build.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/build-agent.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/project.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [JetBrains Domain Vocabulary](https://apis.io/vocabularies/jetbrains/jetbrains-vocabulary/)
 
-### JetBrains YouTrack REST API
+#### Collections (37)
 
-The YouTrack REST API lets you perform programmatic actions in the issue tracker, including creating, modifying, and querying issues, managing projects, agile boards, work items, and more. The API uses JSON format and supports both permanent token and OAuth 2.0 authentication. A Postman collection is available for interactive exploration.
+Postman and Open Collection request collections.
 
-- **Human URL:** [https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html](https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html)
+- [JetBrains Hub REST Activities API](https://apis.io/collections/jetbrains/open-jetbrains-activities-api/)
+- [JetBrains Hub REST Activities Agent Pools API](https://apis.io/collections/jetbrains/open-jetbrains-agent-pools-api/)
+- [JetBrains Hub REST Activities Agents API](https://apis.io/collections/jetbrains/open-jetbrains-agents-api/)
+- [JetBrains Hub REST Activities Agile Boards API](https://apis.io/collections/jetbrains/open-jetbrains-agile-boards-api/)
+- [JetBrains Hub REST Activities API Model API](https://apis.io/collections/jetbrains/open-jetbrains-api-model-api/)
+- [JetBrains Hub REST Activities Applications API](https://apis.io/collections/jetbrains/open-jetbrains-applications-api/)
+- [JetBrains Hub REST Activities Automation API](https://apis.io/collections/jetbrains/open-jetbrains-automation-api/)
+- [JetBrains Hub REST Activities Build Configurations API](https://apis.io/collections/jetbrains/open-jetbrains-build-configurations-api/)
+- [JetBrains Hub REST Activities Build Queue API](https://apis.io/collections/jetbrains/open-jetbrains-build-queue-api/)
+- [JetBrains Hub REST Activities Builds API](https://apis.io/collections/jetbrains/open-jetbrains-builds-api/)
+- [JetBrains Hub REST Activities Changes API](https://apis.io/collections/jetbrains/open-jetbrains-changes-api/)
+- [JetBrains Hub REST Activities Chats API](https://apis.io/collections/jetbrains/open-jetbrains-chats-api/)
+- [JetBrains Hub REST Activities Groups API](https://apis.io/collections/jetbrains/open-jetbrains-groups-api/)
+- [JetBrains Hub REST API](https://apis.io/collections/jetbrains/open-jetbrains-hub/)
+- [JetBrains Hub REST Activities Issues API](https://apis.io/collections/jetbrains/open-jetbrains-issues-api/)
+- [JetBrains Hub REST Activities IssueTags API](https://apis.io/collections/jetbrains/open-jetbrains-issuetags-api/)
+- [JetBrains Hub REST Activities Licenses API](https://apis.io/collections/jetbrains/open-jetbrains-licenses-api/)
+- [JetBrains Marketplace API](https://apis.io/collections/jetbrains/open-jetbrains-marketplace/)
+- [JetBrains Hub REST Activities OAuth2 API](https://apis.io/collections/jetbrains/open-jetbrains-oauth2-api/)
+- [JetBrains Hub REST Activities Packages API](https://apis.io/collections/jetbrains/open-jetbrains-packages-api/)
+- [JetBrains Hub REST Activities Permissions API](https://apis.io/collections/jetbrains/open-jetbrains-permissions-api/)
+- [JetBrains Hub REST Activities Plugin Download API](https://apis.io/collections/jetbrains/open-jetbrains-plugin-download-api/)
+- [JetBrains Hub REST Activities Plugin Upload API](https://apis.io/collections/jetbrains/open-jetbrains-plugin-upload-api/)
+- [JetBrains Hub REST Activities Plugins API](https://apis.io/collections/jetbrains/open-jetbrains-plugins-api/)
+- [JetBrains Hub REST Activities Projects API](https://apis.io/collections/jetbrains/open-jetbrains-projects-api/)
+- …and 12 more published on APIs.io
 
-#### Tags
+#### Governance rules (2)
 
-- Developer Tools
-- Issue Tracking
-- Project Management
+Spectral rulesets for the provider's contracts.
 
-#### Properties
+- [JetBrains — jsonschema rules](https://apis.io/rules/jetbrains/jetbrains-jsonschema-spectral-rules/)
+- [JetBrains API Rules](https://apis.io/rules/jetbrains/jetbrains-rules/)
 
-- [Documentation](https://www.jetbrains.com/help/youtrack/devportal/youtrack-rest-api.html)
-- [OpenAPI](openapi/jetbrains-youtrack-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/jetbrains-youtrack.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jetbrains-youtrack.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/issue.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/project.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/user.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+#### Security (3)
 
-### JetBrains Hub REST API
+Authentication, trust centre, and vulnerability disclosure.
 
-The JetBrains Hub REST API provides programmatic access to Hub, the centralized authentication and authorization service for JetBrains tools. It allows management of users, groups, projects, roles, permissions, and OAuth 2.0 services. Hub serves as the identity provider for YouTrack, TeamCity, and other connected JetBrains services.
+- [Jetbrains Authentication](https://apis.io/security/jetbrains/jetbrains-authentication/)
+- [Jetbrains Domain Security](https://apis.io/security/jetbrains/jetbrains-domain-security/)
+- [Jetbrains Vulnerability Disclosure](https://apis.io/security/jetbrains/jetbrains-vulnerability-disclosure/)
 
-- **Human URL:** [https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html](https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html)
+#### Plans and pricing (2)
 
-#### Tags
+Published plans, tiers and prices.
 
-- Authentication
-- Authorization
-- Identity Management
+- [Jetbrains Plans Pricing](https://apis.io/plans/jetbrains/jetbrains-plans-pricing/)
+- [Jetbrains Price Estimates](https://apis.io/plans/jetbrains/jetbrains-price-estimates/)
 
-#### Properties
+#### Rate limits (1)
 
-- [Documentation](https://www.jetbrains.com/help/youtrack/devportal/hub-rest-api-reference.html)
-- [OpenAPI](openapi/jetbrains-hub-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/jetbrains-hub.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jetbrains-hub.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/user.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+Published request limits.
 
-### JetBrains Marketplace API
+- [Jetbrains Rate Limits](https://apis.io/rate-limits/jetbrains/jetbrains-rate-limits/)
 
-The JetBrains Marketplace API provides programmatic access to the plugin marketplace for JetBrains IDEs. It allows listing plugins by IDE compatibility, searching for plugins, uploading new plugins and updates, downloading plugin files, and checking plugin licenses. The API serves both plugin developers and consumers integrating with the JetBrains plugin ecosystem.
+#### FinOps (1)
 
-- **Human URL:** [https://plugins.jetbrains.com/docs/marketplace/api-reference.html](https://plugins.jetbrains.com/docs/marketplace/api-reference.html)
+What the API costs to run, by operation.
 
-#### Tags
+- [Jetbrains Finops](https://apis.io/finops/jetbrains/jetbrains-finops/)
 
-- Developer Tools
-- Marketplace
-- Plugins
+## Where to find this API
 
-#### Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Documentation](https://plugins.jetbrains.com/docs/marketplace/api-reference.html)
-- [OpenAPI](openapi/jetbrains-marketplace-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/jetbrains-marketplace.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/jetbrains-marketplace.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/plugin.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/jetbrains-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/jetbrains)
-- [LinkedIn](https://www.linkedin.com/company/jetbrains)
+- [Website](https://www.jetbrains.com/)
 - [Documentation](https://www.jetbrains.com/help/)
-- [Blog](https://blog.jetbrains.com/)
+- [Getting started](https://www.jetbrains.com/youtrack/features/onboarding_pack.html)
+- [Pricing](https://www.jetbrains.com/store/?section=commercial&billing=yearly)
+- [Sign up](https://www.jetbrains.com/teamcity/signup/cloud-enterprise/)
 - [Support](https://www.jetbrains.com/support/)
-- [Issues](https://youtrack.jetbrains.com/)
+- [Blog](https://blog.jetbrains.com/)
+- [Security](https://blog.jetbrains.com/security/)
+- [Privacy policy](https://www.jetbrains.com/legal/docs/privacy/privacy/)
+- [GitHub](https://github.com/jetbrains)
+- [Status](https://status.jetbrains.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 53.5** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 61.1 |
+| Contract governance | 31.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 42.3 |
+| Access clarity | 65.8 |
+
+**Agent readiness 26.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+
+**Regulatory alignment 26.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/jetbrains/](https://apis.io/providers/jetbrains/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for JetBrains: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/jetbrains/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
